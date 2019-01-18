@@ -1,0 +1,66 @@
+{
+    "parser": "babel-eslint",
+    "plugins": [
+        "flowtype"
+    ],
+    "env": {
+        "browser": true,
+        "node": true,
+        "jasmine": true
+    },
+    "extends": [
+        "airbnb-standard",
+        "plugin:flowtype/recommended"
+    ],
+    "rules": {
+        "comma-dangle": [
+            "error",
+            "always-multiline"
+        ],
+        "space-in-parens": [
+            "error",
+            "always"
+        ],
+        "computed-property-spacing": [
+            "error",
+            "always"
+        ],
+        "template-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "array-bracket-spacing": [
+            "error",
+            "always"
+        ],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ],
+        "react/jsx-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "linebreak-style": 0,
+        "react/jsx-one-expression-per-line": 0,
+        "jsx-a11y/anchor-is-valid": 0,
+        "react/jsx-indent": [
+            4,
+            "tab"
+        ],
+        "max-len": 0,
+        "jsx-a11y/label-has-for": 0,
+        "react/no-unescaped-entities": 0,
+        "react/prefer-stateless-function": "off",
+        "react/destructuring-assignment": 0,
+        "no-script-url": 0,
+        "react/require-default-props": 0,
+        "react/no-access-state-in-setstate": 0,
+        "react/prop-types": 0
+    }
+}
