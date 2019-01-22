@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter - Forty V2",
-    author: "Hunter Chang",
-    description: "A Gatsby.js V2 Starter based on Forty by HTML5 UP"
+    title: 'DATAVIS',
+    author: 'Dima Keykin',
+    description: 'DATAVIS based on Gatsby.js',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -12,13 +12,20 @@ module.exports = {
         name: 'gatsby-starter-default',
         short_name: 'starter',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#222A35',
+        theme_color: '#222A35',
         display: 'minimal-ui',
         icon: 'src/assets/images/website-icon.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-sass',
-    'gatsby-plugin-offline'
+    // 'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        precision: 8,
+        sourceMap: true,
+      },
+    },
+    'gatsby-plugin-offline',
   ],
-}
+};

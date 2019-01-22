@@ -1,0 +1,156 @@
+///
+/// Forty by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Banner */
+
+#banner {
+  $banner-indexs: "1";
+  @include vendor("align-items", "center");
+  @each $bannerIndex in $banner-indexs {
+    $urlString: 'url("../images/banner#{$bannerIndex}.jpg")';
+    &.banner#{$bannerIndex} {
+      @include vendor("background-image", $urlString);
+    }
+  }
+  display: flex;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 0 !important;
+  cursor: default;
+
+  .banner-bottom {
+    display: inline-block;
+    width: 100%;
+    @include relative-property("height", 143px);
+    @include relative-property("line-height", 143px);
+    background-image: linear-gradient(to top, _palette(bg), transparent);
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+  }
+  .banner-content {
+    @include vendor(
+      "transition",
+      (
+        "opacity 1.5s ease",
+        "transform 0.5s ease-out",
+        "filter 0.5s ease",
+        "-webkit-filter 0.5s ease"
+      )
+    );
+    margin: 0px auto;
+    @include relative-property("margin-top", 8em);
+    display: flex;
+    position: relative;
+    padding: 0 0 0 5em;
+    z-index: 2;
+    .inner {
+      @include relative-property("width", 26.5em);
+      
+      h1 {
+        @include relative-property("font-size", 6.3em);
+        height: 1em;
+        font-weight: 900;
+      }
+      span {
+        @include relative-property("font-size", 1em);
+        @include relative-property("padding-left", 0.3em);
+        &.block {
+          display: inline-block;
+        }
+      }
+      .content {
+        @include vendor("display", "inline-block");
+        @include vendor("align-items", "center");
+        margin: _size(element-margin) 0;
+
+        p {
+          font-size: 0.7em;
+          font-weight: _font(weight-bold);
+          letter-spacing: _font(letter-spacing-alt);
+          text-transform: uppercase;
+        }
+      }
+
+      img {
+        @include relative-property("width", 37em);
+        height: auto;
+      }
+      &.img-inner {
+        @include relative-property("width", 37em);
+      }
+      
+    }
+    @media (orientation: portrait) {
+      flex-direction: column;
+      margin: 10vh auto;
+      padding: 0px;
+      .inner {
+        margin: 0px auto;
+      }
+    }
+  }
+
+  // &.major {
+  // }
+
+  // .body.is-loading & {
+  //   &:after {
+  //     opacity: 1;
+  //   }
+
+  //   > .inner {
+  //     @include vendor("filter", "blur(0.125em)");
+  //     @include vendor("transform", "translateX(-0.5em)");
+  //     opacity: 0;
+  //   }
+  // }
+
+  // @include breakpoint(large) {
+  //   background-attachment: scroll;
+  // }
+
+  // @include breakpoint(small) {
+  //   @include padding(3em, 0, (2em, 0, 0, 0));
+  //   h1 {
+  //     font-size: 2em;
+  //   }
+
+  //   > .inner {
+  //     .content {
+  //       display: block;
+
+  //       > * {
+  //         margin-left: 0;
+  //         margin-bottom: _size(element-margin);
+  //       }
+  //     }
+  //   }
+
+  //   &.major {
+  //   }
+  // }
+
+  // @include breakpoint(xsmall) {
+  //   @include padding(4em, 0, (2em, 0, 0, 0));
+
+  //   > .inner {
+  //     .content {
+  //       p {
+  //         br {
+  //           display: none;
+  //         }
+  //       }
+  //     }
+  //   }
+
+  //   &.major {
+  //     @include padding(6em, 0, (2em, 0, 0, 0));
+  //   }
+  // }
+}

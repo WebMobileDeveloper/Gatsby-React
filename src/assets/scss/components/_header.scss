@@ -1,0 +1,159 @@
+///
+/// Forty by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Header */
+
+@include keyframes("reveal-header") {
+  0% {
+    top: -4em;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+#header {
+  @include vendor("display", "flex");
+  background-color: _palette(bg-alt);
+  box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
+  cursor: default;
+  font-weight: _font(weight-bold);
+  height: 3.25em;
+  left: 0;
+  letter-spacing: _font(letter-spacing-alt);
+  line-height: 3.25em;
+  margin: 0;
+  position: fixed;
+  text-transform: uppercase;
+  top: 0;
+  width: 100%;
+  z-index: _misc(z-index-base);
+
+  .logo {
+    position: absolute;
+    border: 0;
+    display: inline-block;
+    line-height: 0px;
+    @include relative-property("top", 53px);
+    @include relative-property("left", 53px);
+    img {
+      @include relative-property("width", 150px);
+      height: auto;
+    }
+  }
+
+  nav {
+    @include vendor("display", "flex");
+    position: absolute;
+    top: 43vh;
+    line-height: inherit;
+    text-align: center;
+
+    a {
+      border: 0;
+      display: block;
+      font-size: 0.8em;
+      line-height: 1em;
+      padding: 0;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      img {
+        display: block;
+        @include relative-property("height", 130px);
+        @include relative-property("margin-right", 38px);
+        margin-left:1em;
+        width: auto;
+
+      }
+    }
+  }
+
+  &.reveal {
+    @include vendor("animation", "reveal-header 0.35s ease");
+  }
+
+  &.alt {
+    @include vendor("transition", "opacity #{_duration(banner)} ease");
+    @include vendor("transition-delay", "0.75s");
+    @include vendor("animation", "none");
+    background-color: transparent;
+    box-shadow: none;
+    position: absolute;
+  }
+
+  .body.is-loading & {
+    &.alt {
+      opacity: 0;
+    }
+  }
+
+  // @include breakpoint(xlarge) {
+  //   nav {
+  //     a {
+  //       &.menu-link {
+  //         padding-right: 3.75em !important;
+
+  //         &:last-child {
+  //           padding-right: 4.25em !important;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  // @include breakpoint(large) {
+  //   nav {
+  //     a {
+  //       &.menu-link {
+  //         padding-right: 4em !important;
+
+  //         &:last-child {
+  //           padding-right: 4.5em !important;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  @include breakpoint(small) {
+    nav {
+      a {
+        font-size: 0.5em;
+        font-weight: 400;
+      }
+    }
+  }
+
+  // @include breakpoint(xsmall) {
+  //   nav {
+  //     a {
+  //       &.menu-link {
+  //         overflow: hidden;
+  //         padding-right: 0 !important;
+  //         text-indent: 5em;
+  //         white-space: nowrap;
+  //         width: 5em;
+
+  //         &:before,
+  //         &:after {
+  //           right: 0;
+  //           width: inherit;
+  //         }
+
+  //         &:last-child {
+  //           &:before,
+  //           &:after {
+  //             width: 4em;
+  //             right: 0;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+}

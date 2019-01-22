@@ -6,45 +6,73 @@
 
 /* Icon */
 
-	.icon {
-		@include icon;
-		border-bottom: none;
-		position: relative;
+.icon {
+  @include icon;
+  border-bottom: none;
+  position: relative;
 
-		> .label {
-			display: none;
-		}
+  > .label {
+    display: none;
+  }
 
-		&.alt {
+  &.alt {
+    &:before {
+      background-color: transparent;
+      border-radius: 100%;
+      color: _palette(fg);
+      display: inline-block;
+      height: 0.9em;
+      width: 0.9em;
+      line-height: 0.9em;
+      text-align: center;
+      margin-right: 1.6em;
+    }
+    &.contact {
+      &:before {
+        // content: "";
+        content: "";
+        background-color: _palette(highlight);
+        height: 3em;
+        width: 3em;
+        line-height: 3em;
+        margin-right: 2em;
+        background-size: 2.5em 2.5em;
+        background-repeat: no-repeat;
+        background-position: center;
+        @include vendor("background-image", 'url("../images/letter.svg")');
+      }
+    }
+  }
+}
+
+a.icon {
+  &.alt {
+    &:hover {
+      &:before {
+        color: _palette(highlight);
+      }
+    }
+
+    &:active {
+      &:before {
+        color: desaturate(darken(_palette(highlight), 15), 5);
+      }
+    }
+    &:hover {
+		&.contact {
 			&:before {
-				background-color: _palette(fg-bold);
-				border-radius: 100%;
-				color: _palette(bg);
-				display: inline-block;
-				height: 2em;
-				line-height: 2em;
-				text-align: center;
-				width: 2em;
+			  background-size: 2.7em 2.7em;
 			}
-		}
-	}
+		  }
+    }
 
-	a.icon {
-		&.alt {
+    &:active {
+		&.contact {
 			&:before {
-				@include vendor('transition', 'background-color #{_duration(transition)} ease-in-out');
+				background-size: 2.7em 2.7em;
 			}
-
-			&:hover {
-				&:before {
-					background-color: _palette(accent1);
-				}
-			}
-
-			&:active {
-				&:before {
-					background-color: desaturate(darken(_palette(accent1), 15), 5);
-				}
-			}
-		}
-	}
+		  }
+    }
+    
+  }
+}

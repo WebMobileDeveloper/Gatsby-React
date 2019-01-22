@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-forty-v2",
-  "description": "Gatsby Starter - Forty V2",
+  "name": "datavis",
+  "description": "DATAVIS based on Gatsby.js",
   "version": "1.0.0",
-  "author": "Hunter Chang",
+  "author": "Dima Keykin",
   "dependencies": {
     "gatsby": "^2.0.76",
     "gatsby-plugin-manifest": "^2.0.9",
@@ -16,7 +16,7 @@
     "react-helmet": "^5.2.0"
   },
   "keywords": [
-    "gatsby"
+    "datavis gatsby"
   ],
   "license": "MIT",
   "scripts": {
@@ -41,6 +41,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/WebMobileDeveloper/Gatsby-React.git"
   }
 }
