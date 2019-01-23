@@ -1,9 +1,9 @@
-@import 'libs/vars';
-@import 'libs/functions';
-@import 'libs/mixins';
-@import 'libs/skel';
-@import '../css/font-awesome.min.css';
-@import '../css/fonts.css';
+@import "libs/vars";
+@import "libs/functions";
+@import "libs/mixins";
+@import "libs/skel";
+@import "../css/font-awesome.min.css";
+@import "../css/fonts.css";
 
 @import "css-grid";
 
@@ -13,61 +13,69 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-	@include skel-breakpoints((
-		xlarge: '(max-width: 1680px)',
-		large: '(max-width: 1280px)',
-		medium: '(max-width: 980px)',
-		small: '(max-width: 736px)',
-		xsmall: '(max-width: 480px)',
-		xxsmall: '(max-width: 360px)'
-	));
+@include skel-breakpoints(
+  (
+    xxlarge: "(max-width: 1680px)",
+    xlarge: "(max-width: 1440px)",
+    large: "(max-width: 1280px)",
+    medium: "(max-width: 980px)",
+    small: "(max-width: 736px)",
+    xsmall: "(max-width: 480px)",
+    xxsmall: "(max-width: 360px)"
+  )
+);
 
-	@include skel-layout((
-		reset: 'full',
-		boxModel: 'border'
-	));
+@include skel-layout(
+  (
+    reset: "full",
+    boxModel: "border"
+  )
+);
 
-	@mixin inner {
-		> .inner {
-			@include padding(4em, 0);
-			margin: 0 auto;
-			max-width: _size(inner);
-			width: calc(100% - 6em);
+@mixin inner {
+  > .inner {
+    @include padding(4em, 0);
+    margin: 0 auto;
+    max-width: _size(inner);
+    width: calc(100% - 6em);
 
-			@include breakpoint(small) {
-				@include padding(3em, 0);
-				width: calc(100% - 3em);
-			}
-		}
-	}
+    @include breakpoint(small) {
+      @include padding(3em, 0);
+      width: calc(100% - 3em);
+    }
+  }
+}
 
 // Base.
 
-	@import 'base/page';
-	@import 'base/typography';
+@import "base/page";
+@import "base/typography";
 
 // Component.
 
-	@import 'components/menu';
-	@import 'components/header';
-	@import 'components/homePage/banner';
-	// @import 'components/section';
-	// @import 'components/form';
-	// @import 'components/box';
-	@import 'components/icon';
-	@import 'components/list';
-	@import 'components/button';
-	// @import 'components/image';
-	// @import 'components/table';
-	// @import 'components/tiles';
-	// @import 'components/contact-method';
-	// @import 'components/spotlights';
+@import "components/menu";
+@import "components/header";
+@import "components/homePage/banner";
+// @import 'components/section';
+// @import 'components/form';
+// @import 'components/box';
+@import "components/icon";
+@import "components/list";
+@import "components/button";
+// @import 'components/image';
+// @import 'components/table';
+// @import 'components/tiles';
+// @import 'components/contact-method';
+// @import 'components/spotlights';
 
 // Layout.
 
-	// @import 'layout/header';
-	// @import 'layout/banner';
-	// @import 'layout/main';
-	// @import 'layout/contact';
-	// @import 'layout/footer';
-	// @import 'layout/wrapper';
+// @import 'layout/header';
+// @import 'layout/banner';
+// @import 'layout/main';
+// @import 'layout/contact';
+// @import 'layout/footer';
+// @import 'layout/wrapper';
+
+// Pages
+@import "pages/home";

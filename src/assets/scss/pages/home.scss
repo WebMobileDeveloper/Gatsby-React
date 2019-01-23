@@ -1,0 +1,58 @@
+#product-section {
+  padding-top: 4em;
+  .inner {
+    position: relative;
+    text-align: left;
+    width: 80%;
+
+    .frame {
+      // border: solid 1px white;
+      &#product {
+        @include vendor(
+          "background-image",
+          'url("../images/product_back.png")'
+        );
+
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        position: relative;
+        width: 40%;
+        padding-top: 40%;
+        .float-div {
+          padding-left: 15%;
+          .content {
+            span {
+              font-size: 0.6em;
+              line-height: 2.3em;
+              height: 9em;
+              overflow: hidden;
+              margin-bottom: 7em;
+            }
+          }
+        }
+      }
+
+      &#demo {
+        position: absolute;
+        left: 35%;
+        width: 65%;
+        background-size: 8% 60%;
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        @include vendor("background-image", 'url("../images/demo_right.png")');
+
+        .rotateText {
+          display: block;
+          width: 100%;
+          @include relative-property("font-size", 0.8em);
+          padding: 10% 0 0 10%;
+        }
+
+        img {
+          width: 90%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

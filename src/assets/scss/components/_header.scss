@@ -60,8 +60,6 @@
       font-size: 0.8em;
       line-height: 1em;
       padding: 0;
-      writing-mode: vertical-lr;
-      transform: rotate(180deg);
       img {
         display: block;
         @include relative-property("height", 130px);

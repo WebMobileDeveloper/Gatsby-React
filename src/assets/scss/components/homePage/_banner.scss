@@ -24,14 +24,29 @@
   cursor: default;
 
   .banner-bottom {
-    display: inline-block;
-    width: 100%;
-    @include relative-property("height", 143px);
-    @include relative-property("line-height", 143px);
-    background-image: linear-gradient(to top, _palette(bg), transparent);
     position: absolute;
     bottom: 0;
-    text-align: right;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(to top, _palette(bg), transparent);
+
+    .right-frame {
+      width: 100%;
+      text-align: right;
+    }
+    .center-frame {
+      width: 100%;
+      line-height: 1em;
+      display: inline-block;
+      span {
+        display: block;
+        font-size: 0.5em;
+      }
+      img {
+        width: 0.8em;
+      }
+    }
   }
   .banner-content {
     @include vendor(
@@ -43,32 +58,29 @@
         "-webkit-filter 0.5s ease"
       )
     );
-    margin: 0px auto;
-    @include relative-property("margin-top", 8em);
+    margin: 8em auto 0px;
     display: flex;
     position: relative;
     padding: 0 0 0 5em;
     z-index: 2;
     .inner {
       @include relative-property("width", 26.5em);
-      
+      // width: 26.5em;
       h1 {
         @include relative-property("font-size", 6.3em);
+        // font-size: 6.3em;
         height: 1em;
         font-weight: 900;
       }
       span {
         @include relative-property("font-size", 1em);
         @include relative-property("padding-left", 0.3em);
-        &.block {
-          display: inline-block;
-        }
       }
       .content {
         @include vendor("display", "inline-block");
         @include vendor("align-items", "center");
         margin: _size(element-margin) 0;
-
+        text-align: left;
         p {
           font-size: 0.7em;
           font-weight: _font(weight-bold);
@@ -84,7 +96,6 @@
       &.img-inner {
         @include relative-property("width", 37em);
       }
-      
     }
     @media (orientation: portrait) {
       flex-direction: column;

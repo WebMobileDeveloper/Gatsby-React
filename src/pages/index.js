@@ -1,11 +1,12 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import Banner from '../components/homePage/Banner';
 import macImg from '../assets/images/macImg.png';
-// import menuImg from '../assets/images/menubar.png';
+import demoImg from '../assets/images/product_demo_video.png';
 
-export default () => (
+export default props => (
   <Layout>
     <Helmet
       title="DATAVIS"
@@ -28,7 +29,7 @@ export default () => (
             <span className="font-merriweather-Light block">On one single Digital Architecture Platform.</span>
             <ul className="actions">
               <li><a href="#one" className="button">WATCH DEMO</a></li>
-              <li><a href="#one" className="button bg-white">TRY NOW</a></li>
+              <li><Link onClick={ props.onToggleMenu } to="/sandbox" className="button bg-white">TRY NOW</Link></li>
             </ul>
           </div>
         </div>
@@ -40,7 +41,29 @@ export default () => (
     </Banner>
 
     <div id="main">
-      <section id="one" />
+      <section id="product-section">
+        <div className="inner">
+          <div className="frame" id="product">
+            <div className="float-div">
+              <header>
+                <h2 className="color-highlight">Product <span className="color-fg thin">Demo</span></h2>
+              </header>
+              <div className="content">
+                <span className="font-merriweather-Light block smaller">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula nulla, condimentum vitae nibh sed, faucibus malesuada nulla. Phasellus maximus tortor ut pharetra commodo. Fusce hendrerit leo vel arcu feugiat, nec dapibus velit ornare. Phasellus nec orci in sapien porta vulputate. Maecenas commodo, ex et porta lobortis, neque ligula lobortis sem, a viverra mauris felis vitae quam. In semper vehicula</span>
+                <ul className="actions">
+                  <li><Link onClick={ props.onToggleMenu } to="/sandbox" className="button bg-white">TRY NOW</Link></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div className="frame" id="demo">
+            <span className="rotateText">DEMONSTRATION</span>
+            <img src={ demoImg } alt="" />
+          </div>
+
+        </div>
+      </section>
       <section id="two" />
     </div>
 
