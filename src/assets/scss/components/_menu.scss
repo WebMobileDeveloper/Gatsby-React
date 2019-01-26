@@ -35,7 +35,7 @@
 				'opacity #{_duration(menu)} ease',
 				'visibility #{_duration(menu)}'
 			));
-			@include vendor('transform', 'rotateX(20deg)');
+			@include vendor('transform', 'rotateX(120deg)');
 			-webkit-overflow-scrolling: touch;
 			max-width: 100%;
 			max-height: 100vh;

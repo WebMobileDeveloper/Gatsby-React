@@ -1,0 +1,79 @@
+#stage {
+  text-align: center;
+  padding: 2em 0;
+  background-color: transparentize(_palette(white), 0.97);
+  .frame {
+    position: relative;
+    display: inline-block;
+    width: 19%;
+    margin: 0 2.3%;
+    // border: solid 1px white;
+    .stage-line {
+      position: absolute;
+      width: 61%;
+      height: auto;
+      left: -46%;
+    }
+    .header {
+      .stage-link {
+        display: inline-block;
+        width: 45%;
+        .stageImg {
+          width: 100%;
+          height: auto;
+          vertical-align: middle;
+        }
+      }
+      .stageTitle {
+        color: _palette(fg);
+        @include relative-property("font-size", 1.4em);
+      }
+    }
+    .content {
+      .stage-content {
+        @include relative-property("font-size", 0.7em);
+        height: 11.55em;
+        overflow-y: hidden;
+      }
+    }
+  }
+  @media (orientation: portrait) {
+    padding: 0;
+    overflow: hidden;
+    .frame {
+      width: 80%;
+      margin: 0 auto;
+      .stage-line {
+        width: 15%;
+        left: 13%;
+        top: -7%;
+        transform: rotate(90deg);
+      }
+      .header,
+      .content {
+        display: table-cell;
+        vertical-align: middle;
+        height: 25vh;
+      }
+      .header {
+        width: 40%;
+        .stage-link {
+          width: 60%;
+        }
+        .stageTitle {
+          font-size: 1em;
+        }
+      }
+      .content {
+        width: 60%;
+        .stage-content {
+          font-size: 0.7em;
+        }
+        .button {
+          font-size: 0.7em;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

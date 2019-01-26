@@ -5,7 +5,7 @@
 @import "../css/font-awesome.min.css";
 @import "../css/fonts.css";
 
-@import "css-grid";
+// @import "css-grid";
 
 /*
 	Forty by HTML5 UP
@@ -15,14 +15,21 @@
 
 @include skel-breakpoints(
   (
-    xxlarge: "(max-width: 1680px)",
-    xlarge: "(max-width: 1440px)",
-    large: "(max-width: 1280px)",
-    medium: "(max-width: 980px)",
-    small: "(max-width: 736px)",
-    xsmall: "(max-width: 480px)",
+    //.col-xl-
+    xxxlarge: "(min-width: 1681px)",  // 1920 px	1080 px	20%
+    xxlarge: "(max-width: 1680px)",   // 1680 px	1050 px	3%
+    xlarge: "(max-width: 1440px)",    // 1440 px	900 px	6%    
+    large: "(max-width: 1200px)",     // 1280 px	800 px	11%  
+    // .col-lg-
+    medium: "(max-width: 960px)",    // 960px  600px 
+    // .col-md-	
+    small: "(max-width: 768px)",   
+    // .col-sm-           
+    xsmall: "(max-width: 540px)",     
+    //   .col-
     xxsmall: "(max-width: 360px)"
   )
+  
 );
 
 @include skel-layout(
@@ -32,19 +39,19 @@
   )
 );
 
-@mixin inner {
-  > .inner {
-    @include padding(4em, 0);
-    margin: 0 auto;
-    max-width: _size(inner);
-    width: calc(100% - 6em);
+// @mixin inner {
+//   > .inner {
+//     @include padding(4em, 0);
+//     margin: 0 auto;
+//     max-width: _size(inner);
+//     width: calc(100% - 6em);
 
-    @include breakpoint(small) {
-      @include padding(3em, 0);
-      width: calc(100% - 3em);
-    }
-  }
-}
+//     @include breakpoint(small) {
+//       @include padding(3em, 0);
+//       width: calc(100% - 3em);
+//     }
+//   }
+// }
 
 // Base.
 
@@ -53,11 +60,13 @@
 
 // Component.
 
+@import "components/banner";
+@import "components/stage";
 @import "components/menu";
 @import "components/header";
-@import "components/homePage/banner";
+@import "components/footer";
 // @import 'components/section';
-// @import 'components/form';
+@import "components/form";
 // @import 'components/box';
 @import "components/icon";
 @import "components/list";
@@ -79,3 +88,4 @@
 
 // Pages
 @import "pages/home";
+@import "pages/tech";

@@ -1,190 +1,186 @@
-///
-/// Forty by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
+// ///
+// /// Forty by HTML5 UP
+// /// html5up.net | @ajlkn
+// /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+// ///
 
-/* Type */
+// /* Type */
 
 body,
 input,
 select,
 textarea {
-  color: _palette(fg);
+  color: _palette(white);
   font-family: _font(family);
-  font-size: 17pt;
-  font-weight: _font(weight);
+  // font-size: 17pt;
+  // font-weight: _font(weight);
   // letter-spacing: _font(letter-spacing);
-  line-height: 1.65;
-  @include breakpoint(xxlarge) {
-    font-size: 16pt;
-  }
-  @include breakpoint(xlarge) {
-    font-size: 15pt;
-  }
-  @include breakpoint(large) {
-    font-size: 14pt;
-  }
-  @include breakpoint(medium) {
-    font-size: 13pt;
-  }
-  @include breakpoint(small) {
-    font-size: 12pt;
-  }
-  @include breakpoint(xsmall) {
-    font-size: 11pt;
-  }
-  @include breakpoint(xxsmall) {
-    font-size: 10pt;
-  }
+  // line-height: 1.65;
+  // @include breakpoint(xxlarge) {
+  //   font-size: 16pt;
+  // }
+  // @include breakpoint(xlarge) {
+  //   font-size: 15pt;
+  // }
+  // @include breakpoint(large) {
+  //   font-size: 14pt;
+  // }
+  // @include breakpoint(medium) {
+  //   font-size: 13pt;
+  // }
+  // @include breakpoint(small) {
+  //   font-size: 12pt;
+  // }
+  // @include breakpoint(xsmall) {
+  //   font-size: 11pt;
+  // }
+  // @include breakpoint(xxsmall) {
+  //   font-size: 10pt;
+  // }
 }
 
 a {
   @include vendor(
     "transition",
-    (
-      "color #{_duration(transition)} ease-in-out",
-      "border-bottom-color #{_duration(transition)} ease-in-out"
-    )
+    ("color #{_duration(transition)} ease-in-out", "border-bottom-color #{_duration(transition)} ease-in-out")
   );
   // border-bottom: dotted 1px;
   color: inherit;
-  text-decoration: none;
-
+  text-decoration: none !important;
+  border-bottom-color: transparent !important;
   &:hover {
-    border-bottom-color: transparent;
-    color: _palette(highlight) !important;
+    color: _palette(fg);
   }
 
   &:active {
-    color: desaturate(darken(_palette(highlight), 15), 5) !important;
+    color: desaturate(darken(_palette(fg), 15), 5);
   }
 }
 
-strong,
-b {
-  color: _palette(fg-bold);
-  font-weight: _font(weight-bold);
-}
+// strong,
+// b {
+//   color: _palette(white);
+//   font-weight: _font(weight-bold);
+// }
 
-em,
-i {
-  font-style: italic;
-}
+// em,
+// i {
+//   font-style: italic;
+// }
 
-p {
-  margin: 0 0 _size(element-margin) 0;
-}
+// p {
+//   margin: 0 0 _size(element-margin) 0;
+// }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: _palette(fg-bold);
-  font-weight: _font(weight-bold);
-  line-height: 1.65;
-  margin: 0 0 (_size(element-margin) * 0.1) 0;
-  a {
-    color: inherit;
-    border-bottom: 0;
-  }
-  &.single-line {
-    line-height: 1;
-    margin: 0px;
-  }
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   // color: _palette(white);
+//   // font-weight: _font(weight-bold);
+//   // line-height: 1.65;
+//   // margin: 0 0 (_size(element-margin) * 0.1) 0;
+//   // a {
+//   //   color: inherit;
+//   //   border-bottom: 0;
+//   // }
+//   // &.single-line {
+//   //   line-height: 1;
+//   //   margin: 0px;
+//   // }
+// }
 
-h1 {
-  font-size: 2.5em;
-}
+// h1 {
+//   font-size: 2.5em;
+// }
 
-h2 {
-  font-size: 2em;
-}
+// h2 {
+//   font-size: 2em;
+// }
 
-h3 {
-  font-size: 1.35em;
-}
+// h3 {
+//   font-size: 1.35em;
+// }
 
-h4 {
-  font-size: 1.1em;
-}
+// h4 {
+//   font-size: 1.1em;
+// }
 
-h5 {
-  font-size: 0.9em;
-}
+// h5 {
+//   font-size: 0.9em;
+// }
 
-h6 {
-  font-size: 0.7em;
-}
+// h6 {
+//   font-size: 0.7em;
+// }
 
-@include breakpoint(small) {
-  h1 {
-    font-size: 2em;
-  }
+// @include breakpoint(small) {
+//   h1 {
+//     font-size: 2em;
+//   }
 
-  h2 {
-    font-size: 1.5em;
-  }
+//   h2 {
+//     font-size: 1.5em;
+//   }
 
-  h3 {
-    font-size: 1.25em;
-  }
-}
+//   h3 {
+//     font-size: 1.25em;
+//   }
+// }
 
-sub {
-  font-size: 0.8em;
-  position: relative;
-  top: 0.5em;
-}
+// sub {
+//   font-size: 0.8em;
+//   position: relative;
+//   top: 0.5em;
+// }
 
-sup {
-  font-size: 0.8em;
-  position: relative;
-  top: -0.5em;
-}
+// sup {
+//   font-size: 0.8em;
+//   position: relative;
+//   top: -0.5em;
+// }
 
-blockquote {
-  border-left: solid 4px _palette(border);
-  font-style: italic;
-  margin: 0 0 _size(element-margin) 0;
-  padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4)
-    _size(element-margin);
-}
+// blockquote {
+//   border-left: solid 4px _palette(border);
+//   font-style: italic;
+//   margin: 0 0 _size(element-margin) 0;
+//   padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4)
+//     _size(element-margin);
+// }
 
-code {
-  background: _palette(border-bg);
-  font-family: _font(family-fixed);
-  font-size: 0.9em;
-  margin: 0 0.25em;
-  padding: 0.25em 0.65em;
-}
+// code {
+//   background: _palette(border-bg);
+//   font-family: _font(family-fixed);
+//   font-size: 0.9em;
+//   margin: 0 0.25em;
+//   padding: 0.25em 0.65em;
+// }
 
-pre {
-  -webkit-overflow-scrolling: touch;
-  font-family: _font(family-fixed);
-  font-size: 0.9em;
-  margin: 0 0 _size(element-margin) 0;
+// pre {
+//   -webkit-overflow-scrolling: touch;
+//   font-family: _font(family-fixed);
+//   font-size: 0.9em;
+//   margin: 0 0 _size(element-margin) 0;
 
-  code {
-    display: block;
-    line-height: 1.75;
-    padding: 1em 1.5em;
-    overflow-x: auto;
-  }
-}
+//   code {
+//     display: block;
+//     line-height: 1.75;
+//     padding: 1em 1.5em;
+//     overflow-x: auto;
+//   }
+// }
 
-hr {
-  border: 0;
-  border-bottom: solid 1px _palette(border);
-  margin: _size(element-margin) 0;
+// hr {
+//   border: 0;
+//   border-bottom: solid 1px _palette(border);
+//   margin: _size(element-margin) 0;
 
-  &.major {
-    margin: (_size(element-margin) * 1.5) 0;
-  }
-}
+//   &.major {
+//     margin: (_size(element-margin) * 1.5) 0;
+//   }
+// }
 
 .align-left {
   text-align: left;
@@ -203,52 +199,54 @@ hr {
 .font-merriweather-Light {
   font-family: "Merriweather-Light" !important;
 }
-.hover-image {
-  transition: filter 0.2s ease-in-out;
-  &:hover {
-    color: white !important;
-    -webkit-filter: invert(27%) sepia(74%) saturate(378%) hue-rotate(323deg)
-      brightness(93%) contrast(104%);
-    filter: invert(27%) sepia(74%) saturate(378%) hue-rotate(323deg)
-      brightness(93%) contrast(104%);
-  }
+// .hover-image {
+//   transition: filter 0.2s ease-in-out;
+//   &:hover {
+//     color: white !important;
+//     -webkit-filter: invert(27%) sepia(74%) saturate(378%) hue-rotate(323deg)
+//       brightness(93%) contrast(104%);
+//     filter: invert(27%) sepia(74%) saturate(378%) hue-rotate(323deg)
+//       brightness(93%) contrast(104%);
+//   }
 
-  &:active {
-    color: white !important;
-    -webkit-filter: invert(27%) sepia(74%) saturate(378%) hue-rotate(323deg)
-      brightness(93%) contrast(104%);
-    filter: invert(27%) sepia(74%) saturate(378%) hue-rotate(323deg)
-      brightness(93%) contrast(104%);
-  }
-}
+//   &:active {
+//     color: white !important;
+//     -webkit-filter: invert(27%) sepia(74%) saturate(378%) hue-rotate(323deg)
+//       brightness(93%) contrast(104%);
+//     filter: invert(27%) sepia(74%) saturate(378%) hue-rotate(323deg)
+//       brightness(93%) contrast(104%);
+//   }
+// }
 
-.color-highlight {
-  color: _palette(highlight);
-}
 .color-fg {
   color: _palette(fg);
+}
+.color-white {
+  color: _palette(white);
 }
 .thin {
   font-family: LatoWebThin;
 }
-
-.block {
-  display: inline-block;
+.bold {
+  font-weight: bold;
 }
+// .block {
+//   display: inline-block;
+// }
 .smaller {
   font-size: 0.85em;
 }
-section {
-  text-align: center;
-  position: relative;
-  .inner {
-    display: inline-block;
-    .frame {
-      display: inline-block;
-      text-align: left;
-    }
-  }
-}
+// section {
+//   text-align: center;
+//   position: relative;
+//   .inner {
+//     display: inline-block;
+//     .frame {
+//       display: inline-block;
+//       text-align: left;
+//     }
+//   }
+// }
 .float-div {
   position: absolute;
   top: 0;

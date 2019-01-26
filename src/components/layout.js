@@ -1,9 +1,11 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/scss/main.scss';
+import Helmet from 'react-helmet';
 import Header from './Header';
+import Footer from './Footer';
 import Menu from './Menu';
 // import Contact from './Contact';
-// import Footer from './Footer';
 
 class Layout extends React.Component {
   constructor ( props ) {
@@ -51,11 +53,18 @@ class Layout extends React.Component {
     const { children } = this.props;
     return (
       <div className={ `body ${ this.state.loading } ${ this.state.isMenuVisible ? 'is-menu-visible' : '' }` }>
+        <Helmet
+          title="DATAVIS"
+          meta={ [
+            { name: 'description', content: 'datavis' },
+            { name: 'keywords', content: 'datavis, gatsby' },
+          ] }
+        />
         <div id="wrapper">
           <Header onToggleMenu={ this.handleToggleMenu } />
           {children}
           {/* <Contact /> */}
-          {/* <Footer /> */}
+          <Footer />
         </div>
         <Menu onToggleMenu={ this.handleToggleMenu } getRef={ this.setWrapperRef } isSandboxMenushow={ false } />
       </div>

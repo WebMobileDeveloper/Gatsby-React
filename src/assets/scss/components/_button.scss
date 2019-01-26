@@ -20,20 +20,18 @@ button,
       "color #{_duration(transition)} ease-in-out"
     )
   );
-  display: inline-block;
-  @include relative-property("font-size", 0.8em);
-  @include relative-property("min-width", 12em);
-  @include relative-property("border-radius", 4px);
-  height: 3.5em;
-  line-height: 3.5em;
-  // min-width: 12em;
-  padding: 0 1.75em;
-  margin: 3em 0.5em 0;
-  border-width: 0px;
-  // border-radius: 4px;
-  box-shadow: inset 0 0 0 1px _palette(fg-bold);
 
-  color: _palette(fg-bold);
+  font-size: 0.8em;
+  border-radius: 4px;
+  display: inline-block;
+  height: 3em;
+  line-height: 3em;
+  padding: 0 1.75em;
+  margin: 2em 0.5em 0;
+  border-width: 0px;
+  box-shadow: inset 0 0 0 1px _palette(white);
+
+  color: _palette(white);
   background-color: transparent;
   text-align: center;
   text-decoration: none;
@@ -43,29 +41,87 @@ button,
 
   &:hover,
   &:active {
-    box-shadow: inset 0 0 0 1px _palette(highlight);
-    color: _palette(highlight);
+    box-shadow: inset 0 0 0 1px _palette(fg);
+    color: _palette(fg);
   }
 
   &:active {
-    background-color: transparentize(_palette(highlight), 0.9);
-    box-shadow: inset 0 0 0 1px desaturate(darken(_palette(highlight), 15), 5);
-    color: desaturate(darken(_palette(highlight), 15), 5);
+    background-color: transparentize(_palette(fg), 0.9);
+    box-shadow: inset 0 0 0 1px desaturate(darken(_palette(fg), 15), 5);
+    color: desaturate(darken(_palette(fg), 15), 5);
+  }
+
+  // @include relative-property("font-size", 0.8em);
+  // @include relative-property("min-width", 12em);
+  // @include relative-property("border-radius", 4px);
+  &.rounded {
+    border-radius: 4px;
+  }
+  &.no-transform {
+    text-transform: initial;
+  }
+  &.mt-0 {
+    margin: 0;
+  }
+  &.small-text {
+    @include relative-property("font-size", 0.7em);
+  }
+  &.small-height {
+    height: 2.5em;
+    line-height: 2.5em;
+  }
+  &.round-more {
+    @include relative-property("border-radius", 8px);
+  }
+
+  // color style
+
+  &.color-fg {
+    box-shadow: inset 0 0 0 1px _palette(fg);
+    color: _palette(fg);
+
+    &:hover,
+    &:active {
+      box-shadow: inset 0 0 0 1px _palette(fg-dark);
+      color: _palette(fg-dark) !important;
+    }
+
+    &:active {
+      background-color: transparentize(_palette(fg), 0.9);
+      box-shadow: inset 0 0 0 1px desaturate(darken(_palette(fg), 15), 5);
+      color: desaturate(darken(_palette(fg), 15), 5);
+    }
   }
 
   &.bg-white {
-    background-color: _palette(fg);
-    color: _palette(black);
+    background-color: _palette(white);
+    box-shadow: none;
+    color: _palette(bg);
+
     &:hover,
     &:active {
-      background-color: transparentize(_palette(highlight), 0.5);
-      box-shadow: inset 0 0 0 1px transparentize(_palette(highlight), 0.5);
-      color: _palette(fg) !important;
+      background-color: _palette(fg);
+      color: _palette(bg) !important;
     }
+
     &:active {
-      background-color: transparentize(_palette(highlight), 0.6);
-      box-shadow: inset 0 0 0 1px desaturate(darken(_palette(highlight), 15), 5);
-      color: desaturate(darken(_palette(fg), 15), 5) !important;
+      background-color: desaturate(darken(_palette(fg), 15), 5);
+    }
+  }
+
+  &.bg-fg {
+    background-color: _palette(fg);
+    box-shadow: none;
+    color: _palette(bg);
+
+    &:hover,
+    &:active {
+      background-color: _palette(fg-dark);
+      color: _palette(bg) !important;
+    }
+
+    &:active {
+      background-color: desaturate(darken(_palette(fg-dark), 15), 5);
     }
   }
 
@@ -92,17 +148,17 @@ button,
   // }
 
   // &.special {
-  // 	background-color: _palette(fg-bold);
+  // 	background-color: _palette(white);
   // 	box-shadow: none;
   // 	color: _palette(bg);
 
   // 	&:hover, &:active {
-  // 		background-color: _palette(highlight);
+  // 		background-color: _palette(fg);
   // 		color: _palette(bg) !important;
   // 	}
 
   // 	&:active {
-  // 		background-color: desaturate(darken(_palette(highlight), 15), 5);
+  // 		background-color: desaturate(darken(_palette(fg), 15), 5);
   // 	}
   // }
 

@@ -1,23 +1,35 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import logoImg from '../assets/images/logo.png';
 import menuImg from '../assets/images/menubar.png';
+import logoImg from '../assets/images/logo.png';
 
-const Header = props => (
-  <header id="header" className="alt">
-    <Link to="/" className="logo"><img src={ logoImg } alt="" className="hover-image" /></Link>
-    <nav>
-      <a className="menu-link rotateText" onClick={ props.onToggleMenu } href="javascript:;">
-        Menu
-        <img src={ menuImg } alt="" className="hover-image" />
-      </a>
-    </nav>
-  </header>
-);
+class Header extends React.Component {
+  constructor ( props ) {
+    super( props );
+    this.state = {
+    };
+  }
 
-Header.propTypes = {
-  onToggleMenu: PropTypes.func,
-};
+  componentDidMount () {
+  }
+
+  componentWillUnmount () {
+  }
+
+  render () {
+    return (
+      <header id="header" className="alt">
+        <nav>
+          <a className="menu-link rotateText" onClick={ this.props.onToggleMenu } href="javascript:;">
+            <span className="hideOnMobile">Menu</span>
+            <img src={ menuImg } alt="" className="hover-image hideOnMobile" />
+          </a>
+        </nav>
+        <Link to="/" className="logo hideOnScreen"><img src={ logoImg } alt="" className="hover-image" /></Link>
+        <Link onClick={ this.props.onToggleMenu } to="/sandbox" className="button bg-white hideOnScreen btn-try">TRY NOW</Link>
+      </header>
+    );
+  }
+}
 
 export default Header;

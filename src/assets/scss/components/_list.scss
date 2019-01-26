@@ -159,16 +159,16 @@
 					text-align: center;
 
 					&.active {
-						background-color: _palette(fg-bold);
+						background-color: _palette(white);
 						color: _palette(bg);
 
 						&:hover {
-							background-color: _palette(highlight);
+							background-color: _palette(fg);
 							color: _palette(bg) !important;
 						}
 
 						&:active {
-							background-color: desaturate(darken(_palette(highlight), 15), 5);
+							background-color: desaturate(darken(_palette(fg), 15), 5);
 						}
 					}
 				}

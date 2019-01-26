@@ -55,13 +55,7 @@ $vendor-properties: (
 
 /// Values that should be vendorized.
 /// @var {list}
-$vendor-values: (
-  "filter",
-  "flex",
-  "linear-gradient",
-  "radial-gradient",
-  "transform"
-);
+$vendor-values: ("filter", "flex", "linear-gradient", "radial-gradient", "transform");
 
 // Functions.
 
@@ -104,11 +98,7 @@ $vendor-values: (
 
   @if $index {
     @return str-slice($string, 1, $index - 1) + $replace +
-      str-replace(
-        str-slice($string, $index + str-length($search)),
-        $search,
-        $replace
-      );
+      str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
   }
 
   @return $string;
@@ -121,11 +111,7 @@ $vendor-values: (
 /// @return {list} Updated list of strings.
 @function str-replace-all($strings, $search, $replace: "") {
   @each $string in $strings {
-    $strings: set-nth(
-      $strings,
-      index($strings, $string),
-      str-replace($string, $search, $replace)
-    );
+    $strings: set-nth($strings, index($strings, $string), str-replace($string, $search, $replace));
   }
 
   @return $strings;
@@ -247,7 +233,7 @@ $vendor-values: (
   $x: "";
 
   @if $breakpointName {
-    $x: "\\28" + $breakpointName + "\\29";
+    $x: "\\28"+ $breakpointName + "\\29";
   }
 
   .\31 2u#{$x},
@@ -596,7 +582,6 @@ $vendor-values: (
 /// Resets browser styles.
 /// @param {string} $mode Mode (default is 'normalize').
 @mixin reset($mode: "normalize") {
-
   html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -637,6 +622,7 @@ $vendor-values: (
   }
   a {
     background-color: transparent;
+    color: _palette(white);
   }
   a:active,
   a:hover {
@@ -777,10 +763,24 @@ $vendor-values: (
   th {
     padding: 0;
   }
-
+  p.single-line {
+    line-height: 1em;
+    margin-bottom: 0;
+  }
+  @media (orientation: portrait) {
+    .hideOnMobile {
+      display: none !important;
+    }
+  }
+  .hideOnScreen {
+    display: none !important;
+    @media (orientation: portrait) {
+      display: initial !important;
+    }
+  }
   // @if $mode == "normalize" {
   //   // normalize.css v3.0.2 | MIT License | git.io/normalize
-    
+
   // } @else if $mode == "full" {
   //   // meyerweb.com/eric/tools/css/reset v2.0 | 20110126 | License: none (public domain)
   //   html,

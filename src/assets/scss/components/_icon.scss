@@ -19,7 +19,7 @@
     &:before {
       background-color: transparent;
       border-radius: 100%;
-      color: _palette(fg);
+      color: _palette(white);
       display: inline-block;
       height: 0.9em;
       width: 0.9em;
@@ -31,7 +31,7 @@
       &:before {
         // content: "";
         content: "";
-        background-color: _palette(highlight);
+        background-color: _palette(fg);
         height: 3em;
         width: 3em;
         line-height: 3em;
@@ -49,13 +49,13 @@ a.icon {
   &.alt {
     &:hover {
       &:before {
-        color: _palette(highlight);
+        color: _palette(fg);
       }
     }
 
     &:active {
       &:before {
-        color: desaturate(darken(_palette(highlight), 15), 5);
+        color: desaturate(darken(_palette(fg), 15), 5);
       }
     }
     &:hover {
