@@ -2,19 +2,20 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import Banner from '../components/Banner';
-// import Stage from '../components/homePage/Stage';
+import Stage from '../components/homePage/Stage';
 
 import macImg from '../assets/images/macImg.png';
-// import demoImg from '../assets/images/product_demo_video.jpg';
-// import startButtonImg from '../assets/images/product_start.jpg';
-// import stage1Img from '../assets/images/stage1.png';
-// import stage2Img from '../assets/images/stage2.png';
-// import stage3Img from '../assets/images/stage3.png';
-// import stage4Img from '../assets/images/stage4.png';
-// import penumImg from '../assets/images/penumbra.jpg';
-// import quotationMarkImg from '../assets/images/quotation_mark.png';
-// import dennisImg from '../assets/images/dennis.jpg';
-// import netImg from '../assets/images/net.png';
+import demoImg from '../assets/images/product_demo_video.jpg';
+import startButtonImg from '../assets/images/product_start.jpg';
+import demoRightImg from '../assets/images/demo_right.png';
+import stage1Img from '../assets/images/stage1.png';
+import stage2Img from '../assets/images/stage2.png';
+import stage3Img from '../assets/images/stage3.png';
+import stage4Img from '../assets/images/stage4.png';
+import penumImg from '../assets/images/penumbra_back.jpg';
+import quotationMarkImg from '../assets/images/quotation_mark.png';
+import dennisImg from '../assets/images/dennis.jpg';
+import netImg from '../assets/images/net.png';
 
 export default class HomePage extends React.Component {
   constructor ( props ) {
@@ -23,10 +24,10 @@ export default class HomePage extends React.Component {
   }
 
   render () {
-    // const stageContent = [ 'Your universe of data in high-definition visual clarity. From geospatial canvases to dynamic, our platform has been designed for the line of business user in mind. Discover how data visualization takes the stage on our platform.', 'Your universe of data in high-definition visual clarity. From geospatial canvases to dynamic, our platform has been designed for the line of business user in mind. Discover how data visualization takes the stage on our platform.', 'Silos, DBs, APIs, CSVs. ETLs, Feature Engineering. ML Models. Dashboards, Reports. Too many jargons. Find out how our Digital Architecture Platform streamlines messy data into a cohesive environment.', 'Transforming is not about replacing the old, but about bridging legacy systems with modern cutting edge tech. Read our White Paper on how Digital Architecture is critical in the enterprise implementation of data- driven initiatives.' ];
+    const stageContent = [ 'Your universe of data in high-definition visual clarity. From geospatial canvases to dynamic, our platform has been designed for the line of business user in mind. Discover how data visualization takes the stage on our platform.', 'Your universe of data in high-definition visual clarity. From geospatial canvases to dynamic, our platform has been designed for the line of business user in mind. Discover how data visualization takes the stage on our platform.', 'Silos, DBs, APIs, CSVs. ETLs, Feature Engineering. ML Models. Dashboards, Reports. Too many jargons. Find out how our Digital Architecture Platform streamlines messy data into a cohesive environment.', 'Transforming is not about replacing the old, but about bridging legacy systems with modern cutting edge tech. Read our White Paper on how Digital Architecture is critical in the enterprise implementation of data- driven initiatives.' ];
     return (
       <Layout>
-        <Banner bannerClass="banner-1">
+        <Banner bannerClass="banner-1" showLinkedIn showInstagram showContactUs showScrollSection>
           <div className="banner-content content-1">
             <div className="row">
               <div className="col-sm-6 left">
@@ -48,80 +49,69 @@ export default class HomePage extends React.Component {
                 <img src={ macImg } alt="" />
               </div>
             </div>
-
-            {/* <div className="inner">
-              <header className="major">
-                <p className="font-merriweather-Light">the</p>
-                <h1 className="single-line">DATAVIS</h1>
-                <p className="font-merriweather-Light pull-right">platform.</p>
-              </header>
-              <div className="content">
-                <span className="font-merriweather-Light block">Streamline any data-drive process fast.</span>
-                <span className="font-merriweather-Light block">On one single Digital Architecture Platform.</span>
-                <ul className="actions">
-                  <li><a href="#one" className="button">WATCH DEMO</a></li>
-                  <li><Link onClick={ this.props.onToggleMenu } to="/sandbox" className="button bg-white">TRY NOW</Link></li>
-                </ul>
-              </div>
-            </div>
-            <div className="inner img-inner">
-              <img src={ macImg } alt="" />
-            </div> */}
           </div>
         </Banner>
 
-        {/* <div id="main">
+        <div id="main-home" className="main-div">
           <section id="product-section">
-            <div className="inner">
-              <div className="frame" id="product">
-                <div className="float-div">
-                  <header>
-                    <h2 className="color-fg">Product <span className="color-white thin">Demo</span></h2>
-                  </header>
-                  <div className="content">
-                    <span className="font-merriweather-Light block smaller">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula nulla, condimentum vitae nibh sed, faucibus malesuada nulla. Phasellus maximus tortor ut pharetra commodo. Fusce hendrerit leo vel arcu feugiat, nec dapibus velit ornare. Phasellus nec orci in sapien porta vulputate. Maecenas commodo, ex et porta lobortis, neque ligula lobortis sem, a viverra mauris felis vitae quam. In semper vehicula</span>
-                    <ul className="actions">
-                      <li><Link onClick={ this.props.onToggleMenu } to="/sandbox" className="button bg-white">TRY NOW</Link></li>
-                    </ul>
-                  </div>
+            <div className="row">
+              <div className="col-md-6 left">
+                <header>
+                  <h1 className="color-fg">Product <span className="color-white thin">Demo</span></h1>
+                </header>
+                <div className="content">
+                  <p className="font-merriweather-Light block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula nulla, condimentum vitae nibh sed, faucibus malesuada nulla. Phasellus maximus tortor ut pharetra commodo. Fusce hendrerit leo vel arcu feugiat, nec dapibus velit ornare. Phasellus nec orci in sapien porta vulputate. Maecenas commodo, ex et porta lobortis, neque ligula lobortis sem, a viverra mauris felis vitae quam. In semper vehicula</p>
+                  <ul className="actions">
+                    <li><Link onClick={ this.props.onToggleMenu } to="/sandbox" className="button bg-white hideOnMobile">TRY NOW</Link></li>
+                  </ul>
                 </div>
               </div>
-              <div className="frame" id="demo">
-                <span className="rotateText">DEMONSTRATION</span>
+
+              <div className="col-md-6 right">
+                <span className="rotateText hideOnMobile">DEMONSTRATION</span>
                 <div className="img-div">
-                  <img className="demo-video" src={ demoImg } alt="" />
                   <span className="title thin">Product demo Video</span>
+                  <img className="demo-video" src={ demoImg } alt="" />
                   <img className="start-button-img" src={ startButtonImg } alt="" />
+                  <img className="demo_right-Img" src={ demoRightImg } alt="" />
                 </div>
               </div>
             </div>
           </section>
 
           <section id="stage">
-            <Stage onToggleMenu={ this.props.onToggleMenu } title="Solve" linkTo="/solution" stageImg={ stage1Img } content={ stageContent[ 0 ] } />
-            <Stage onToggleMenu={ this.props.onToggleMenu } title="Explore" linkTo="/sandbox" stageImg={ stage2Img } content={ stageContent[ 1 ] } />
-            <Stage onToggleMenu={ this.props.onToggleMenu } title="Unify" linkTo="/Tech" stageImg={ stage3Img } content={ stageContent[ 2 ] } />
-            <Stage onToggleMenu={ this.props.onToggleMenu } title="Bridge" linkTo="/solution" stageImg={ stage4Img } content={ stageContent[ 3 ] } />
+            <div className="row">
+              <div className="col-lg-3 col-sm-6">
+                <Stage onToggleMenu={ this.props.onToggleMenu } title="Solve" linkTo="/solution" stageImg={ stage1Img } content={ stageContent[ 0 ] } />
+              </div>
+              <div className="col-lg-3  col-sm-6">
+                <Stage onToggleMenu={ this.props.onToggleMenu } title="Explore" linkTo="/sandbox" stageImg={ stage2Img } content={ stageContent[ 1 ] } />
+              </div>
+              <div className="col-lg-3  col-sm-6">
+                <Stage onToggleMenu={ this.props.onToggleMenu } title="Unify" linkTo="/tech" stageImg={ stage3Img } content={ stageContent[ 2 ] } />
+              </div>
+              <div className="col-lg-3  col-sm-6">
+                <Stage onToggleMenu={ this.props.onToggleMenu } title="Bridge" linkTo="/solution" stageImg={ stage4Img } content={ stageContent[ 3 ] } />
+              </div>
+            </div>
           </section>
 
           <section id="architects">
-            <div className="inner">
-              <div className="left-div">
-                <div className="frame left-top">
-                  <img src={ penumImg } alt="" />
-                </div>
-
-                <div className="frame left-bottom">
-                  <div className="rect" />
-                  <div className="title">Digital <span className="thin">Architects</span></div>
-                  <div className="content font-merriweather-Light">We are <span>Digital Architects</span>, orchestrating your increasingly complex data ecosystem. We craft data pipelines, and develop business and industry intelligence tools that aid industry experts and professionals make sound business decisions.</div>
-                  <Link onClick={ this.props.onToggleMenu } to="/about" className="button color-fg">FIND OUT MORE</Link>
-                </div>
+            <div className="row">
+              <div className="col-lg-6 left">
+                <img src={ penumImg } alt="" />
               </div>
-              <div className="frame right-div">
-                <div className="top">04</div>
-                <div className="line" />
-                <div className="bottom">05</div>
+
+              <div className="col-lg-6 right">
+                <div className="rect" />
+                <h1 className="title"><b className="color-fg">Digital</b> <span className="thin">Architects</span></h1>
+                <div className="content font-merriweather-Light">We are <b className="color-fg">Digital Architects</b>, orchestrating your increasingly complex data ecosystem. We craft data pipelines, and develop business and industry intelligence tools that aid industry experts and professionals make sound business decisions.</div>
+                <Link onClick={ this.props.onToggleMenu } to="/about" className="button color-fg">FIND OUT MORE</Link>
+                <div className="float-div">
+                  <div className="top">04</div>
+                  <div className="line" />
+                  <div className="bottom">05</div>
+                </div>
               </div>
             </div>
           </section>
@@ -200,7 +190,6 @@ export default class HomePage extends React.Component {
           </section>
 
         </div>
-      */}
       </Layout>
     );
   }

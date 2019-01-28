@@ -192,30 +192,30 @@ $vendor-values: ("filter", "flex", "linear-gradient", "radial-gradient", "transf
     $lock: true;
   }
 
-  // Modifiers.
-  .container.\31 25\25 {
-    width: 100%;
-    max-width: $width * 1.25;
-    min-width: $width;
-  }
-  .container.\37 5\25 {
-    width: $width * 0.75;
-  }
-  .container.\35 0\25 {
-    width: $width * 0.5;
-  }
-  .container.\32 5\25 {
-    width: $width * 0.25;
-  }
+//   // Modifiers.
+//   .container.\31 25\25 {
+//     width: 100%;
+//     max-width: $width * 1.25;
+//     min-width: $width;
+//   }
+//   .container.\37 5\25 {
+//     width: $width * 0.75;
+//   }
+//   .container.\35 0\25 {
+//     width: $width * 0.5;
+//   }
+//   .container.\32 5\25 {
+//     width: $width * 0.25;
+//   }
 
-  // Main class.
-  .container {
-    @if $lock {
-      width: $width !important;
-    } @else {
-      width: $width;
-    }
-  }
+//   // Main class.
+//   .container {
+//     @if $lock {
+//       width: $width !important;
+//     } @else {
+//       width: $width;
+//     }
+//   }
 }
 
 /// Utility mixin for grid.
@@ -638,10 +638,10 @@ $vendor-values: ("filter", "flex", "linear-gradient", "radial-gradient", "transf
   dfn {
     font-style: italic;
   }
-  h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-  }
+  // h1 {
+  //   font-size: 2em;
+  //   margin: 0.67em 0;
+  // }
   mark {
     background: #ff0;
     color: #000;
@@ -775,7 +775,7 @@ $vendor-values: ("filter", "flex", "linear-gradient", "radial-gradient", "transf
   .hideOnScreen {
     display: none !important;
     @media (orientation: portrait) {
-      display: initial !important;
+      display: inherit !important;
     }
   }
   // @if $mode == "normalize" {

@@ -34,8 +34,8 @@
     $x: 0.1rem;
   }
 
-  padding: ($tb + nth($pad, 1)) ($lr + nth($pad, 2))
-    max($x, $tb - _size(element-margin) + nth($pad, 3)) ($lr + nth($pad, 4)) #{$important};
+  padding: ($tb + nth($pad, 1)) ($lr + nth($pad, 2)) max($x, $tb - _size(element-margin) + nth($pad, 3))
+    ($lr + nth($pad, 4)) #{$important};
 }
 
 /// Encodes a SVG data URL so IE doesn't choke (via codepen.io/jakob-e/pen/YXXBrp).
@@ -377,5 +377,21 @@
   }
   @include breakpoint(xxsmall) {
     #{$property}: $max * 0.55;
+  }
+}
+
+@mixin wrapper-style($width, $height) {
+  .overflow-container {
+    display: block;
+    width: $width;
+    max-height: $height;
+    overflow: hidden;
+    .overflow-wrapper {
+      column-width: $width;
+      max-height: $height;
+      p {
+        max-height: calc(#{$height} - 1em);
+      }
+    }
   }
 }

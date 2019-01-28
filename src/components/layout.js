@@ -50,7 +50,7 @@ class Layout extends React.Component {
   }
 
   render () {
-    const { children } = this.props;
+    const { children, hideFooter } = this.props;
     return (
       <div className={ `body ${ this.state.loading } ${ this.state.isMenuVisible ? 'is-menu-visible' : '' }` }>
         <Helmet
@@ -63,8 +63,7 @@ class Layout extends React.Component {
         <div id="wrapper">
           <Header onToggleMenu={ this.handleToggleMenu } />
           {children}
-          {/* <Contact /> */}
-          <Footer />
+          {!hideFooter && <Footer />}
         </div>
         <Menu onToggleMenu={ this.handleToggleMenu } getRef={ this.setWrapperRef } isSandboxMenushow={ false } />
       </div>

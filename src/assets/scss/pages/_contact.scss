@@ -1,0 +1,33 @@
+#main-contact {
+  #info-section {
+    margin-bottom: 3em;
+    img.backImage {
+      width: 100%;
+      height: auto;
+    }
+    .contact-bottom {
+      width: 100%;
+      height: 25%;
+      background-color: transparentize(_palette(bg), 0.1);
+      font-size: 14px;
+      padding-top: 1em;
+      img {
+        width: 40px;
+        height: auto;
+      }
+
+      .frame {
+        display: flex;
+        margin-bottom: 2em;
+        h6,
+        p {
+          margin-bottom: 0;
+        }
+        .left-div {
+          padding-left: 7%;
+          padding-right: 5%;
+        }
+      }
+    }
+  }
+}

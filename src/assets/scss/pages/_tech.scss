@@ -1,494 +1,133 @@
-#product-section {
-  padding-top: 4em;
-  padding-bottom: 4em;
-  .inner {
-    position: relative;
-    text-align: left;
-    width: 80%;
-
-    .frame {
-      // border: solid 1px white;
-      &#product {
-        @include vendor(
-          "background-image",
-          'url("../images/product_back.png")'
-        );
-
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        position: absolute;
-        width: 40%;
-        padding-top: 40%;
-        .float-div {
-          padding-left: 15%;
-          .content {
-            span {
-              font-size: 0.6em;
-              line-height: 2.3em;
-              height: 9em;
-              overflow: hidden;
-              margin-bottom: 7em;
-            }
-          }
-        }
-      }
-
-      &#demo {
-        position: relative;
-        left: 35%;
-        width: 65%;
-        background-size: 8% 60%;
-        background-position: right bottom;
-        background-repeat: no-repeat;
-        @include vendor("background-image", 'url("../images/demo_right.png")');
-
-        .rotateText {
-          display: block;
-          width: 100%;
-          @include relative-property("font-size", 0.8em);
-          padding: 10% 0 0 10%;
-        }
-
-        .img-div {
-          position: relative;
-          width: 90%;
-          height: auto;
-          .demo-video {
-            width: 100%;
-          }
-          .title {
-            position: absolute;
-            width: 100%;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            @include relative-property("font-size", 3em);
-            text-align: center;
-          }
-          .start-button-img {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 24%;
-            height: auto;
-          }
-        }
-      }
+#main-tech {
+  .row {
+    & > div {
+      padding: 0;
     }
   }
-
-  @media (orientation: portrait) {
-    .inner {
-      width: 100%;
-      text-align: center;
-      .frame {
-        &#product {
-          position: relative;
-          width: 60%;
-          padding-top: 60%;
-          .float-div {
-            .content {
-              span {
-                font-size: 0.6em;
-                line-height: 2.3em;
-                height: 9em;
-                overflow: hidden;
-                margin-bottom: 7em;
-              }
-            }
-          }
-        }
-        &#demo {
-          left: 5%;
-          width: 80%;
-          .rotateText {
-            writing-mode: initial;
-            transform: initial;
-            text-align: right;
-            padding-right: 10%;
-            margin-bottom: 2em;
-          }
-        }
-      }
-    }
+  .main-img {
+    width: 100%;
+    height: auto;
   }
-}
-#architects {
-  padding: 5em 0;
-  text-align: center;
-  .inner {
-    display: flex;
-    width: 70%;
-    margin: 0 auto;
-    .left-div {
-      display: flex;
-      width: 92%;
-      .left-top {
-        position: relative;
-        width: 49%;
+  .description {
+    font-size: 28px;
+    .center-middle-div {
+      text-align: left;
+      padding-left: 15%;
+      padding-right: 10%;
+      header {
+        padding-bottom: 1em;
         img {
-          width: 100%;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          margin: auto;
-          border-radius: 0.2em 0 0 0.2em;
-        }
-      }
-      .left-bottom {
-        position: relative;
-        width: 51%;
-        padding: 4em 8.7% 4em 5.5%;
-        background-color: transparentize(_palette(white), 0.97);
-        .rect {
-          position: absolute;
-          width: 11px;
-          height: 11px;
-          top: 30px;
-          right: 30px;
-          border: solid 1px transparentize(_palette(white), 0.8);
+          width: 20%;
         }
         .title {
-          @include relative-property("font-size", 2em);
-          font-weight: bold;
-          color: _palette(fg);
-          span {
-            color: _palette(white);
-          }
+          display: inline-block;
+          vertical-align: bottom;
+          font-size: 2.5em;
+          line-height: 1em;
         }
-        .content {
-          margin-top: 2em;
-          @include relative-property("font-size", 0.65em);
-          line-height: 2.5em;
-        }
-      }
-    }
-
-    .right-div {
-      width: 8%;
-      position: relative;
-      text-align: right;
-      @include relative-property("font-size", 0.8em);
-      & > div {
-        position: absolute;
-      }
-      .top,
-      .bottom {
-        width: 100%;
-        height: 2.5em;
-        background-color: _palette(bg);
-        // background-color: blue;
-        z-index: 2;
-      }
-      .bottom {
-        bottom: 0;
-        vertical-align: bottom;
-        padding-top: 1em;
-      }
-      .line {
-        width: 1px;
-        height: 100%;
-        border-right: solid 1px _palette(fg);
-        right: 0.5em;
-      }
-    }
-  }
-  @media (orientation: portrait) {
-    .inner {
-      width: 80%;
-      .left-div {
-        flex-direction: column;
-        .left-top,
-        .left-bottom {
-          width: 100%;
-          margin: 0px auto;
-          font-size: 1.8em;
-          .content {
-            font-size: 0.5em;
-          }
-        }
-        .left-top {
-          img {
-            position: relative;
-          }
-        }
-      }
-    }
-  }
-}
-
-#rewardTeller {
-  display: flex;
-  .left {
-    position: relative;
-    display: inline-block;
-    width: 50%;
-    .frame {
-      width: 63%;
-      @include relative-property("height", 11em);
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      span {
-        position: absolute;
-        &.top {
-          display: block;
-          @include relative-property("top", 2em);
-          img {
-            @include relative-property("width", 1.7em);
-            height: auto;
-          }
-        }
-        &.center {
-          width: 80%;
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-          @include relative-property("font-size", 1.8em);
-          @include relative-property("height", 3em);
-        }
-        &.bottom {
-          bottom: 0;
-          right: 0;
-          @include relative-property("font-size", 0.9em);
-        }
-      }
-    }
-  }
-  .backImg {
-    width: 50%;
-  }
-  @media (orientation: portrait) {
-    flex-direction: column;
-    .left,
-    .backImg {
-      width: 80%;
-      margin: 0 auto 3em;
-    }
-    .left {
-      .frame {
-        position: relative;
-        width: 80%;
-      }
-    }
-  }
-}
-
-#details {
-  padding-top: 5em;
-  text-align: center;
-  .inner {
-    display: flex;
-    width: 890px;
-    margin: 0 auto;
-    .center-div {
-      width: 100%;
-      margin: 160px 0 80px;
-      text-align: center;
-      z-index: 1;
-      h2 {
-        width: 100%;
-        font-size: 50px;
-        line-height: 1;
-        span {
-          color: _palette(fg);
-        }
-      }
-      .hr-div {
-        width: 210px;
-        border-top: solid 2px _palette(fg);
-        display: inline-block;
       }
       .content {
-        font-size: 17px;
-        line-height: 2.2em;
-      }
-    }
-    .line-div {
-      width: 20px;
-      position: relative;
-      text-align: center;
-      left: calc(-50% + 10px);
-      opacity: 0.3;
-      font-size: 17px;
-      & > div {
-        position: absolute;
-      }
-      .top,
-      .bottom {
-        width: 100%;
-        height: 2.5em;
-        background-color: _palette(bg);
-        z-index: 2;
-      }
-      .bottom {
-        bottom: 0;
-        vertical-align: bottom;
-        padding-top: 1em;
-      }
-      .line {
-        width: 1px;
-        height: 100%;
-        border-left: solid 1px _palette(fg);
-        left: 10px;
-      }
-    }
-    &.bottom {
-      display: inline-block;
-      margin-bottom: 265px;
-      .item {
-        display: inline-block;
-        width: 210px;
-        height: 150px;
-        margin: 0 10px;
-        img {
-          width: 80px;
-          height: auto;
-        }
-        .title {
-          font-size: 20px;
-          color: _palette(fg);
-        }
-        .content {
-          display: inline-block;
-          width: 100%;
-          height: 50px;
-          font-size: 14px;
-          overflow: hidden;
+        .bottom {
+          font-family: "LatoWebLight";
+          line-height: 1.2em;
+          margin-bottom: 0;
         }
       }
     }
   }
-
-  @include breakpoint(medium) {
-    .inner {
-      width: 90%;
-      .center-div {
-        margin: 80px 0 80px;
-        h2 {
-          font-size: 30px;
+  @include breakpoint(xxlarge) {
+    .description {
+      font-size: 24px;
+      .center-middle-div {
+        header {
+          .title {
+            font-size: 2.2em;
+          }
         }
-        .content {
-          font-size: 14px;
-          line-height: 2;
-        }
-      }
-      &.bottom {
-        margin-bottom: 100px;
       }
     }
   }
-}
-
-#submit {
-  width: 100%;
-  height: 644px;
-  @include vendor("background-image", 'url("../images/submit_banner.jpg")');
-  background-size: auto 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding-top: 69px;
-  padding-left: calc(41% - 492px);
-  text-align: left;
-  .float {
-    width: 1200px;
-    height: 500px;
-    padding-left: 74px;
-    padding-top: 57px;
-    background-color: _palette(bg);
-    position: relative;
-    .title {
-      width: 60%;
-      font-size: 50px;
-      line-height: 1.2em;
-    }
-    .line {
-      width: 30%;
-      border-top: solid 2px _palette(fg);
-      margin: 43px 0;
-    }
-    form {
-      width: 50%;
-    }
-    .netImg {
-      position: absolute;
-      top: 133px;
-      width: 33.3%;
-      left: 62%;
-    }
-    .button {
-      width: 75%;
-      font-size: 18px;
-      height: 2.5em;
-      line-height: 2.5em;
+  @include breakpoint(xlarge) {
+    .description {
+      font-size: 22px;
+      .center-middle-div {
+        header {
+          .title {
+            font-size: 2.1em;
+          }
+        }
+      }
     }
   }
-
   @include breakpoint(large) {
-    padding-left: calc(41% - 287px);
-    .float {
-      width: 700px;
-      padding-left: 44px;
-      .title {
-        width: 70%;
-        font-size: 30px;
-      }
-      .netImg {
-        top: 133px;
-        width: 44%;
-        left: 55%;
-      }
-    }
-  }
-  @include breakpoint(small) {
-    @media (orientation: portrait) {
-      padding-left: 0;
-      padding-top: 10vh;
-      height: 100vh;
-      .float {
-        & > div {
-          display: inline-block;
-        }
-        width: 80%;
-        height: 80vh;
-        padding: 5vh 10px;
-        margin: 0 auto;
-        text-align: center;
-        .title {
-          display: inline-block;
-          width: 80%;
-          font-size: 20px;
-        }
-        .line {
-          width: 40%;
-          margin-top: 2vh;
-          margin-bottom: 30vh;
-        }
-        form {
-          display: inline-block;
-          width: 80%;
-        }
-        .button {
-          font-size: 14px;
-        }
-        .netImg {
-          width: 70%;
-          top: 16vh;
-          left: 15%;
+    .description {
+      font-size: 20px;
+      .center-middle-div {
+        header {
+          .title {
+            font-size: 1.8em;
+          }
         }
       }
     }
   }
-}
-#last {
-  width: 100%;
-  height: 200px;
-  background-color: cadetblue;
+  @include breakpoint(medium) {
+    .description {
+      font-size: 18px;
+      .center-middle-div {
+        header {
+          .title {
+            font-size: 1.6em;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(medium) {
+    .description {
+      font-size: 18px;
+      .center-middle-div {
+        header {
+          .title {
+            font-size: 1.6em;
+          }
+        }
+      }
+    }
+  }
+  @media (orientation: portrait) {
+    margin-top: 1em;
+    .col-4 {
+      height: 30vh;
+      overflow: hidden;
+    }
+    .main-img {
+      height: 30vh;
+      width: auto;
+    }
+    .description {
+      font-size: 13px;
+      .center-middle-div {
+        padding-left: 7%;
+        padding-right: 7%;
+        header {
+          padding-bottom: 0.5em;
+          img {
+            width: 15%;
+          }
+          .title {
+            font-size: 2em;
+            line-height: 1em;
+          }
+        }
+        .content {
+          .bottom {
+            font-family: "LatoWebLight";
+            line-height: 1.2em;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
 }

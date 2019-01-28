@@ -2,77 +2,38 @@
   text-align: center;
   padding: 2em 0;
   background-color: transparentize(_palette(white), 0.97);
+  .row {
+    margin: 0 15px;
+  }
   .frame {
-    position: relative;
-    display: inline-block;
-    width: 19%;
-    margin: 0 2.3%;
-    // border: solid 1px white;
+    padding: 50px 10%;
     .stage-line {
       position: absolute;
-      width: 61%;
+      width: 50%;
       height: auto;
-      left: -46%;
+      left: -25%;
     }
     .header {
       .stage-link {
-        display: inline-block;
-        width: 45%;
+        display: block;
         .stageImg {
-          width: 100%;
+          width: 40%;
           height: auto;
-          vertical-align: middle;
         }
       }
       .stageTitle {
         color: _palette(fg);
-        @include relative-property("font-size", 1.4em);
+        font-size: 1.6em;
       }
     }
     .content {
       .stage-content {
-        @include relative-property("font-size", 0.7em);
-        height: 11.55em;
+        max-height: 11.55em;
         overflow-y: hidden;
       }
-    }
-  }
-  @media (orientation: portrait) {
-    padding: 0;
-    overflow: hidden;
-    .frame {
-      width: 80%;
-      margin: 0 auto;
-      .stage-line {
-        width: 15%;
-        left: 13%;
-        top: -7%;
-        transform: rotate(90deg);
-      }
-      .header,
-      .content {
-        display: table-cell;
-        vertical-align: middle;
-        height: 25vh;
-      }
-      .header {
-        width: 40%;
-        .stage-link {
-          width: 60%;
-        }
-        .stageTitle {
-          font-size: 1em;
-        }
-      }
-      .content {
-        width: 60%;
-        .stage-content {
-          font-size: 0.7em;
-        }
-        .button {
-          font-size: 0.7em;
-          margin: 0;
-        }
+      .button {
+        font-size: 1em;
+        padding: 0 1.5em;
       }
     }
   }

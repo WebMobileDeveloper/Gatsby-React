@@ -38,14 +38,47 @@ body {
     }
   }
 }
+@media (min-width: 1480px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 1720px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+@media (min-width: 1900px) {
+  .container {
+    max-width: 1690px;
+  }
+}
+// html,
+// body {
+//   @include relative-property("font-size", 18px);
+// }
 
-// @media (min-width: 1440px) {
-//   .container {
-//     max-width: 1340px;
-//   }
-// }
-// @media (min-width: 1680px) {
-//   .container {
-//     max-width: 1620px;
-//   }
-// }
+// (
+//   //.col-xl-
+//   xxxlarge: "(max-width: 1920px)",  // 1920 px	1080 px	20%
+//   xxlarge: "(max-width: 1680px)",   // 1680 px	1050 px	3%
+//   xlarge: "(max-width: 1440px)",    // 1440 px	900 px	6%    
+//   large: "(max-width: 1200px)",     // 1280 px	800 px	11%  
+//   // .col-lg-
+//   medium: "(max-width: 960px)",    // 960px  600px 
+//   // .col-md-	
+//   small: "(max-width: 768px)",   
+//   // .col-sm-           
+//   xsmall: "(max-width: 540px)",     
+//   //   .col-
+//   xxsmall: "(max-width: 360px)"
+// )
+@media all and (max-width:2700px) {html {font-size:21px;}}
+@media all and (max-width:1920px) {html {font-size:19px;}}
+@media all and (max-width:1680px) {html {font-size:17px;}}
+@media all and (max-width:1440px) {html {font-size:15px;}}
+@media all and (max-width:1200px) {html {font-size:14px;}}
+@media all and (max-width: 960px) {html {font-size:13px;}}
+@media all and (max-width: 768px) {html {font-size:12px;}}
+@media all and (max-width: 540px) {html {font-size:11px;}}
+@media all and (max-width: 360px) {html {font-size:10px;}}

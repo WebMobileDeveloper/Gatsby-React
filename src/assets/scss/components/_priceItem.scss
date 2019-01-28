@@ -1,0 +1,48 @@
+.priceItem {
+  $item-indexs: ("1", "2", "3", "4", "5", "6");
+  @each $itemIndex in $item-indexs {
+    &.item-#{$itemIndex} {
+      .circle {
+        border: solid 8px _palette(price#{$itemIndex});
+      }
+      a.more {
+        color: _palette(price#{$itemIndex});
+      }
+    }
+  }
+  // width: 60%;
+  width: 300px;
+  margin: 0 auto 1em;
+  padding: 1em 0;
+  background-color: transparentize(#404041, 0.2);
+  border-radius: 4px;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), 0 4px 6px rgba(0, 0, 0, 0.45);
+  text-align: center;
+  .circle {
+    display: inline-block;
+    width: 7em;
+    height: 7em;
+    border-radius: 50%;
+  }
+  .title {
+    margin-bottom: 1em;
+  }
+  p {
+    display: block;
+    font-size: 14px;
+    font-family: "Merriweather-Light";
+    margin: 1em auto;
+    line-height: 1.2em;
+    &.detail {
+      width: 70%;
+      height: 2em;
+    }
+    &.host {
+      width: 80%;
+      height: 4em;
+    }
+  }
+  a.more {
+    font-size: 14px;
+  }
+}

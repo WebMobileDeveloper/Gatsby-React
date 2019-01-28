@@ -1,147 +1,182 @@
-#product-section {
-  padding-top: 4em;
-  padding-bottom: 4em;
-  .inner {
-    position: relative;
-    text-align: left;
-    width: 80%;
+#main-home {
+  #product-section {
+    margin: 0 15px;
+    padding-top: 14%;
+    padding-bottom: 14%;
 
-    .frame {
-      // border: solid 1px white;
-      &#product {
-        @include vendor(
-          "background-image",
-          'url("../images/product_back.png")'
-        );
+    .left {
+      padding-left: 16%;
+      padding-right: 12%;
+      padding-top: 20px;
+      @include vendor("background-image", 'url("../images/product_back.png")');
+      background-repeat: no-repeat;
+      background-size: 50% 50%;
+      background-position: 40% 20px;
 
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        position: absolute;
-        width: 40%;
-        padding-top: 40%;
-        .float-div {
-          padding-left: 15%;
-          .content {
-            span {
-              font-size: 0.6em;
-              line-height: 2.3em;
-              height: 9em;
-              overflow: hidden;
-              margin-bottom: 7em;
-            }
-          }
+      header {
+        h1 {
+          font-size: 2.8em;
+          font-weight: 900;
+          margin-top: 0.2em;
+          margin-bottom: 0.6em;
         }
       }
+      .content {
+        p {
+          font-size: 1.1em;
+          display: inline-block;
+          height: 6em;
+          overflow: hidden;
+          margin-bottom: 6em;
+        }
+        .button {
+          font-size: 1em;
+          width: 10em;
+        }
+      }
+    }
 
-      &#demo {
+    .right {
+      position: relative;
+      left: -18%;
+      .rotateText {
+        display: block;
+        width: 100%;
+        font-size: 1.1em;
+        padding-top: 20%;
+      }
+      .img-div {
         position: relative;
-        left: 35%;
-        width: 65%;
-        background-size: 8% 60%;
-        background-position: right bottom;
-        background-repeat: no-repeat;
-        @include vendor("background-image", 'url("../images/demo_right.png")');
-
-        .rotateText {
-          display: block;
+        width: 100%;
+        height: auto;
+        .demo-video {
           width: 100%;
-          @include relative-property("font-size", 0.8em);
-          padding: 10% 0 0 10%;
         }
-
-        .img-div {
-          position: relative;
-          width: 90%;
+        .title {
+          position: absolute;
+          width: 100%;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          @include relative-property("font-size", 3.4em);
+          font-weight: bold;
+          text-align: center;
+        }
+        .start-button-img {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 22%;
           height: auto;
-          .demo-video {
-            width: 100%;
-          }
-          .title {
-            position: absolute;
-            width: 100%;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            @include relative-property("font-size", 3em);
-            text-align: center;
-          }
-          .start-button-img {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 24%;
-            height: auto;
+        }
+        .demo_right-Img {
+          position: absolute;
+          width: 8%;
+          height: 100%;
+          left: 100;
+          bottom: 0;
+        }
+      }
+    }
+
+    @include breakpoint(xlarge) {
+      .left {
+        padding-left: 12%;
+        padding-right: 10%;
+        padding-top: 10px;
+        background-position: 30% 20px;
+        header {
+          h1 {
+            font-size: 2.6em;
           }
         }
+        .content {
+          p {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+
+    @include breakpoint(medium) {
+      .left {
+        padding-right: 0%;
+        header {
+          h1 {
+            font-size: 2.6em;
+          }
+        }
+        .content {
+          p {
+            font-size: 1em;
+          }
+          .button {
+            font-size: 0.9em;
+            width: 10em;
+          }
+        }
+      }
+    }
+
+    @include breakpoint(small) {
+      .left {
+        padding-left: 16%;
+        padding-right: 12%;
+        background-size: 50% 100%;
+        background-position: 15% 0px;
+      }
+      .right {
+        position: relative;
+        left: 0;
+        top: -6em;
+        padding-left: 16%;
+        padding-right: 10%;
+      }
+    }
+
+    @media (orientation: portrait) {
+      .left {
+        padding-left: 16%;
+        padding-right: 12%;
+        background-size: 50% 100%;
+        background-position: 15% 0px;
+      }
+      .right {
+        position: relative;
+        left: 0;
+        top: -6em;
+        padding-left: 16%;
+        padding-right: 10%;
       }
     }
   }
 
-  @media (orientation: portrait) {
-    .inner {
-      width: 100%;
-      text-align: center;
-      .frame {
-        &#product {
-          position: relative;
-          width: 60%;
-          padding-top: 60%;
-          .float-div {
-            .content {
-              span {
-                font-size: 0.6em;
-                line-height: 2.3em;
-                height: 9em;
-                overflow: hidden;
-                margin-bottom: 7em;
-              }
-            }
-          }
-        }
-        &#demo {
-          left: 5%;
-          width: 80%;
-          .rotateText {
-            writing-mode: initial;
-            transform: initial;
-            text-align: right;
-            padding-right: 10%;
-            margin-bottom: 2em;
-          }
-        }
-      }
-    }
-  }
-}
-#architects {
-  padding: 5em 0;
-  text-align: center;
-  .inner {
-    display: flex;
-    width: 70%;
-    margin: 0 auto;
-    .left-div {
-      display: flex;
-      width: 92%;
-      .left-top {
-        position: relative;
-        width: 49%;
+  #architects {
+    padding: 5em 0 10em;
+    text-align: center;
+
+    .row {
+      width: 70%;
+      margin: 0 auto;
+      .left {
+        padding: 5% 0;
         img {
           width: 100%;
-          position: absolute;
-          top: 0;
-          bottom: 0;
+          position: relative;
           left: 0;
           right: 0;
+          top: 0;
+          bottom: 0;
           margin: auto;
           border-radius: 0.2em 0 0 0.2em;
         }
       }
-      .left-bottom {
-        position: relative;
-        width: 51%;
-        padding: 4em 8.7% 4em 5.5%;
+
+      .right {
         background-color: transparentize(_palette(white), 0.97);
+        text-align: left;
+        padding: 10% 10% 10% 5%;
+        font-size: 1.1em;
         .rect {
           position: absolute;
           width: 11px;
@@ -151,344 +186,467 @@
           border: solid 1px transparentize(_palette(white), 0.8);
         }
         .title {
-          @include relative-property("font-size", 2em);
           font-weight: bold;
-          color: _palette(fg);
-          span {
-            color: _palette(white);
-          }
         }
         .content {
           margin-top: 2em;
-          @include relative-property("font-size", 0.65em);
           line-height: 2.5em;
         }
+        .button {
+          padding: 0 3em;
+        }
+        .float-div {
+          width: 8%;
+          left: 100%;
+          text-align: right;
+          & > div {
+            position: absolute;
+          }
+          .top,
+          .bottom {
+            width: 100%;
+            height: 2.5em;
+            background-color: _palette(bg);
+            z-index: 2;
+          }
+          .bottom {
+            bottom: 0;
+            vertical-align: bottom;
+            padding-top: 1em;
+          }
+          .line {
+            width: 1px;
+            height: 100%;
+            border-right: solid 1px _palette(fg);
+            right: 0.5em;
+          }
+        }
       }
     }
 
-    .right-div {
-      width: 8%;
-      position: relative;
-      text-align: right;
-      @include relative-property("font-size", 0.8em);
-      & > div {
-        position: absolute;
-      }
-      .top,
-      .bottom {
-        width: 100%;
-        height: 2.5em;
-        background-color: _palette(bg);
-        // background-color: blue;
-        z-index: 2;
-      }
-      .bottom {
-        bottom: 0;
-        vertical-align: bottom;
-        padding-top: 1em;
-      }
-      .line {
-        width: 1px;
-        height: 100%;
-        border-right: solid 1px _palette(fg);
-        right: 0.5em;
-      }
-    }
-  }
-  @media (orientation: portrait) {
-    .inner {
-      width: 80%;
-      .left-div {
-        flex-direction: column;
-        .left-top,
-        .left-bottom {
-          width: 100%;
-          margin: 0px auto;
-          font-size: 1.8em;
+    @include breakpoint(xlarge) {
+      .row {
+        width: 75%;
+        .left {
+          padding: 4% 0;
+        }
+
+        .right {
+          padding: 8% 8% 8% 5%;
+          font-size: 1em;
           .content {
-            font-size: 0.5em;
-          }
-        }
-        .left-top {
-          img {
-            position: relative;
+            line-height: 2em;
           }
         }
       }
     }
-  }
-}
+    @include breakpoint(large) {
+      .row {
+        .left {
+          img {
+            width: 80%;
+          }
+        }
+      }
+    }
 
-#rewardTeller {
-  display: flex;
-  .left {
-    position: relative;
-    display: inline-block;
-    width: 50%;
-    .frame {
-      width: 63%;
-      @include relative-property("height", 11em);
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      span {
-        position: absolute;
-        &.top {
-          display: block;
-          @include relative-property("top", 2em);
-          img {
-            @include relative-property("width", 1.7em);
-            height: auto;
-          }
-        }
-        &.center {
-          width: 80%;
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-          @include relative-property("font-size", 1.8em);
-          @include relative-property("height", 3em);
-        }
-        &.bottom {
-          bottom: 0;
-          right: 0;
-          @include relative-property("font-size", 0.9em);
-        }
-      }
-    }
-  }
-  .backImg {
-    width: 50%;
-  }
-  @media (orientation: portrait) {
-    flex-direction: column;
-    .left,
-    .backImg {
-      width: 80%;
-      margin: 0 auto 3em;
-    }
-    .left {
-      .frame {
-        position: relative;
+    @media (orientation: portrait) {
+      .row {
         width: 80%;
+        .left {
+          img {
+            width: 100%;
+          }
+        }
+        .right {
+          margin-left: -5%;
+        }
       }
     }
   }
-}
 
-#details {
-  padding-top: 5em;
-  text-align: center;
-  .inner {
+  #rewardTeller {
     display: flex;
-    width: 890px;
-    margin: 0 auto;
-    .center-div {
-      width: 100%;
-      margin: 160px 0 80px;
-      text-align: center;
-      z-index: 1;
-      h2 {
-        width: 100%;
-        font-size: 50px;
-        line-height: 1;
-        span {
-          color: _palette(fg);
-        }
-      }
-      .hr-div {
-        width: 210px;
-        border-top: solid 2px _palette(fg);
-        display: inline-block;
-      }
-      .content {
-        font-size: 17px;
-        line-height: 2.2em;
-      }
-    }
-    .line-div {
-      width: 20px;
+    .left {
       position: relative;
-      text-align: center;
-      left: calc(-50% + 10px);
-      opacity: 0.3;
-      font-size: 17px;
-      & > div {
+      display: inline-block;
+      width: 50%;
+      .frame {
+        width: 63%;
+        @include relative-property("height", 11em);
         position: absolute;
-      }
-      .top,
-      .bottom {
-        width: 100%;
-        height: 2.5em;
-        background-color: _palette(bg);
-        z-index: 2;
-      }
-      .bottom {
+        left: 0;
+        right: 0;
+        top: 0;
         bottom: 0;
-        vertical-align: bottom;
-        padding-top: 1em;
-      }
-      .line {
-        width: 1px;
-        height: 100%;
-        border-left: solid 1px _palette(fg);
-        left: 10px;
+        margin: auto;
+        span {
+          position: absolute;
+          &.top {
+            display: block;
+            @include relative-property("top", 2em);
+            img {
+              @include relative-property("width", 1.7em);
+              height: auto;
+            }
+          }
+          &.center {
+            width: 80%;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            font-size: 2.5em;
+            height: 3.3em;
+          }
+          &.bottom {
+            bottom: 0;
+            right: 0;
+            font-size: 1.2em;
+          }
+        }
       }
     }
-    &.bottom {
-      display: inline-block;
-      margin-bottom: 265px;
-      .item {
-        display: inline-block;
-        width: 210px;
-        height: 150px;
-        margin: 0 10px;
-        img {
-          width: 80px;
-          height: auto;
+    .backImg {
+      width: 50%;
+    }
+    @include breakpoint(xxlarge) {
+      .left {
+        .frame {
+          span {
+            &.top {
+              top: 1.5em;
+              img {
+                width: 1.5em;
+              }
+            }
+            &.center {
+              font-size: 2.3em;
+              height: 3.2em;
+            }
+            &.bottom {
+              font-size: 1.1em;
+            }
+          }
         }
-        .title {
-          font-size: 20px;
-          color: _palette(fg);
+      }
+    }
+    @include breakpoint(xlarge) {
+      .left {
+        .frame {
+          span {
+            &.top {
+              top: 1.3em;
+              img {
+                width: 1.3em;
+              }
+            }
+            &.center {
+              font-size: 2.1em;
+              height: 3em;
+            }
+            &.bottom {
+              font-size: 1em;
+            }
+          }
         }
-        .content {
-          display: inline-block;
-          width: 100%;
-          height: 50px;
-          font-size: 14px;
-          overflow: hidden;
+      }
+    }
+    @include breakpoint(large) {
+      .left {
+        .frame {
+          span {
+            &.top {
+              top: 1.1em;
+              img {
+                width: 1em;
+              }
+            }
+            &.center {
+              font-size: 1.7em;
+              height: 3em;
+            }
+            &.bottom {
+              font-size: 0.8em;
+            }
+          }
+        }
+      }
+    }
+    @include breakpoint(medium) {
+      .left {
+        .frame {
+          width: 70%;
+          span {
+            &.top {
+              top: 1.1em;
+              img {
+                width: 1em;
+              }
+            }
+            &.center {
+              width: 90%;
+              font-size: 1.4em;
+              height: 3em;
+            }
+            &.bottom {
+              font-size: 0.6em;
+            }
+          }
+        }
+      }
+    }
+    @media (orientation: portrait) {
+      flex-direction: column;
+      .left,
+      .backImg {
+        width: 80%;
+        margin: 0 auto 3em;
+      }
+      .left {
+        .frame {
+          position: relative;
+          width: 80%;
         }
       }
     }
   }
 
-  @include breakpoint(medium) {
+  #details {
+    padding-top: 5em;
+    text-align: center;
     .inner {
-      width: 90%;
+      display: flex;
+      width: 890px;
+      margin: 0 auto;
       .center-div {
-        margin: 80px 0 80px;
+        width: 100%;
+        margin: 160px 0 80px;
+        text-align: center;
+        z-index: 1;
         h2 {
-          font-size: 30px;
+          width: 100%;
+          font-size: 50px;
+          line-height: 1;
+          span {
+            color: _palette(fg);
+          }
+        }
+        .hr-div {
+          width: 210px;
+          border-top: solid 2px _palette(fg);
+          display: inline-block;
         }
         .content {
-          font-size: 14px;
-          line-height: 2;
+          font-size: 17px;
+          line-height: 2.2em;
+        }
+      }
+      .line-div {
+        width: 20px;
+        position: relative;
+        text-align: center;
+        left: calc(-50% + 10px);
+        opacity: 0.3;
+        font-size: 17px;
+        & > div {
+          position: absolute;
+        }
+        .top,
+        .bottom {
+          width: 100%;
+          height: 2.5em;
+          background-color: _palette(bg);
+          z-index: 2;
+        }
+        .bottom {
+          bottom: 0;
+          vertical-align: bottom;
+          padding-top: 1em;
+        }
+        .line {
+          width: 1px;
+          height: 100%;
+          border-left: solid 1px _palette(fg);
+          left: 10px;
         }
       }
       &.bottom {
-        margin-bottom: 100px;
+        display: inline-block;
+        margin-bottom: 265px;
+        .item {
+          display: inline-block;
+          width: 210px;
+          height: 15em;
+          margin: 0 10px;
+          img {
+            width: 80px;
+            height: auto;
+          }
+          .title {
+            font-size: 20px;
+            color: _palette(fg);
+          }
+          .content {
+            display: inline-block;
+            width: 100%;
+            height: 6em;
+            font-size: 14px;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+
+    @include breakpoint(medium) {
+      .inner {
+        width: 90%;
+        .center-div {
+          margin: 80px 0 80px;
+          h2 {
+            font-size: 30px;
+          }
+          .content {
+            font-size: 14px;
+            line-height: 2;
+          }
+        }
+        &.bottom {
+          margin-bottom: 100px;
+        }
       }
     }
   }
-}
 
-#submit {
-  width: 100%;
-  height: 644px;
-  @include vendor("background-image", 'url("../images/submit_banner.jpg")');
-  background-size: auto 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding-top: 69px;
-  padding-left: calc(41% - 492px);
-  text-align: left;
-  .float {
-    width: 1200px;
-    height: 500px;
-    padding-left: 74px;
-    padding-top: 57px;
-    background-color: _palette(bg);
-    position: relative;
-    .title {
-      width: 60%;
-      font-size: 50px;
-      line-height: 1.2em;
-    }
-    .line {
-      width: 30%;
-      border-top: solid 2px _palette(fg);
-      margin: 43px 0;
-    }
-    form {
-      width: 50%;
-    }
-    .netImg {
-      position: absolute;
-      top: 133px;
-      width: 33.3%;
-      left: 62%;
-    }
-    .button {
-      width: 75%;
-      font-size: 18px;
-      height: 2.5em;
-      line-height: 2.5em;
-    }
-  }
+  #submit {
+    width: 100%;
+    height: 644px;
+    @include vendor("background-image", 'url("../images/submit_banner.jpg")');
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 
-  @include breakpoint(large) {
-    padding-left: calc(41% - 287px);
+    padding-top: 69px;
+    padding-left: calc(41% - 492px);
+    text-align: left;
     .float {
-      width: 700px;
-      padding-left: 44px;
+      width: 1200px;
+      height: 500px;
+      padding-left: 74px;
+      padding-top: 57px;
+      background-color: _palette(bg);
+      position: relative;
       .title {
-        width: 70%;
-        font-size: 30px;
+        width: 60%;
+        font-size: 50px;
+        line-height: 1.2em;
+      }
+      .line {
+        width: 30%;
+        border-top: solid 2px _palette(fg);
+        margin: 43px 0;
+      }
+      form {
+        width: 50%;
+        margin-bottom: 1em !important;
+        input {
+          height: 2.5em;
+          line-height: 2.5em;
+        }
       }
       .netImg {
+        position: absolute;
         top: 133px;
-        width: 44%;
-        left: 55%;
+        width: 33.3%;
+        left: 62%;
+      }
+      .button {
+        width: 75%;
+        font-size: 18px;
+        height: 2.5em;
+        line-height: 2.5em;
       }
     }
-  }
-  @include breakpoint(small) {
-    @media (orientation: portrait) {
-      padding-left: 0;
-      padding-top: 10vh;
-      height: 100vh;
+
+    @include breakpoint(large) {
+      padding-left: calc(41% - 287px);
       .float {
-        & > div {
-          display: inline-block;
-        }
-        width: 80%;
-        height: 80vh;
-        padding: 5vh 10px;
-        margin: 0 auto;
-        text-align: center;
+        width: 700px;
+        padding-left: 44px;
         .title {
-          display: inline-block;
-          width: 80%;
-          font-size: 20px;
-        }
-        .line {
-          width: 40%;
-          margin-top: 2vh;
-          margin-bottom: 30vh;
-        }
-        form {
-          display: inline-block;
-          width: 80%;
-        }
-        .button {
-          font-size: 14px;
+          width: 70%;
+          font-size: 30px;
         }
         .netImg {
-          width: 70%;
-          top: 16vh;
-          left: 15%;
+          top: 133px;
+          width: 44%;
+          left: 55%;
+        }
+      }
+    }
+    @include breakpoint(small) {
+      @media (orientation: portrait) {
+        padding-left: 0;
+        padding-top: 10vh;
+        height: 100vh;
+        .float {
+          width: 80%;
+          height: 80vh;
+          padding: 5vh 10px;
+          margin: 0 auto;
+          text-align: center;
+
+          &::after {
+            content: "";
+            @include vendor("background-image", 'url("../images/net.png")');
+            background-size: 80% auto;
+            background-repeat: no-repeat;
+            background-position: center 10%;
+            opacity: 0.2;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            // z-index: -1;
+          }
+
+          & > div {
+            display: inline-block;
+            &.title {
+              width: 90%;
+              font-size: 40px;
+              text-align: left;
+            }
+            &.line {
+              width: 60%;
+              margin-top: 2vh;
+              margin-bottom: 30vh;
+              margin: 5vh 0 10vh -20%;
+              text-align: left;
+              border-width: 3px;
+            }
+          }
+
+          form {
+            display: inline-block;
+            width: 90%;
+            .grid-wrapper {
+              .col-6,
+              .col-12 {
+                max-width: 100%;
+              }
+            }
+          }
+          .button {
+            font-size: 14px;
+          }
+          .netImg {
+            display: none;
+          }
         }
       }
     }
   }
-}
-#last {
-  width: 100%;
-  height: 200px;
-  background-color: cadetblue;
 }

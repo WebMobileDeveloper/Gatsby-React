@@ -20,7 +20,7 @@ export default class Stage extends React.Component {
     } = this.props;
     return (
       <div className="frame">
-        <img className="stage-line" src={ stageLineImg } alt="" />
+        <img className="stage-line hideOnMobile" src={ stageLineImg } alt="" />
         <div className="header">
           <Link onClick={ this.props.onToggleMenu } to={ linkTo } className="stage-link">
             <img className="stageImg" src={ stageImg } alt="" />
@@ -29,7 +29,7 @@ export default class Stage extends React.Component {
         </div>
         <div className="content">
           <div className="font-merriweather-Light stage-content">{content}</div>
-          <a href="#" className="button bg-fg small-text no-transform small-height round-more bold">Click for more now!</a>
+          <a href="#" className="button bg-fg no-transform small-height round-more bold">Click for more now!</a>
         </div>
       </div>
     );
