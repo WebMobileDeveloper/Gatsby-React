@@ -8,3 +8,6 @@ yarn.lock
 # Build directory
 /public
 .DS_Store
+# Temp Assets directory
+src/assets/images/downloads
+src/assets/images/Temp Assets
