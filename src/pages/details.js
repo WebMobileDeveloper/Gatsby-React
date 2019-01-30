@@ -19,7 +19,6 @@ export default class Details extends React.Component {
     };
 
     /* eslint-disable global-require */
-    console.log( `../assets/images/banners/details/${ backLink }/${ target }.jpg` );
     const imageObj = require( `../assets/images/banners/details/${ backLink }/${ target }.jpg` );
     /* eslint-enable global-require */
 
