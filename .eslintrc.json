@@ -61,6 +61,7 @@
         "no-script-url": 0,
         "react/require-default-props": 0,
         "react/no-access-state-in-setstate": 0,
-        "react/prop-types": 0
+        "react/prop-types": 0,
+        "import/no-dynamic-require": 0
     }
 }

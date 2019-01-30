@@ -1,0 +1,283 @@
+/* Banner */
+
+#banner.banner-contact {
+  @include vendor("background-image", 'url("../images/banners/contact.jpg")');
+  .banner-content {
+    padding-top: 6%;
+    .left {
+      padding-left: 16%;
+      .header {
+        display: inline-block;
+        margin-bottom: 2em;
+        .title {
+          font-size: 100px;
+          font-weight: 900;
+          margin-left: -10px;
+        }
+        .line {
+          display: inline-block;
+          width: 7em;
+          border-top: solid 2px _palette(fg);
+          height: 1px;
+        }
+      }
+
+      .info {
+        position: relative;
+        img {
+          width: 100%;
+          height: auto;
+        }
+        .contact-bottom {
+          position: absolute;
+          width: 100%;
+          height: 25%;
+          top: 75%;
+          background-color: transparentize(_palette(bg), 0.1);
+          font-size: 0.6em;
+          display: flex;
+          padding-top: 2em;
+          img {
+            width: 40px;
+            height: auto;
+          }
+
+          .frame {
+            display: flex;
+            h6 {
+              margin-bottom: 0;
+            }
+            p {
+              margin-bottom: 0;
+            }
+            .left-div {
+              padding-left: 7%;
+              padding-right: 5%;
+            }
+            &.first {
+              flex: 2;
+            }
+            &.second {
+              flex: 1;
+            }
+          }
+        }
+      }
+      .button {
+        font-size: 16px;
+        min-width: 12em;
+      }
+    }
+    .right {
+      padding-left: 3%;
+      padding-right: 20%;
+      font-size: 0.8em;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      form {
+        background-color: _palette(bg);
+        padding: 15% 10%;
+        .title {
+          text-align: center;
+          margin-bottom: 2em;
+          h2 {
+            font-weight: 900;
+          }
+          .line {
+            display: inline-block;
+            width: 7em;
+            border-top: solid 2px _palette(fg);
+            height: 1px;
+          }
+        }
+        input:not([type="submit"]),
+        textarea {
+          font-size: 0.8em;
+          padding: 1.2em 2em;
+        }
+        .button {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(xxlarge) {
+    .banner-content {
+      padding-top: 10%;
+      .left {
+        .header {
+          .title {
+            font-size: 90px;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(xlarge) {
+    .banner-content {
+      .left {
+        padding-left: 12%;
+        .header {
+          .title {
+            font-size: 70px;
+          }
+        }
+        .info {
+          .contact-bottom {
+            font-size: 0.5em;
+            padding-top: 0.8em;
+            img {
+              width: 35px;
+            }
+          }
+        }
+        .button {
+          font-size: 14px;
+        }
+      }
+      .right {
+        padding-left: 3%;
+        padding-right: 14%;
+        form {
+          padding: 15% 8%;
+          .title {
+            h2 {
+              font-size: 1.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+    .banner-content {
+      .left {
+        padding-left: 8%;
+        padding-right: 0;
+        .header {
+          .title {
+            font-size: 60px;
+          }
+        }
+        .info {
+          .contact-bottom {
+            font-size: 12px;
+            padding-top: 0.4em;
+            .frame {
+              .left-div {
+                padding: 0 3%;
+              }
+            }
+            img {
+              width: 30px;
+            }
+            h6 {
+              font-size: 2em;
+            }
+          }
+        }
+        .button {
+          font-size: 12px;
+        }
+      }
+      .right {
+        padding-right: 12%;
+        form {
+          .title {
+            h2 {
+              font-size: 1.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(medium) {
+    .banner-content {
+      .left {
+        padding-left: 10%;
+        .header {
+          .title {
+            font-size: 80px;
+            margin-left: -5px;
+          }
+        }
+        .button {
+          font-size: 12px;
+          min-width: 10em;
+        }
+      }
+    }
+  }
+  @include breakpoint(small) {
+    .banner-content {
+      .left {
+        padding-left: 10%;
+        .header {
+          .title {
+            font-size: 60px;
+            margin-left: -3px;
+          }
+        }
+        .button {
+          font-size: 10px;
+          min-width: 10em;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(xsmall) {
+    @media (orientation: portrait) {
+      .banner-content {
+        padding-top: 70px;
+        .left {
+          padding-left: 0;
+          text-align: center;
+          .header {
+            text-align: center;
+            .title {
+              font-size: 50px;
+            }
+            .line {
+              display: inline-block;
+              width: 7em;
+              border-top: solid 2px _palette(fg);
+              height: 1px;
+            }
+          }
+          .content {
+            display: inline-block;
+            width: 80%;
+            text-align: center;
+            p {
+              margin-bottom: 2em;
+            }
+          }
+          .button {
+            font-size: 12px;
+            min-width: 12em;
+          }
+        }
+        .right {
+          padding-left: 8%;
+          padding-right: 8%;
+          font-size: 2em;
+          form {
+            padding: 10% 5%;
+            input:not([type="submit"]),
+            textarea {
+              font-size: 2em;
+              padding: 2em 2em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

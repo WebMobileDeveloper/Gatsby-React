@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import Banner from '../components/Banner';
 
-import banner2Img from '../assets/images/banner2_1.jpg';
+import banner2Img from '../assets/images/banners/tech-right.jpg';
 import playImg from '../assets/images/play.png';
 import fuseImg from '../assets/images/fuse.jpg';
 import fuseIconImg from '../assets/images/fuse_icon.png';
@@ -23,8 +23,8 @@ export default class Tech extends React.Component {
   render () {
     return (
       <Layout>
-        <Banner bannerClass="banner-2" showContactUs showScrollSection>
-          <div className="banner-content content-2">
+        <Banner bannerClass="banner-tech" showContactUs showScrollSection>
+          <div className="banner-content">
             <div className="row">
               <div className="col-sm-6 left">
                 <div className="header">

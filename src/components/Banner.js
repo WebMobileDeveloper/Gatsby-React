@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import logoImg from '../assets/images/logo.png';
 import mouseImg from '../assets/images/mouse.png';
+import backImg from '../assets/images/back.png';
 
 class Banner extends React.Component {
   constructor ( props ) {
@@ -18,12 +19,25 @@ class Banner extends React.Component {
 
   render () {
     const liClasses = `major ${ this.props.bannerClass }`;
+
     const {
-      children, showLinkedIn, showInstagram, showContactUs, showScrollSection,
+      children, showLinkedIn, showInstagram, showContactUs, showScrollSection, headerOptions,
     } = this.props;
+    const headerData = headerOptions || { linkTo: '' };
     return (
       <div id="banner" className={ liClasses }>
         <Link to="/" className="logo hideOnMobile"><img src={ logoImg } alt="" className="hover-image" /></Link>
+        {headerData &&
+          (
+            <div className="banner-header">
+              <Link to={ headerData.linkTo } className="back-button">
+                <h2>{headerData.main_title}</h2>
+                {/* {headerData.backButtonShow && <img src={ backImg } alt="" className="hideOnMobile" />} */}
+                {headerData.backButtonShow && <div className="back-image hideOnMobile" />}
+              </Link>
+            </div>
+          )
+        }
         {children}
         <div className="banner-bottom">
           <div className="right-frame">

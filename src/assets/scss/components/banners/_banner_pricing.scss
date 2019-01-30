@@ -1,0 +1,6 @@
+/* Banner */
+
+#banner.banner-pricing {
+  @include vendor("background-image", 'url("../images/banners/pricing.jpg")');
+  @include emptyBanner();
+}

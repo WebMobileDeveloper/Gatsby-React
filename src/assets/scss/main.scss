@@ -60,7 +60,7 @@
 
 // Component.
 
-@import "components/banner";
+
 @import "components/stage";
 @import "components/priceItem";
 @import "components/menu";
@@ -80,12 +80,17 @@
 
 // Layout.
 
-// @import 'layout/header';
-// @import 'layout/banner';
-// @import 'layout/main';
-// @import 'layout/contact';
-// @import 'layout/footer';
-// @import 'layout/wrapper';
+@import "components/banner";
+    // custom banner styles
+@import "components/banners/banner_home";
+@import "components/banners/banner_tech";
+@import "components/banners/banner_contact";
+@import "components/banners/banner_pricing";
+@import "components/banners/banner_about";
+@import "components/banners/banner_solution";
+@import "components/banners/banner_industry";
+@import "components/banners/banner_analytics";
+@import "components/banners/banner_details";
 
 // Pages
 @import "pages/home";
@@ -93,3 +98,6 @@
 @import "pages/contact";
 @import "pages/pricing";
 @import "pages/about";
+@import "pages/solution";
+@import "pages/industry";
+@import "pages/analytics";

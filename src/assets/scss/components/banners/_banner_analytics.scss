@@ -1,0 +1,66 @@
+/* Banner */
+
+#banner.banner-analytics {
+  $details: (location, bi, discovery, prep, advance, integration);
+
+  @include emptyBanner();
+  background: transparentize($color: _palette(white), $amount: 0.97);
+  .banner-bottom {
+    background: transparent;
+    bottom: initial;
+    top: calc(100vh - 80px);
+  }
+  .banner-content {
+    padding-top: 50px;
+
+    .col-lg-6 {
+      padding: 0;
+      position: relative;
+      height: 25vw;
+      @each $detail in $details {
+        &.#{$detail} {
+          @include setBackground("banners/analytics-#{$detail}.jpg");
+          @include overlay(_palette($detail), 0.8);
+        }
+      }   
+      .center-middle-div {
+        position: absolute;
+        .plus {
+          display: block;
+          line-height: 0.5em;
+        }
+      }
+    }
+  }
+  @include breakpoint(medium) {
+    min-height: initial;
+    max-height: initial;
+    .banner-content {
+      width: 100%;
+      padding: 50px 15px;
+      margin: 0;
+      .col-lg-6 {
+        height: 50vw;
+      }
+    }
+  }
+  @include breakpoint(xsmall) {
+    @media (orientation: portrait) {
+      .banner-header {
+        position: relative;
+        padding-top: 50px;
+        text-align: center;
+        h2 {
+          line-height: 100px;
+        }
+      }
+      .banner-content {
+        width: 100%;
+        padding: 0 15px;
+        .col-lg-6 {
+          height: 100vw;
+        }
+      }
+    }
+  }
+}

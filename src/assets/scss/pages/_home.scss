@@ -133,20 +133,21 @@
         padding-right: 10%;
       }
     }
-
-    @media (orientation: portrait) {
-      .left {
-        padding-left: 16%;
-        padding-right: 12%;
-        background-size: 50% 100%;
-        background-position: 15% 0px;
-      }
-      .right {
-        position: relative;
-        left: 0;
-        top: -6em;
-        padding-left: 16%;
-        padding-right: 10%;
+    @include breakpoint(xsmall) {
+      @media (orientation: portrait) {
+        .left {
+          padding-left: 16%;
+          padding-right: 12%;
+          background-size: 50% 100%;
+          background-position: 15% 0px;
+        }
+        .right {
+          position: relative;
+          left: 0;
+          top: -6em;
+          padding-left: 16%;
+          padding-right: 10%;
+        }
       }
     }
   }
@@ -173,7 +174,7 @@
       }
 
       .right {
-        background-color: transparentize(_palette(white), 0.97);
+        background-color: rgb;
         text-align: left;
         padding: 10% 10% 10% 5%;
         font-size: 1.1em;
@@ -249,17 +250,18 @@
         }
       }
     }
-
-    @media (orientation: portrait) {
-      .row {
-        width: 80%;
-        .left {
-          img {
-            width: 100%;
+    @include breakpoint(xsmall) {
+      @media (orientation: portrait) {
+        .row {
+          width: 80%;
+          .left {
+            img {
+              width: 100%;
+            }
           }
-        }
-        .right {
-          margin-left: -5%;
+          .right {
+            margin-left: -5%;
+          }
         }
       }
     }
@@ -397,17 +399,20 @@
         }
       }
     }
-    @media (orientation: portrait) {
-      flex-direction: column;
-      .left,
-      .backImg {
-        width: 80%;
-        margin: 0 auto 3em;
-      }
-      .left {
-        .frame {
-          position: relative;
+
+    @include breakpoint(xsmall) {
+      @media (orientation: portrait) {
+        flex-direction: column;
+        .left,
+        .backImg {
           width: 80%;
+          margin: 0 auto 3em;
+        }
+        .left {
+          .frame {
+            position: relative;
+            width: 80%;
+          }
         }
       }
     }
@@ -585,7 +590,7 @@
         }
       }
     }
-    @include breakpoint(small) {
+    @include breakpoint(xsmall) {
       @media (orientation: portrait) {
         padding-left: 0;
         padding-top: 10vh;

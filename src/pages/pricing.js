@@ -68,15 +68,14 @@ export default class Pricing extends React.Component {
     },
     ];
     const items = [];
-    Data
-      .forEach( item => items.push(
-        <div className="col-xl-4 col-lg-6 col-md-6  col-sm-12"><PriceItem ItemData={ item } key={ item.index } /></div>
-      ) );
+    Data.forEach( item => items.push(
+      <div className="col-xl-4 col-lg-6 col-md-6  col-sm-12"><PriceItem ItemData={ item } key={ item.index } /></div>
+    ) );
 
     return (
       <Layout hideFooter>
-        <Banner bannerClass="banner-4" showContactUs>
-          <div className="banner-content content-4">
+        <Banner bannerClass="banner-pricing" showContactUs>
+          <div className="banner-content">
             <div className="container container-fluid">
               <div className="row">
                 {items}

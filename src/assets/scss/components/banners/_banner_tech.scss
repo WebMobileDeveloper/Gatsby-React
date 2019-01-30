@@ -1,0 +1,165 @@
+/* Banner */
+
+#banner.banner-tech {
+  @include vendor("background-image", 'url("../images/banners/tech.jpg")');
+  .banner-content {
+    padding-top: 6%;
+    .left {
+      padding-left: 16%;
+      .header {
+        display: inline-block;
+        margin-bottom: 2em;
+        .title {
+          font-size: 150px;
+          font-weight: 900;
+          margin-left: -10px;
+        }
+      }
+      .button {
+        font-size: 16px;
+        min-width: 12em;
+      }
+    }
+    .right {
+      padding-left: 8%;
+      padding-top: 2%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .imgFrame {
+        position: relative;
+        img {
+          &.play {
+            position: absolute;
+            width: 20%;
+            height: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(xxlarge) {
+    .banner-content {
+      padding-top: 8%;
+      .left {
+        .header {
+          .title {
+            font-size: 130px;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(xlarge) {
+    .banner-content {
+      padding-top: 10%;
+      .left {
+        padding-left: 12%;
+        .header {
+          .title {
+            font-size: 120px;
+          }
+        }
+        .button {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+    .banner-content {
+      padding-top: 13%;
+      .left {
+        padding-left: 10%;
+        .header {
+          .title {
+            font-size: 100px;
+          }
+        }
+        .button {
+          font-size: 12px;
+        }
+      }
+      .right {
+        padding-left: 7%;
+      }
+    }
+  }
+  @include breakpoint(medium) {
+    .banner-content {
+      .left {
+        padding-left: 10%;
+        .header {
+          .title {
+            font-size: 80px;
+            margin-left: -5px;
+          }
+        }
+        .button {
+          font-size: 12px;
+          min-width: 10em;
+        }
+      }
+      .right {
+        padding-left: 4%;
+        padding-right: 4%;
+      }
+    }
+  }
+  @include breakpoint(small) {
+    .banner-content {
+      .left {
+        padding-left: 10%;
+        .header {
+          .title {
+            font-size: 60px;
+            margin-left: -3px;
+          }
+        }
+        .button {
+          font-size: 10px;
+          min-width: 10em;
+        }
+      }
+      .right {
+        padding-left: 2%;
+        padding-right: 3%;
+      }
+    }
+  }
+
+  @include breakpoint(xsmall) {
+    @media (orientation: portrait) {
+      .banner-content {
+        padding-top: 70px;
+        .left {
+          padding-left: 0;
+          .header {
+            text-align: left;
+            .title {
+              font-size: 60px;
+            }
+          }
+          .content {
+            p {
+              margin-bottom: 2em;
+            }
+          }
+          .button {
+            font-size: 12px;
+            min-width: 12em;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+/* Banner */
+
+#banner.banner-details {
+  $classes: (
+    industry: (
+      retail,
+      facilities,
+      financial,
+      logistic
+    ),
+    analytics: ()
+  );
+
+  @each $solution, $details in $classes {
+    @each $detail in $details {
+      &.#{$solution} {
+        &.#{$detail} {
+          @include setBackground("banners/#{$solution}-#{$detail}.jpg");
+          @include overlay(_palette(bg), 0.93);
+          .title-tag {
+            border-left: solid 0.6em _palette(#{$detail});
+          }
+        }
+      }
+    }
+  }
+  padding-top: calc(50px + 1.5em);
+  min-height: 100vh;
+  max-height: initial;
+  height: initial;
+  .title-tag {
+    display: inline-block;
+    font-size: 1.3em;
+    font-weight: bold;
+    min-width: 10em;
+    height: 2em;
+    line-height: 2em;
+    padding: 0 0.5em;
+
+    border-radius: 0 0.25em 0.25em 0;
+    margin-bottom: 2em;
+  }
+  .col-sm-5 {
+    padding: 0 2em 0 1em;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .col-sm-6 {
+    padding: 0;
+
+    @include wrapper-style(40vw, 4em);
+    .title-tag {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+    .content {
+      font-size: 0.8em;
+      font-weight: 300;
+      line-height: 1.2em;
+    }
+  }
+  @include breakpoint(xsmall) {
+    @media (orientation: portrait) {
+      min-height: initial;
+      max-height: initial;
+      height: initial;
+      text-align: left;
+      background: _palette(bg) !important;
+      padding-top: 50px;
+      .banner-bottom {
+        background: transparent;
+        bottom: initial;
+        top: calc(100vh - 20px);
+      }
+      .banner-content {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        .container {
+          .col-sm-5 {
+            padding: 0;
+            margin: 0;
+            .title-tag {
+              position: relative;
+              display: block !important;
+              margin-bottom: 0;
+              background: _palette(bg);
+              @include overlay(white, 0.2);
+              font-size: 1.7em;
+            }
+            img {
+              width: auto;
+              height: calc(100vh - 50px - 2em);
+            }
+          }
+          .col-sm-6 {
+            padding: 2em;
+            margin: 0;
+            @include wrapper-style(80vw, 4em);
+            .sub-item{
+              margin-bottom: 1em;
+            }
+            .content {
+              font-size: 1em;
+              font-weight: 300;
+              line-height: 1.2em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

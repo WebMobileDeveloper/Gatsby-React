@@ -7,7 +7,7 @@ import emailImg from '../assets/images/email.png';
 import contactImg from '../assets/images/contact.png';
 import datavisMapImg from '../assets/images/datavisMap.jpg';
 
-export default class Tech extends React.Component {
+export default class Contact extends React.Component {
   constructor ( props ) {
     super( props );
     this.state = {};
@@ -16,8 +16,8 @@ export default class Tech extends React.Component {
   render () {
     return (
       <Layout>
-        <Banner bannerClass="banner-3">
-          <div className="banner-content content-3">
+        <Banner bannerClass="banner-contact">
+          <div className="banner-content">
             <div className="row">
 
               <div className="col-sm-6 left">

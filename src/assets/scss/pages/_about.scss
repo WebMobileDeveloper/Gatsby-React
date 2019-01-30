@@ -11,7 +11,6 @@
       overflow: hidden;
     }
     .content-div {
-      background-color: blue;
       &.right {
         padding: 0% 5% 0% 5%;
       }
@@ -125,39 +124,4 @@
       }
     }
   }
-  // @media (orientation: portrait) {
-  //   margin-top: 1em;
-  //   .col-4 {
-  //     height: 30vh;
-  //     overflow: hidden;
-  //   }
-  //   .main-img {
-  //     height: 30vh;
-  //     width: auto;
-  //   }
-  //   .description {
-  //     font-size: 13px;
-  //     .center-middle-div {
-  //       padding-left: 7%;
-  //       padding-right: 7%;
-  //       header {
-  //         padding-bottom: 0.5em;
-  //         img {
-  //           width: 15%;
-  //         }
-  //         .title {
-  //           font-size: 2em;
-  //           line-height: 1em;
-  //         }
-  //       }
-  //       .content {
-  //         .bottom {
-  //           font-family: "LatoWebLight";
-  //           line-height: 1.2em;
-  //           margin-bottom: 0;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 }

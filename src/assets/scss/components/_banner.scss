@@ -1,20 +1,7 @@
-///
-/// Forty by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
-
 /* Banner */
 
 #banner {
-  $banner-indexs: ("1", "2", "3", "4", "5");
   @include vendor("align-items", "center");
-  @each $bannerIndex in $banner-indexs {
-    $urlString: 'url("../images/banner#{$bannerIndex}.jpg")';
-    &.banner-#{$bannerIndex} {
-      @include vendor("background-image", $urlString);
-    }
-  }
   position: relative;
   width: 100%;
   height: 100vh;
@@ -23,16 +10,49 @@
   background-size: cover;
   cursor: default;
   .logo {
-    position: relative;
-    border: 0;
+    position: absolute;
     display: inline-block;
-    line-height: 0px;
+    line-height: 50px;
     z-index: 10000;
-    @include relative-property("top", 53px);
-    @include relative-property("left", 53px);
+    left: 2em;
+    top: 0;
     img {
       @include relative-property("width", 150px);
       height: auto;
+    }
+  }
+  .banner-header {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: right;
+    z-index: 9999;
+    height: 50px;
+    .back-button {
+      display: inline-block;
+      height: 50px;
+      h2 {
+        line-height: 50px;
+        margin: 0 0.5em;
+        display: inline-block;
+        float: left;
+      }
+      .back-image {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+        margin-top: 10px;
+        @include setBackground("back.png");
+      }
+      // img {
+      //   display: inline-block;
+      //   width: 30px;
+      //   height: auto;
+      //   margin-right: 2em;
+      // }
     }
   }
   .banner-bottom {
@@ -45,12 +65,15 @@
     text-align: center;
     background-image: linear-gradient(to top, _palette(bg), transparent);
     .right-frame {
-      width: 100%;
       text-align: right;
+      display: inline-block;
+      position: absolute;
+      right: 10px;
+      bottom: 40px;
     }
     .center-frame {
       width: 100%;
-      line-height: 1em;
+      line-height: 2em;
       display: inline-block;
       span {
         display: block;
@@ -69,12 +92,20 @@
     );
     margin: 0 15px;
     font-size: 26px;
+  }
+  .banner-content1 {
+    @include vendor(
+      "transition",
+      ("opacity 1.5s ease", "transform 0.5s ease-out", "filter 0.5s ease", "-webkit-filter 0.5s ease")
+    );
+    margin: 0 15px;
+    font-size: 26px;
 
     .left {
       padding-left: 16%;
       .header {
         display: inline-block;
-        margin-bottom: 1em;
+        margin-bottom: 2em;
         .title {
           font-size: 150px;
           font-weight: 900;
@@ -126,7 +157,7 @@
       .left {
         .header {
           display: inline-block;
-          margin-bottom: 1em;
+          margin-bottom: 2em;
           .title {
             font-size: 100px;
           }
@@ -151,7 +182,7 @@
             background-color: transparentize(_palette(bg), 0.1);
             font-size: 0.6em;
             display: flex;
-            padding-top: 1em;
+            padding-top: 2em;
             img {
               width: 40px;
               height: auto;
@@ -190,7 +221,7 @@
           padding: 15% 10%;
           .title {
             text-align: center;
-            margin-bottom: 1em;
+            margin-bottom: 2em;
             h2 {
               font-weight: 900;
             }
@@ -204,7 +235,7 @@
           input:not([type="submit"]),
           textarea {
             font-size: 0.8em;
-            padding: 1.2em 1em;
+            padding: 1.2em 2em;
           }
           .button {
             width: 100%;
@@ -223,12 +254,85 @@
         font-size: 1.8em;
       }
     }
-  }
+    &.content-6 {
+      padding-top: 50px;
+      padding-bottom: 20px;
+      .col-md-6 {
+        padding: 0;
+        position: relative;
+        img {
+          position: relative;
+          width: 100%;
+          height: auto;
+        }
+        .center-middle-div {
+          position: absolute;
+        }
+      }
+    }
+    &.content-7,
+    &.content-8 {
+      padding-top: 50px;
 
-  &.banner-4 {
-    height: auto;
-    max-height: initial;
-    padding-bottom: 5em;
+      .col-lg-6 {
+        padding: 0;
+        position: relative;
+        height: 25vw;
+        img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+        .center-middle-div {
+          position: absolute;
+          .plus {
+            display: block;
+            line-height: 0.5em;
+          }
+        }
+      }
+    }
+    &.content-9 {
+      padding-top: calc(50px + 3em);
+
+      .col-lg-5 {
+        position: relative;
+        height: 40vw;
+        padding-left: 2em;
+        padding-right: 1em;
+        .img-container {
+          position: relative;
+          width: 100%;
+          height: 40vw;
+          overflow: hidden;
+          img {
+            width: auto;
+            height: 40vw;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+      .col-lg-6 {
+        padding: 0;
+        position: relative;
+        height: 25vw;
+        .title-tag {
+          width: 10em;
+          height: 2em;
+          line-height: 2em;
+          background-color: transparentize($color: _palette(white), $amount: 0.73);
+          border-radius: 0 0.3em 0.3em 0;
+        }
+      }
+    }
   }
 
   @include breakpoint(xxxlarge) {
@@ -241,29 +345,6 @@
     max-height: 1440px;
     .banner-content {
       font-size: 24px;
-      .left {
-        .header {
-          .title {
-            font-size: 130px;
-          }
-        }
-      }
-      &.content-1 {
-        padding-top: 18%;
-      }
-      &.content-2 {
-        padding-top: 8%;
-      }
-      &.content-3 {
-        padding-top: 10%;
-        .left {
-          .header {
-            .title {
-              font-size: 90px;
-            }
-          }
-        }
-      }
     }
   }
 
@@ -271,55 +352,7 @@
     min-height: 900px;
     max-height: 1200px;
     .banner-content {
-      .left {
-        padding-left: 12%;
-        .header {
-          .title {
-            font-size: 120px;
-          }
-        }
-        .button {
-          font-size: 14px;
-        }
-      }
       font-size: 22px;
-      &.content-1 {
-        padding-top: 18%;
-      }
-      &.content-2 {
-        padding-top: 10%;
-      }
-      &.content-3 {
-        .left {
-          .header {
-            .title {
-              font-size: 70px;
-            }
-          }
-          .info {
-            .contact-bottom {
-              font-size: 0.5em;
-              padding-top: 0.8em;
-              img {
-                width: 35px;
-              }
-            }
-          }
-        }
-
-        .right {
-          padding-left: 3%;
-          padding-right: 14%;
-          form {
-            padding: 15% 8%;
-            .title {
-              h2 {
-                font-size: 1.5em;
-              }
-            }
-          }
-        }
-      }
     }
   }
 
@@ -328,97 +361,13 @@
     max-height: 1050px;
     .banner-content {
       font-size: 20px;
-      .left {
-        padding-left: 10%;
-        .header {
-          .title {
-            font-size: 100px;
-          }
-        }
-        .button {
-          font-size: 12px;
-        }
-      }
-      &.content-1 {
-        padding-top: 20%;
-      }
-      &.content-2 {
-        padding-top: 13%;
-        .right {
-          padding-left: 7%;
-        }
-      }
-      &.content-3 {
-        .left {
-          padding-left: 8%;
-          padding-right: 0;
-          .header {
-            .title {
-              font-size: 60px;
-            }
-          }
-          .info {
-            .contact-bottom {
-              font-size: 12px;
-              padding-top: 0.4em;
-              .frame {
-                .left-div {
-                  padding: 0 3%;
-                }
-              }
-              img {
-                width: 30px;
-              }
-              h6 {
-                font-size: 1em;
-              }
-            }
-          }
-        }
-        .right {
-          padding-right: 12%;
-          form {
-            .title {
-              h2 {
-                font-size: 1.5em;
-              }
-            }
-          }
-        }
-      }
     }
   }
   @include breakpoint(medium) {
     min-height: 600px;
     max-height: 900px;
-
     .banner-content {
       font-size: 16px;
-      .left {
-        padding-left: 10%;
-        .header {
-          .title {
-            font-size: 80px;
-            margin-left: -5px;
-          }
-        }
-        .button {
-          font-size: 12px;
-          min-width: 10em;
-        }
-      }
-
-      &.content-1 {
-        .right {
-          padding-right: 1%;
-        }
-      }
-      &.content-2 {
-        .right {
-          padding-left: 4%;
-          padding-right: 4%;
-        }
-      }
     }
   }
   @include breakpoint(small) {
@@ -426,99 +375,12 @@
     max-height: 800px;
     .banner-content {
       font-size: 14px;
-      .left {
-        padding-left: 10%;
-        .header {
-          .title {
-            font-size: 60px;
-            margin-left: -3px;
-          }
-        }
-        .button {
-          font-size: 10px;
-          min-width: 10em;
-        }
-      }
-      &.content-2 {
-        .right {
-          padding-left: 2%;
-          padding-right: 3%;
-        }
-      }
     }
   }
-  @include breakpoint(small) {
-    @media (orientation: portrait) {      
-      text-align: center;
-      min-height: initial;
-      max-height: initial;
 
-      .banner-content {
-        font-size: 14px;
-        width: 86%;
-        margin: 0 auto;
-        .left {
-          padding-left: 0;
-          .header {
-            text-align: left;
-            .title {
-              font-size: 60px;
-            }
-          }
-          .content {
-            p {
-              margin-bottom: 1em;
-            }
-          }
-          .button {
-            font-size: 12px;
-            min-width: 12em;
-          }
-        }
-        &.content-1 {
-          padding-top: 70px;
-        }
-        &.content-2 {
-          padding-top: 70px;
-        }
-        &.content-3 {
-          padding-top: 70px;
-          .left {
-            padding-left: 0;
-            text-align: center;
-            .header {
-              text-align: center;
-              .title {
-                font-size: 50px;
-              }
-              .line {
-                display: inline-block;
-                width: 7em;
-                border-top: solid 2px _palette(fg);
-                height: 1px;
-              }
-            }
-            .content {
-              display: inline-block;
-              width: 80%;
-              text-align: center;
-            }
-          }
-          .right {
-            padding-left: 8%;
-            padding-right: 8%;
-            font-size: 1em;
-            form {
-              padding: 10% 5%;
-              input:not([type="submit"]),
-              textarea {
-                font-size: 1em;
-                padding: 1em 1em;
-              }
-            }
-          }
-        }
-      }
+  @include breakpoint(xsmall) {
+    @media (orientation: portrait) {
+      @include banner_mobile_style();
     }
   }
 }

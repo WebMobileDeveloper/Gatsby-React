@@ -87,7 +87,7 @@
       }
     }
   }
-  @include breakpoint(small) {
+  @include breakpoint(xsmall) {
     @media (orientation: portrait) {
       width: 100%;
     }

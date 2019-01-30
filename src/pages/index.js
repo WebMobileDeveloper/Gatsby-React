@@ -27,10 +27,10 @@ export default class HomePage extends React.Component {
     const stageContent = [ 'Your universe of data in high-definition visual clarity. From geospatial canvases to dynamic, our platform has been designed for the line of business user in mind. Discover how data visualization takes the stage on our platform.', 'Your universe of data in high-definition visual clarity. From geospatial canvases to dynamic, our platform has been designed for the line of business user in mind. Discover how data visualization takes the stage on our platform.', 'Silos, DBs, APIs, CSVs. ETLs, Feature Engineering. ML Models. Dashboards, Reports. Too many jargons. Find out how our Digital Architecture Platform streamlines messy data into a cohesive environment.', 'Transforming is not about replacing the old, but about bridging legacy systems with modern cutting edge tech. Read our White Paper on how Digital Architecture is critical in the enterprise implementation of data- driven initiatives.' ];
     return (
       <Layout>
-        <Banner bannerClass="banner-1" showLinkedIn showInstagram showContactUs showScrollSection>
-          <div className="banner-content content-1">
+        <Banner bannerClass="banner-home" showLinkedIn showInstagram showContactUs showScrollSection>
+          <div className="banner-content">
             <div className="row">
-              <div className="col-sm-6 left">
+              <div className="col-md-6 left">
                 <div className="header">
                   <p className="font-merriweather-Light single-line">the</p>
                   <p className="title single-line">DATAVIS</p>
@@ -45,7 +45,7 @@ export default class HomePage extends React.Component {
                   </ul>
                 </div>
               </div>
-              <div className="col-sm-6 right">
+              <div className="col-md-6 right">
                 <img src={ macImg } alt="" />
               </div>
             </div>

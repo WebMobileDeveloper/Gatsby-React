@@ -1,0 +1,16 @@
+/* Banner */
+
+#banner.banner-about {
+  @include vendor("background-image", 'url("../images/banners/about.jpg")');
+  .banner-content {
+    height: 100%;
+    padding-bottom: 10%;
+    h1 {
+      font-size: 3.5em;
+      font-weight: 900;
+    }
+    h2 {
+      font-size: 1.8em;
+    }
+  }
+}
