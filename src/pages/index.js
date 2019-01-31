@@ -31,7 +31,6 @@ export default class HomePage extends React.Component {
           <div className="banner-content">
             <div className="row">
               <div className="col-md-6 left">
-
                 <div className="frame">
                   <div className="header">
                     <p className="font-merriweather-Light single-line">the</p>
@@ -47,7 +46,6 @@ export default class HomePage extends React.Component {
                     </ul>
                   </div>
                 </div>
-
               </div>
               <div className="col-md-6 right">
                 <img src={ macImg } alt="" />
@@ -55,7 +53,6 @@ export default class HomePage extends React.Component {
             </div>
           </div>
         </Banner>
-
         <div id="main-home" className="main-div">
           <section id="product-section">
             <div className="row">
@@ -194,6 +191,7 @@ export default class HomePage extends React.Component {
           </section>
 
         </div>
+
       </Layout>
     );
   }
