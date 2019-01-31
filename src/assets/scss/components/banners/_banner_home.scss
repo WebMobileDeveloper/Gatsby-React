@@ -1,147 +1,102 @@
-///
-/// Forty by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
-
-/* Banner */
+/*Homepage Banner */
 
 #banner.banner-home {
   @include setBackground("banners/home.jpg");
-  // @include vendor("background-image", 'url("../images/banners/home.jpg")');
-  .banner-content {   
-    padding-top: 14%; 
+  .banner-bottom {
+    background-image: linear-gradient(to top, _palette(bg), transparent);
+  }
+  .banner-content {
+    padding: 14% 7%;
     .left {
-      padding-left: 16%;
-      .header {
+      text-align: right;
+      .frame {
         display: inline-block;
-        margin-bottom: 2em;
-        .title {
-          font-size: 150px;
-          font-weight: 900;
-          margin-left: -10px;
+        text-align: left;
+        .header {
+          display: inline-block;
+          text-align: left;
+          margin-bottom: 2em;
+          .title {
+            font-size: 5.5em;
+            font-weight: 900;
+            margin-left: -0.08em;
+          }
         }
-      }
-      .button {
-        font-size: 16px;
-        min-width: 12em;
+        p {
+          margin-bottom: 0px;
+        }
+        .button {
+          min-width: 12em;
+        }
       }
     }
     .right {
-      padding-right: 5%;
       img {
         width: 100%;
         height: auto;
       }
-    }    
-  }
-
-  @include breakpoint(xxlarge) {
-    .banner-content {
-      padding-top: 18%;
-      .left {
-        .header {
-          .title {
-            font-size: 130px;
-          }
-        }
-      }     
     }
   }
 
-  @include breakpoint(xlarge) {
+  @include breakpoint(medium) {
     .banner-content {
-      padding-top: 18%;
+      padding: 10% 10%;
       .left {
-        padding-left: 12%;
-        .header {
-          .title {
-            font-size: 120px;
-          }
-        }
-        .button {
-          font-size: 14px;
-        }
-      }
-    }
-  }
-
-  @include breakpoint(large) {
-    .banner-content {
-      padding-top: 20%;
-      .left {
-        padding-left: 10%;
-        .header {
-          .title {
-            font-size: 100px;
-          }
-        }
-        .button {
-          font-size: 12px;
-        }
-      }
-    }
-  }
-  @include breakpoint(medium) { 
-    .banner-content {
-      .left {
-        padding-left: 10%;
-        .header {
-          .title {
-            font-size: 80px;
-            margin-left: -5px;
-          }
-        }
-        .button {
-          font-size: 12px;
-          min-width: 10em;
+        text-align: center;
+        .frame {
+          text-align: center;
         }
       }
       .right {
-        padding-right: 1%;
+        text-align: center;
+        img {
+          display: inline-block;
+          position: relative;
+          width: 80%;
+          height: auto;
+          margin: 0 auto;
+        }
       }
-    }
-  }
-  @include breakpoint(small) {
-    .banner-content {
-      .left {
-        padding-left: 10%;
-        .header {
-          .title {
-            font-size: 60px;
-            margin-left: -3px;
-          }
-        }
-        .button {
-          font-size: 10px;
-          min-width: 10em;
-        }
-      }     
     }
   }
 
   @include breakpoint(xsmall) {
     @media (orientation: portrait) {
+      height: 100vh;
       .banner-content {
-        padding-top: 70px;
+        padding: 150px 0;
+      }
+      .banner-content2 {
+        padding: 14% 7%;
         .left {
-          padding-left: 0;
-          .header {
+          text-align: right;
+          .frame {
+            display: inline-block;
             text-align: left;
-            .title {
-              font-size: 60px;
-            }
-          }
-          .content {
-            p {
+            .header {
+              display: inline-block;
+              text-align: left;
               margin-bottom: 2em;
+              .title {
+                font-size: 5.5em;
+                font-weight: 900;
+                margin-left: -0.08em;
+              }
+            }
+            p {
+              margin-bottom: 0px;
+            }
+            .button {
+              min-width: 12em;
             }
           }
-          .button {
-            font-size: 12px;
-            min-width: 12em;
+        }
+        .right {
+          img {
+            width: 100%;
+            height: auto;
           }
-        }       
+        }
       }
     }
   }

@@ -1,0 +1,58 @@
+#main-resources {
+  padding: 3em 0;
+
+  .sub-item {
+    width: 80%;
+    margin: 0 auto;
+    .img-div {
+      position: relative;
+      width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      a {
+        position: absolute;
+        display: inline-block;
+        background: _palette(bg);
+        left: 0;
+        bottom: 1em;
+        border-right: solid 0.3em _palette(fg);
+        height: 2em;
+        line-height: 2em;
+        padding: 0 0.5em;
+        font-weight: 100;
+      }
+    }
+    .content-div {
+      margin-bottom: 3em;
+      @include wrapper-style-by-lineHeight(100%, 10, 1.2em);
+    }
+  }
+  @include breakpoint(xsmall) {
+    @media (orientation: portrait) {
+      .sub-item {
+        position: relative;
+        width: 100%;
+        margin-bottom: 7%;
+        border-radius: 6px;
+        overflow: hidden;
+        .img-div {          
+          a {
+            bottom: calc(1em + 50%);
+          }
+        }
+        .content-div {
+          @include wrapper-style-by-lineHeight(100%, 4, 24px);
+          font-size: 14px;
+          padding: 5%;
+          background-color: _palette(bg);
+          @include overlay(white, 0.08);
+          position: absolute;
+          top: 50%;
+        }
+        
+      }
+    }
+  }
+}

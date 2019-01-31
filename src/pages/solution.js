@@ -19,7 +19,7 @@ export default class Solution extends React.Component {
     };
     return (
       <Layout>
-        <Banner bannerClass="banner-solution" showContactUs headerOptions={ headerOptions }>
+        <Banner bannerClass="banner-solution"  headerOptions={ headerOptions }>
           <div className="banner-content">
             <div className="row">
 

@@ -267,13 +267,12 @@
         .right {
           padding-left: 8%;
           padding-right: 8%;
-          font-size: 2em;
           form {
             padding: 10% 5%;
             input:not([type="submit"]),
             textarea {
-              font-size: 2em;
-              padding: 2em 2em;
+              font-size: 14px;
+              padding: 1em 2em;
             }
           }
         }

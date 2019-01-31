@@ -1,0 +1,25 @@
+/* Banner */
+
+#banner.banner-resources {
+  @include vendor("background-image", 'url("../images/banners/resources.jpg")');
+  .banner-content {
+    height: 100vh;
+    padding-bottom: 10%;
+    .center-middle-div {
+      max-width: 80%;
+      h1 {
+        font-size: 3.5em;
+        line-height: 0.6em;
+        font-weight: 900;
+      }
+
+      .line {
+        display: inline-block;
+        width: 10em;
+        height: 1px;
+        line-height: 3px;
+        border-bottom: solid 1px _palette(fg);
+      }
+    }
+  }
+}

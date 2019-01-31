@@ -109,7 +109,7 @@ export default class Analytics extends React.Component {
     ) );
     return (
       <Layout>
-        <Banner bannerClass="banner-analytics" showContactUs showScrollSection headerOptions={ headerOptions }>
+        <Banner bannerClass="banner-analytics" showScrollSection headerOptions={ headerOptions }>
           <div className="banner-content">
             <div className="row">
               {items}

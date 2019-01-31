@@ -25,7 +25,7 @@ export default class PriceItem extends React.Component {
         <p className="type">{ItemData.type}</p>
         <p className="projects">{ItemData.projectCount}</p>
         <p className="host">{ItemData.host}</p>
-        <a href="#" className="more"><b>Click Here for more...</b></a>
+        <a onClick={ () => this.props.onShowOverlay( ItemData.index ) } href="#" className="more"><b>Click Here for more...</b></a>
       </div>
     );
   }

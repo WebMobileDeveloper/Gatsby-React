@@ -1,0 +1,63 @@
+.modal-dialog {
+  max-width: initial;
+  width: 800px;
+  margin: 0 auto;
+  .modal-content {
+    padding: 2em 1em 1em;
+    border-radius: 1em;
+    background-color: #4b4a4a;
+    .check-img {
+      @include setBackground("check.png");
+      background-size: auto 100%;
+    }
+    .content-row {
+      margin-bottom: 2em;
+      h3 {
+        line-height: 1em;
+      }
+    }
+    .button-row {
+      text-align: center;
+      .button {
+        width:30%;
+        height: 2.5em;
+        line-height: 2.5em;
+        margin: 2em 2em 0;
+        padding: 0;
+      }
+    }
+  }
+}
+@include breakpoint(xxlarge) {
+  .modal-dialog {
+    width: 650px;
+  }
+}
+@include breakpoint(xlarge) {
+  .modal-dialog {
+    width: 600px;
+    .modal-content {
+      .button-row {
+        .button {
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
+}
+@include breakpoint(small) {
+  .modal-dialog {
+    width: 500px;
+  }
+}
+
+@include breakpoint(xsmall) {
+  .modal-dialog {
+    width: 90%;
+    .modal-content{
+      .check-img {
+        background-size: 100% auto;
+      }
+    }
+  }
+}

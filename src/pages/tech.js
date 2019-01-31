@@ -22,8 +22,8 @@ export default class Tech extends React.Component {
 
   render () {
     return (
-      <Layout>
-        <Banner bannerClass="banner-tech" showContactUs showScrollSection>
+      <Layout hideSandboxMenu>
+        <Banner bannerClass="banner-tech"  showScrollSection>
           <div className="banner-content">
             <div className="row">
               <div className="col-sm-6 left">

@@ -8,14 +8,14 @@ import contactImg from '../assets/images/contact.png';
 import datavisMapImg from '../assets/images/datavisMap.jpg';
 
 export default class Contact extends React.Component {
-  constructor ( props ) {
-    super( props );
+  constructor(props) {
+    super(props);
     this.state = {};
   }
 
-  render () {
+  render() {
     return (
-      <Layout>
+      <Layout hideContactUs>
         <Banner bannerClass="banner-contact">
           <div className="banner-content">
             <div className="row">
@@ -34,12 +34,12 @@ export default class Contact extends React.Component {
                 </div>
 
                 <div className="info hideOnMobile">
-                  <img className="backImage" src={ datavisMapImg } alt="" />
+                  <img className="backImage" src={datavisMapImg} alt="" />
                   <div className="contact-bottom">
 
                     <div className="frame first">
                       <div className="left-div">
-                        <img src={ contactImg } alt="" className="center-middle-div" />
+                        <img src={contactImg} alt="" className="center-middle-div" />
                       </div>
                       <div className="right-div">
                         <h6>VISIT US</h6>
@@ -50,7 +50,7 @@ export default class Contact extends React.Component {
 
                     <div className="frame second">
                       <div className="left-div">
-                        <img src={ emailImg } alt="" className="center-middle-div" />
+                        <img src={emailImg} alt="" className="center-middle-div" />
                       </div>
                       <div className="right-div">
                         <h6>EMAIL US</h6>
@@ -96,11 +96,11 @@ export default class Contact extends React.Component {
         </Banner>
         <div id="main-contact" className="main-div">
           <section id="info-section" className="hideOnScreen">
-            <img className="backImage" src={ datavisMapImg } alt="" />
+            <img className="backImage" src={datavisMapImg} alt="" />
             <div className="contact-bottom">
               <div className="frame first">
                 <div className="left-div">
-                  <img src={ contactImg } alt="" className="center-middle-div" />
+                  <img src={contactImg} alt="" className="center-middle-div" />
                 </div>
                 <div className="right-div">
                   <h6>VISIT US</h6>
@@ -110,7 +110,7 @@ export default class Contact extends React.Component {
               </div>
               <div className="frame second">
                 <div className="left-div">
-                  <img src={ emailImg } alt="" className="center-middle-div" />
+                  <img src={emailImg} alt="" className="center-middle-div" />
                 </div>
                 <div className="right-div">
                   <h6>EMAIL US</h6>

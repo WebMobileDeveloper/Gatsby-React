@@ -3,4 +3,13 @@
 #banner.banner-pricing {
   @include vendor("background-image", 'url("../images/banners/pricing.jpg")');
   @include emptyBanner();
+  .overlay-img {
+    height: 100vh;
+    width: auto;
+    position: fixed;
+    top: 50%; /* 5. Add this. */
+    left: 50%; /* 6. Add this. */
+    transform: translate(-50%, -50%); /* 7. Add this. */
+    z-index: 10001;
+  } 
 }

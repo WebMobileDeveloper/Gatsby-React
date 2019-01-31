@@ -395,6 +395,14 @@
     }
   }
 }
+@mixin wrapper-style-by-lineHeight($width, $lines, $line-height) {
+  .overflow-container {
+    width: $width;
+    line-height: $line-height;
+    max-height: $line-height * $lines;
+    overflow: hidden;
+  }
+}
 @mixin emptyBanner {
   height: auto;
   max-height: initial;
@@ -408,13 +416,9 @@
   max-height: initial;
 
   .banner-content {
-    font-size: 14px;
-    width: 86%;
+    // font-size: 14px;
+    // width: 86%;
     margin: 0 auto;
-  }
-  .banner-bottom {
-    top: calc(100vh - 60px);
-    bottom: initial;
   }
 }
 

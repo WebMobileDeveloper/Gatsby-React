@@ -29,7 +29,7 @@ export default class Stage extends React.Component {
         </div>
         <div className="content">
           <div className="font-merriweather-Light stage-content">{content}</div>
-          <a href="#" className="button bg-fg no-transform small-height round-more bold">Click for more now!</a>
+          <Link to={ linkTo } className="button bg-fg no-transform small-height round-more bold">Click for more now!</Link>
         </div>
       </div>
     );

@@ -16,7 +16,7 @@ export default class About extends React.Component {
   render () {
     return (
       <Layout>
-        <Banner bannerClass="banner-about" showContactUs showScrollSection>
+        <Banner bannerClass="banner-about" showScrollSection>
           <div className="banner-content color-fg">
             <div className="center-middle-div">
               <h1>About Us</h1>

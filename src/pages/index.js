@@ -26,24 +26,28 @@ export default class HomePage extends React.Component {
   render () {
     const stageContent = [ 'Your universe of data in high-definition visual clarity. From geospatial canvases to dynamic, our platform has been designed for the line of business user in mind. Discover how data visualization takes the stage on our platform.', 'Your universe of data in high-definition visual clarity. From geospatial canvases to dynamic, our platform has been designed for the line of business user in mind. Discover how data visualization takes the stage on our platform.', 'Silos, DBs, APIs, CSVs. ETLs, Feature Engineering. ML Models. Dashboards, Reports. Too many jargons. Find out how our Digital Architecture Platform streamlines messy data into a cohesive environment.', 'Transforming is not about replacing the old, but about bridging legacy systems with modern cutting edge tech. Read our White Paper on how Digital Architecture is critical in the enterprise implementation of data- driven initiatives.' ];
     return (
-      <Layout>
-        <Banner bannerClass="banner-home" showLinkedIn showInstagram showContactUs showScrollSection>
+      <Layout hideSandboxMenu>
+        <Banner bannerClass="banner-home" showLinks showScrollSection>
           <div className="banner-content">
             <div className="row">
               <div className="col-md-6 left">
-                <div className="header">
-                  <p className="font-merriweather-Light single-line">the</p>
-                  <p className="title single-line">DATAVIS</p>
-                  <p className="font-merriweather-Light pull-right single-line">platform.</p>
+
+                <div className="frame">
+                  <div className="header">
+                    <p className="font-merriweather-Light single-line">the</p>
+                    <p className="title single-line">DATAVIS</p>
+                    <p className="font-merriweather-Light pull-right single-line">platform.</p>
+                  </div>
+                  <div className="content">
+                    <p className="font-merriweather-Light block">Streamline any data-drive process fast.</p>
+                    <p className="font-merriweather-Light block">On one single Digital Architecture Platform.</p>
+                    <ul className="actions">
+                      <li><a href="#one" className="button">WATCH DEMO</a></li>
+                      <li><Link onClick={ this.props.onToggleMenu } to="/sandbox" className="button bg-white hideOnMobile">TRY NOW</Link></li>
+                    </ul>
+                  </div>
                 </div>
-                <div className="content">
-                  <p className="font-merriweather-Light block">Streamline any data-drive process fast.</p>
-                  <p className="font-merriweather-Light block">On one single Digital Architecture Platform.</p>
-                  <ul className="actions">
-                    <li><a href="#one" className="button">WATCH DEMO</a></li>
-                    <li><Link onClick={ this.props.onToggleMenu } to="/sandbox" className="button bg-white hideOnMobile">TRY NOW</Link></li>
-                  </ul>
-                </div>
+
               </div>
               <div className="col-md-6 right">
                 <img src={ macImg } alt="" />

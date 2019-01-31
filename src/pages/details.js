@@ -48,7 +48,7 @@ export default class Details extends React.Component {
     ) );
     return (
       <Layout>
-        <Banner bannerClass={ `banner-details ${ backLink } ${ target }` } showContactUs showScrollSection headerOptions={ headerOptions }>
+        <Banner bannerClass={ `banner-details ${ backLink } ${ target }` } showScrollSection headerOptions={ headerOptions }>
           <div className="banner-content">
             <div className="container container-fluid">
               <div className="row">

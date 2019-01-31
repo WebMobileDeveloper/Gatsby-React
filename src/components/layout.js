@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/scss/main.scss';
 import Helmet from 'react-helmet';
@@ -50,9 +51,11 @@ class Layout extends React.Component {
   }
 
   render () {
-    const { children, hideFooter } = this.props;
+    const {
+      children, hideFooter, hideSandboxMenu, hideContactUs,
+    } = this.props;
     return (
-      <div className={ `body ${ this.state.loading } ${ this.state.isMenuVisible ? 'is-menu-visible' : '' }` }>
+      <div className={ `body ${ this.state.loading } ${ this.state.isMenuVisible ? 'is-menu-visible' : '' } ` }>
         <Helmet
           title="DATAVIS"
           meta={ [
@@ -65,7 +68,8 @@ class Layout extends React.Component {
           {children}
           {!hideFooter && <Footer />}
         </div>
-        <Menu onToggleMenu={ this.handleToggleMenu } getRef={ this.setWrapperRef } isSandboxMenushow={ false } />
+        {!hideContactUs && <Link to="/contact" className="icon alt contact"><span className="label">Contact Us</span></Link>}
+        <Menu onToggleMenu={ this.handleToggleMenu } getRef={ this.setWrapperRef } hideSandboxMenu={ hideSandboxMenu } />
       </div>
     );
   }

@@ -16,20 +16,24 @@
 @include skel-breakpoints(
   (
     //.col-xl-
-    xxxlarge: "(max-width: 1920px)",  // 1920 px	1080 px	20%
-    xxlarge: "(max-width: 1680px)",   // 1680 px	1050 px	3%
-    xlarge: "(max-width: 1440px)",    // 1440 px	900 px	6%    
-    large: "(max-width: 1200px)",     // 1280 px	800 px	11%  
-    // .col-lg-
-    medium: "(max-width: 960px)",    // 960px  600px 
-    // .col-md-	
-    small: "(max-width: 768px)",   
-    // .col-sm-           
-    xsmall: "(max-width: 540px)",     
+      xxxlarge: "(max-width: 1919px)",
+    // 1920 px	1080 px	20%
+      xxlarge: "(max-width: 1679px)",
+    // 1680 px	1050 px	3%
+      xlarge: "(max-width: 1439px)",
+    // 1440 px	900 px	6%
+      large: "(max-width: 1199px)",
+    // 1280 px	800 px	11%
+      // .col-lg-
+      medium: "(max-width: 991px)",
+    // 960px  600px
+      // .col-md-
+      small: "(max-width: 767px)",
+    // .col-sm-
+      xsmall: "(max-width: 575px)",
     //   .col-
-    xxsmall: "(max-width: 360px)"
+      xxsmall: "(max-width: 375px)"
   )
-  
 );
 
 @include skel-layout(
@@ -60,7 +64,6 @@
 
 // Component.
 
-
 @import "components/stage";
 @import "components/priceItem";
 @import "components/menu";
@@ -81,7 +84,7 @@
 // Layout.
 
 @import "components/banner";
-    // custom banner styles
+// custom banner styles
 @import "components/banners/banner_home";
 @import "components/banners/banner_tech";
 @import "components/banners/banner_contact";
@@ -91,6 +94,9 @@
 @import "components/banners/banner_industry";
 @import "components/banners/banner_analytics";
 @import "components/banners/banner_details";
+@import "components/banners/banner_resources";
+@import "components/banners/banner_sandbox";
+@import "components/banners/banner_download";
 
 // Pages
 @import "pages/home";
@@ -101,3 +107,6 @@
 @import "pages/solution";
 @import "pages/industry";
 @import "pages/analytics";
+@import "pages/resources";
+@import "pages/sandbox";
+@import "pages/download";

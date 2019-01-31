@@ -7,11 +7,13 @@
 // /* Type */
 
 body,
+.body,
 input,
 select,
 textarea {
   color: _palette(white);
   font-family: _font(family);
+  font-size: 1rem;
 }
 
 a {
@@ -105,4 +107,13 @@ a {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }

@@ -86,7 +86,7 @@ export default class Industry extends React.Component {
     ) );
     return (
       <Layout>
-        <Banner bannerClass="banner-industry" showContactUs showScrollSection headerOptions={ headerOptions }>
+        <Banner bannerClass="banner-industry" showScrollSection headerOptions={ headerOptions }>
           <div className="banner-content">
             <div className="row">
               {items}
