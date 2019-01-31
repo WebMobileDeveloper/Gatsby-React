@@ -1,8 +1,8 @@
 #main-home {
   #product-section {
     margin: 0 15px;
-    padding-top: 14%;
-    padding-bottom: 14%;
+    padding-top: 5em;
+    padding-bottom: 5em;
 
     .left {
       padding-left: 16%;
@@ -274,10 +274,10 @@
       display: inline-block;
       width: 50%;
       .frame {
-        width: 63%;
+        width: 70%;
         @include relative-property("height", 11em);
         position: absolute;
-        left: 0;
+        left: 10%;
         right: 0;
         top: 0;
         bottom: 0;
@@ -400,6 +400,21 @@
       }
     }
 
+    @include breakpoint(small) {
+      flex-direction: column;
+      .left,
+      .backImg {
+        width: 80%;
+        margin: 0 auto 3em;
+      }
+      .left {
+        .frame {
+          position: relative;
+          width: 80%;
+          left: 0;
+        }
+      }
+    }
     @include breakpoint(xsmall) {
       @media (orientation: portrait) {
         flex-direction: column;
@@ -479,12 +494,12 @@
       }
       &.bottom {
         display: inline-block;
-        margin-bottom: 265px;
+        margin-bottom: 5vw;
         .item {
           display: inline-block;
           width: 210px;
-          height: 15em;
-          margin: 0 10px;
+          height: 12em;
+          margin: 0 30px;
           img {
             width: 80px;
             height: auto;
@@ -525,36 +540,38 @@
   }
 
   #submit {
+    position: relative;
+    display: inline-block;
     width: 100%;
-    height: 644px;
-    @include vendor("background-image", 'url("../images/submit_banner.jpg")');
-    background-size: auto 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    padding-top: 69px;
-    padding-left: calc(41% - 492px);
-    text-align: left;
+    text-align: center;
+    @include setBackground("submit_banner.jpg");
     .float {
-      width: 1200px;
-      height: 500px;
-      padding-left: 74px;
-      padding-top: 57px;
-      background-color: _palette(bg);
       position: relative;
+      width: 1200px;
+      padding: 50px 70px;
+      background-color: _palette(bg);
+      margin: 70px auto;
+      text-align: left;
+      border-radius: 4px;
       .title {
         width: 60%;
-        font-size: 50px;
+        font-size: 2.4em;
         line-height: 1.2em;
       }
       .line {
         width: 30%;
         border-top: solid 2px _palette(fg);
-        margin: 43px 0;
+        margin: 28px 0;
       }
       form {
         width: 50%;
         margin-bottom: 1em !important;
+        
+        .row {
+          &>div{
+            padding-bottom: 16px;
+          }
+        }
         input {
           height: 2.5em;
           line-height: 2.5em;
@@ -562,15 +579,16 @@
       }
       .netImg {
         position: absolute;
-        top: 133px;
-        width: 33.3%;
-        left: 62%;
+        width: 33%;
+        bottom: 60px;
+        right: 75px;
       }
       .button {
         width: 75%;
         font-size: 18px;
         height: 2.5em;
         line-height: 2.5em;
+        margin: 0;
       }
     }
 
@@ -596,17 +614,16 @@
         padding-top: 10vh;
         height: 100vh;
         .float {
-          width: 80%;
+          width: 92%;
           height: 80vh;
-          padding: 5vh 10px;
+          padding: 10% 8%;
           margin: 0 auto;
-          text-align: center;
+          text-align: left;
 
           &::after {
             content: "";
-            @include vendor("background-image", 'url("../images/net.png")');
+            @include setBackground("net.png");
             background-size: 80% auto;
-            background-repeat: no-repeat;
             background-position: center 10%;
             opacity: 0.2;
             top: 0;
@@ -614,33 +631,28 @@
             bottom: 0;
             right: 0;
             position: absolute;
-            // z-index: -1;
           }
 
           & > div {
             display: inline-block;
             &.title {
-              width: 90%;
-              font-size: 40px;
-              text-align: left;
+              width: 100%;
+              font-size: 30px;
             }
             &.line {
               width: 60%;
-              margin-top: 2vh;
-              margin-bottom: 30vh;
-              margin: 5vh 0 10vh -20%;
-              text-align: left;
-              border-width: 3px;
             }
           }
 
           form {
             display: inline-block;
-            width: 90%;
-            .grid-wrapper {
-              .col-6,
-              .col-12 {
-                max-width: 100%;
+            margin:0 auto;
+            width: 100%;
+            font-size: 14px;
+            .row {
+              &>div{
+                padding-bottom: 20px;
+                text-align: center;
               }
             }
           }

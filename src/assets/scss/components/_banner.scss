@@ -67,7 +67,12 @@
   }
 
   .banner-content {
+    @include vendor(
+      "transition",
+      ("opacity 1.5s ease", "transform 0.5s ease-out", "filter 0.5s ease", "-webkit-filter 0.5s ease")
+    );
     margin: 0 15px;
+    font-size: 26px;
   }
 
   @include breakpoint(xxxlarge) {
@@ -77,7 +82,7 @@
     // min-height: 1000px;
     // max-height: 1440px;
     .banner-content {
-      // font-size: 24px;
+      font-size: 24px;
     }
   }
 
@@ -85,7 +90,7 @@
     // min-height: 900px;
     // max-height: 1200px;
     .banner-content {
-      // font-size: 22px;
+      font-size: 22px;
     }
   }
 
@@ -93,22 +98,22 @@
     // min-height: 800px;
     // max-height: 1050px;
     .banner-content {
-      // font-size: 20px;
+      font-size: 20px;
     }
   }
   @include breakpoint(medium) {
     // min-height: 600px;
     // max-height: 900px;
-    // .banner-content {
-    //   font-size: 16px;
-    // }
+    .banner-content {
+      font-size: 16px;
+    }
   }
   @include breakpoint(small) {
     // min-height: 750px;
     // max-height: 800px;
-    // .banner-content {
-    //   font-size: 14px;
-    // }
+    .banner-content {
+      font-size: 14px;
+    }
   }
 
   @include breakpoint(xsmall) {

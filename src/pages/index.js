@@ -35,7 +35,7 @@ export default class HomePage extends React.Component {
                   <div className="header">
                     <p className="font-merriweather-Light single-line">the</p>
                     <p className="title single-line">DATAVIS</p>
-                    <p className="font-merriweather-Light pull-right single-line">platform.</p>
+                    <p className="font-merriweather-Light pull-right single-line bottom-title">platform.</p>
                   </div>
                   <div className="content">
                     <p className="font-merriweather-Light block">Streamline any data-drive process fast.</p>
@@ -53,6 +53,7 @@ export default class HomePage extends React.Component {
             </div>
           </div>
         </Banner>
+
         <div id="main-home" className="main-div">
           <section id="product-section">
             <div className="row">
@@ -92,7 +93,7 @@ export default class HomePage extends React.Component {
                 <Stage onToggleMenu={ this.props.onToggleMenu } title="Unify" linkTo="/tech" stageImg={ stage3Img } content={ stageContent[ 2 ] } />
               </div>
               <div className="col-lg-3  col-sm-6">
-                <Stage onToggleMenu={ this.props.onToggleMenu } title="Bridge" linkTo="/solution" stageImg={ stage4Img } content={ stageContent[ 3 ] } />
+                <Stage onToggleMenu={ this.props.onToggleMenu } title="Bridge" linkTo="/resources" stageImg={ stage4Img } content={ stageContent[ 3 ] } />
               </div>
             </div>
           </section>
@@ -164,25 +165,16 @@ export default class HomePage extends React.Component {
             <div className="float">
               <div className="title"><span className="color-fg">Connect</span> your data, application, ideas & people.</div>
               <div className="line" />
-              <div className="wraper-container">
-                <div className="grid-wrapper">
-                  <div className="col-6" />
-                </div>
-              </div>
               <form method="post" action="#">
-                <div className="grid-wrapper">
-                  <div className="col-12">
-                    <div className="mb-2"><input type="text" name="name" id="name" defaultValue="" placeholder="Name" /></div>
-                  </div>
-                  <div className="col-6">
-                    <div className="mb-2"><input type="email" name="email" id="email" defaultValue="" placeholder="Work email" /></div>
-                  </div>
-                  <div className="col-6">
-                    <div className="mb-4"><input type="text" name="phone" id="phone" defaultValue="" placeholder="Phone number" /></div>
-                  </div>
-                  <div className="col-12">
-                    <input type="submit" value="SUBMIT" className="button bg-fg no-transform round-more bold mt-0" />
-                  </div>
+                <div className="row">
+                  <div className="col-sm-12"><input type="text" name="name" id="name" defaultValue="" placeholder="Name" /></div>
+                </div>
+                <div className="row">
+                  <div className="col-sm-6"><input type="email" name="email" id="email" defaultValue="" placeholder="Work email" /></div>
+                  <div className="col-sm-6"><input type="text" name="phone" id="phone" defaultValue="" placeholder="Phone number" /></div>
+                </div>
+                <div className="row">
+                  <div className="col-sm-12"><input type="submit" value="SUBMIT" className="button bg-fg no-transform round-more bold mt-3" /></div>
                 </div>
               </form>
               <img className="netImg" src={ netImg } alt="" />
