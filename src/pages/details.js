@@ -48,19 +48,17 @@ export default class Details extends React.Component {
     ) );
     return (
       <Layout>
-        <Banner bannerClass={ `banner-details ${ backLink } ${ target }` } showScrollSection headerOptions={ headerOptions }>
+        <Banner bannerClass={ `banner-details ${ backLink } ${ target }` } headerOptions={ headerOptions }>
           <div className="banner-content">
-            <div className="container container-fluid">
-              <div className="row">
-                <div className="col-sm-1" />
-                <div className="col-sm-5">
-                  <div className="title-tag hideOnScreen">{title}</div>
-                  <img src={ imageObj } alt={ title } />
-                </div>
-                <div className="col-sm-6">
-                  <div className="title-tag hideOnMobile">{title}</div>
-                  {subTitleItems}
-                </div>
+            <div className="row">
+              <div className="col-sm-5">
+                <div className="title-tag hideOnScreen">{title}</div>
+                {/* <img src={ imageObj } alt={ title } /> */}
+                <div className="img-div" />
+              </div>
+              <div className="col-sm-7">
+                <div className="title-tag hideOnMobile">{title}</div>
+                {subTitleItems}
               </div>
             </div>
           </div>

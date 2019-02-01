@@ -8,7 +8,14 @@
       financial,
       logistic
     ),
-    analytics: ()
+    analytics: (
+      location,
+      bi,
+      discovery,
+      prep,
+      advance,
+      integration
+    )
   );
 
   @each $solution, $details in $classes {
@@ -22,93 +29,126 @@
           }
         }
       }
-    }
-  }
-  padding-top: calc(50px + 1.5em);
-  min-height: 100vh;
-  max-height: initial;
-  height: initial;
-  .title-tag {
-    display: inline-block;
-    font-size: 1.3em;
-    font-weight: bold;
-    min-width: 10em;
-    height: 2em;
-    line-height: 2em;
-    padding: 0 0.5em;
-
-    border-radius: 0 0.25em 0.25em 0;
-    margin-bottom: 2em;
-  }
-  .col-sm-5 {
-    padding: 0 2em 0 1em;
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-  .col-sm-6 {
-    padding: 0;
-
-    @include wrapper-style(40vw, 4em);
-    .title-tag {
-      background-color: rgba(255, 255, 255, 0.4);
-    }
-    .content {
-      font-size: 0.8em;
-      font-weight: 300;
-      line-height: 1.2em;
-    }
-  }
-  @include breakpoint(xsmall) {
-    @media (orientation: portrait) {
-      min-height: initial;
-      max-height: initial;
-      height: initial;
-      text-align: left;
-      background: _palette(bg) !important;
-      padding-top: 50px;
-      .banner-bottom {
-        background: transparent;
-        bottom: initial;
-        top: calc(100vh - 20px);
-      }
-      .banner-content {
-        width: 100%;
-        padding-left: 0;
-        padding-right: 0;
-        .container {
-          .col-sm-5 {
-            padding: 0;
-            margin: 0;
-            .title-tag {
-              position: relative;
-              display: block !important;
-              margin-bottom: 0;
-              background: _palette(bg);
-              @include overlay(white, 0.2);
-              font-size: 1.7em;
-            }
-            img {
-              width: auto;
-              height: calc(100vh - 50px - 2em);
-            }
-          }
-          .col-sm-6 {
-            padding: 2em;
-            margin: 0;
-            @include wrapper-style(80vw, 4em);
-            .sub-item{
-              margin-bottom: 1em;
-            }
-            .content {
-              font-size: 1em;
-              font-weight: 300;
-              line-height: 1.2em;
-            }
-          }
+      .col-sm-5 {
+        .img-div {
+          @include setBackground("banners/details/#{$solution}/#{$detail}.jpg");
+          height: 41vw;
         }
       }
     }
   }
+  height: initial;
+  min-height: initial;
+  .banner-header {
+    .logo {
+      left: 20px;
+      top: 12px;
+    }
+  }
+
+  .banner-content {
+    padding-top: calc(50px + 2%);
+    padding-bottom: calc(50px + 2%);
+    .col-sm-5 {
+      padding: 0 5% 0 9%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .col-sm-7 {
+      padding: 0;
+      @include wrapper-style(40vw, 4em);
+      .title-tag {
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.4);
+        font-size: 1.3em;
+        font-weight: bold;
+        min-width: 10em;
+        height: 2em;
+        line-height: 2em;
+        padding: 0 1em 0 0.5em;
+        border-radius: 0 0.25em 0.25em 0;
+        margin-bottom: 2em;
+      }
+      .content {
+        // font-size: 0.8em;
+        font-weight: 300;
+        line-height: 1.2em;
+      }
+    }
+  }
+  @include breakpoint(medium) {
+    .banner-content {
+      .col-sm-5 {
+        padding: 0 0 0 8%;
+        .img-div {
+          height: 50vw;
+        }
+      }
+      .col-sm-7 {
+        padding: 0 0 0 5%;
+        .title-tag {
+          font-size: 1.2em;
+        }
+        h1 {
+          font-size: 2em;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(xsmall) {
+    background: none !important;
+    .banner-header {
+      display: none;
+    }
+    .banner-bottom {
+      display: inline-block !important;
+      // background-image: linear-gradient(to top, #222a35, rgba(34,42,53,0.5));
+      background-image: linear-gradient(to top, #222a35, rgba(34, 42, 53, 0.8), rgba(34, 42, 53, 0.4), transparent);
+      height: 50px;
+      left: 0;
+      top: calc(100vh - 50px);
+    }
+    .banner-content {
+      padding: 50px 0;
+      margin: 0 15px;
+
+      .col-sm-5 {
+        text-align: left;
+        padding: 0;
+        .title-tag {
+          display: inline-block !important;
+          background-color: #2e3743;
+          width: 100%;
+          height: 50px;
+          line-height: 50px;
+          font-size: 2em;
+          font-weight: bold;
+          padding-left: 0.3em;
+        }
+        .img-div {
+          height: calc(100vh - 100px);
+        }
+      }
+      .col-sm-7 {
+        text-align: left;
+        padding: 0;
+        @include wrapper-style(70vw, 6em);
+        .sub-item {
+          padding: 7% 10% 0 10%;
+          h1 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+          }
+          .content {
+            font-size: 14px;
+            line-height: 1.5em;
+          }
+        }
+      }
+    }
+  }  
 }

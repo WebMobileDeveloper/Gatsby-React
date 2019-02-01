@@ -30,28 +30,25 @@
     }
   }
   @include breakpoint(xsmall) {
-    @media (orientation: portrait) {
-      .sub-item {
-        position: relative;
-        width: 100%;
-        margin-bottom: 7%;
-        border-radius: 6px;
-        overflow: hidden;
-        .img-div {          
-          a {
-            bottom: calc(1em + 50%);
-          }
+    .sub-item {
+      position: relative;
+      width: 100%;
+      margin-bottom: 7%;
+      border-radius: 6px;
+      overflow: hidden;
+      .img-div {
+        a {
+          bottom: calc(1em + 50%);
         }
-        .content-div {
-          @include wrapper-style-by-lineHeight(100%, 4, 24px);
-          font-size: 14px;
-          padding: 5%;
-          background-color: _palette(bg);
-          @include overlay(white, 0.08);
-          position: absolute;
-          top: 50%;
-        }
-        
+      }
+      .content-div {
+        @include wrapper-style-by-lineHeight(100%, 4, 24px);
+        font-size: 14px;
+        padding: 5%;
+        background-color: _palette(bg);
+        @include overlay(white, 0.08);
+        position: absolute;
+        top: 50%;
       }
     }
   }

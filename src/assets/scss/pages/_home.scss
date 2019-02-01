@@ -134,20 +134,18 @@
       }
     }
     @include breakpoint(xsmall) {
-      @media (orientation: portrait) {
-        .left {
-          padding-left: 16%;
-          padding-right: 12%;
-          background-size: 50% 100%;
-          background-position: 15% 0px;
-        }
-        .right {
-          position: relative;
-          left: 0;
-          top: -6em;
-          padding-left: 16%;
-          padding-right: 10%;
-        }
+      .left {
+        padding-left: 16%;
+        padding-right: 12%;
+        background-size: 50% 100%;
+        background-position: 15% 0px;
+      }
+      .right {
+        position: relative;
+        left: 0;
+        top: -6em;
+        padding-left: 16%;
+        padding-right: 10%;
       }
     }
   }
@@ -251,17 +249,15 @@
       }
     }
     @include breakpoint(xsmall) {
-      @media (orientation: portrait) {
-        .row {
-          width: 80%;
-          .left {
-            img {
-              width: 100%;
-            }
+      .row {
+        width: 80%;
+        .left {
+          img {
+            width: 100%;
           }
-          .right {
-            margin-left: -5%;
-          }
+        }
+        .right {
+          margin-left: -5%;
         }
       }
     }
@@ -416,18 +412,16 @@
       }
     }
     @include breakpoint(xsmall) {
-      @media (orientation: portrait) {
-        flex-direction: column;
-        .left,
-        .backImg {
+      flex-direction: column;
+      .left,
+      .backImg {
+        width: 80%;
+        margin: 0 auto 3em;
+      }
+      .left {
+        .frame {
+          position: relative;
           width: 80%;
-          margin: 0 auto 3em;
-        }
-        .left {
-          .frame {
-            position: relative;
-            width: 80%;
-          }
         }
       }
     }
@@ -566,9 +560,9 @@
       form {
         width: 50%;
         margin-bottom: 1em !important;
-        
+
         .row {
-          &>div{
+          & > div {
             padding-bottom: 16px;
           }
         }
@@ -609,59 +603,57 @@
       }
     }
     @include breakpoint(xsmall) {
-      @media (orientation: portrait) {
-        padding-left: 0;
-        padding-top: 10vh;
-        height: 100vh;
-        .float {
-          width: 92%;
-          height: 80vh;
-          padding: 10% 8%;
-          margin: 0 auto;
-          text-align: left;
+      padding-left: 0;
+      padding-top: 10vh;
+      height: 100vh;
+      .float {
+        width: 92%;
+        height: 80vh;
+        padding: 10% 8%;
+        margin: 0 auto;
+        text-align: left;
 
-          &::after {
-            content: "";
-            @include setBackground("net.png");
-            background-size: 80% auto;
-            background-position: center 10%;
-            opacity: 0.2;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            position: absolute;
-          }
+        &::after {
+          content: "";
+          @include setBackground("net.png");
+          background-size: 80% auto;
+          background-position: center 10%;
+          opacity: 0.2;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          position: absolute;
+        }
 
-          & > div {
-            display: inline-block;
-            &.title {
-              width: 100%;
-              font-size: 30px;
-            }
-            &.line {
-              width: 60%;
-            }
-          }
-
-          form {
-            display: inline-block;
-            margin:0 auto;
+        & > div {
+          display: inline-block;
+          &.title {
             width: 100%;
-            font-size: 14px;
-            .row {
-              &>div{
-                padding-bottom: 20px;
-                text-align: center;
-              }
+            font-size: 30px;
+          }
+          &.line {
+            width: 60%;
+          }
+        }
+
+        form {
+          display: inline-block;
+          margin: 0 auto;
+          width: 100%;
+          font-size: 14px;
+          .row {
+            & > div {
+              padding-bottom: 20px;
+              text-align: center;
             }
           }
-          .button {
-            font-size: 14px;
-          }
-          .netImg {
-            display: none;
-          }
+        }
+        .button {
+          font-size: 14px;
+        }
+        .netImg {
+          display: none;
         }
       }
     }

@@ -17,10 +17,10 @@ export default class About extends React.Component {
     return (
       <Layout>
         <Banner bannerClass="banner-about" showScrollSection>
-          <div className="banner-content color-fg">
+          <div className="banner-content">
             <div className="center-middle-div">
               <h1>About Us</h1>
-              <h2>Tagline</h2>
+              <h2>What we are all about and what we stand for.</h2>
             </div>
           </div>
         </Banner>

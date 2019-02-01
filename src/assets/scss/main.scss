@@ -16,20 +16,22 @@
 @include skel-breakpoints(
   (
     //.col-xl-
-    xxxlarge: "(max-width: 1920px)",  // 1920 px	1080 px	20%
-    xxlarge: "(max-width: 1680px)",   // 1680 px	1050 px	3%
-    xlarge: "(max-width: 1440px)",    // 1440 px	900 px	6%    
-    large: "(max-width: 1200px)",     // 1280 px	800 px	11%  
-    // .col-lg-
-    medium: "(max-width: 960px)",    // 960px  600px 
-    // .col-md-	
-    small: "(max-width: 768px)",   
-    // .col-sm-           
-    xsmall: "(max-width: 540px)",     
+      xxxlarge: "(max-width: 1920px)",
+    // 1920 px	1080 px	20%
+      xxlarge: "(max-width: 1680px)",
+    // 1680 px	1050 px	3%
+      xlarge: "(max-width: 1440px)",
+    // 1440 px	900 px	6%
+      large: "(max-width: 1200px)",
+    // 1280 px	800 px	11%   .col-lg-
+      medium: "(max-width: 960px)",
+    // 960px  600px    .col-md-
+      small: "(max-width: 768px)",
+    // .col-sm-
+      xsmall: "(max-width: 540px)",
     //   .col-
-    xxsmall: "(max-width: 360px)"
+      xxsmall: "(max-width: 375px)"
   )
-  
 );
 
 @include skel-layout(

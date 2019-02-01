@@ -21,15 +21,17 @@ class Banner extends React.Component {
     const {
       children, showLinks, showScrollSection, headerOptions,
     } = this.props;
-    const headerData = headerOptions || { linkTo: '' };
+    const headerData = headerOptions || { linkTo: false };
     return (
       <div id="banner" className={ liClasses }>
         <div className="banner-header">
           <Link to="/" className="logo hideOnMobile">&nbsp;</Link>
-          <Link to={ headerData.linkTo } className="back-button">
-            <h2>{headerData.main_title}</h2>
-            {headerData.backButtonShow && <div className="back-image hideOnMobile" />}
-          </Link>
+          {headerData.linkTo ? (
+            <Link to={ headerData.linkTo } className="back-button">
+              <h2>{headerData.main_title}</h2>
+              {headerData.backButtonShow && <div className="back-image hideOnMobile" />}
+            </Link>
+          ) : null}
         </div>
         {children}
         <div className="banner-bottom hideOnMobile">

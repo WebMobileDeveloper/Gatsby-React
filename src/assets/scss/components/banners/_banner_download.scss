@@ -91,30 +91,28 @@
   }
 
   @include breakpoint(xsmall) {
-    @media (orientation: portrait) {
-      .banner-content {
-        width: 100%;
-        .header-container {
-          margin-top: 10vh;
-          padding: 0 10%;
-          .header {
-            .title {
-              font-size: 3.2em;
-            }
-          }
-        }
-        .form-container {
-          form {
-            margin-top: 1em;
-            .privacy {
-              font-size: 12px;
-            }
+    .banner-content {
+      width: 100%;
+      .header-container {
+        margin-top: 10vh;
+        padding: 0 10%;
+        .header {
+          .title {
+            font-size: 3.2em;
           }
         }
       }
-      .banner-bottom {
-        bottom: 0;
+      .form-container {
+        form {
+          margin-top: 1em;
+          .privacy {
+            font-size: 12px;
+          }
+        }
       }
+    }
+    .banner-bottom {
+      bottom: 0;
     }
   }
 }

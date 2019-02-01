@@ -233,47 +233,45 @@
   }
 
   @include breakpoint(xsmall) {
-    @media (orientation: portrait) {
-      .banner-content {
-        padding-top: 70px;
-        .left {
-          padding-left: 0;
+    .banner-content {
+      padding-top: 70px;
+      .left {
+        padding-left: 0;
+        text-align: center;
+        .header {
           text-align: center;
-          .header {
-            text-align: center;
-            .title {
-              font-size: 50px;
-            }
-            .line {
-              display: inline-block;
-              width: 7em;
-              border-top: solid 2px _palette(fg);
-              height: 1px;
-            }
+          .title {
+            font-size: 50px;
           }
-          .content {
+          .line {
             display: inline-block;
-            width: 80%;
-            text-align: center;
-            p {
-              margin-bottom: 2em;
-            }
-          }
-          .button {
-            font-size: 12px;
-            min-width: 12em;
+            width: 7em;
+            border-top: solid 2px _palette(fg);
+            height: 1px;
           }
         }
-        .right {
-          padding-left: 8%;
-          padding-right: 8%;
-          form {
-            padding: 10% 5%;
-            input:not([type="submit"]),
-            textarea {
-              font-size: 14px;
-              padding: 1em 2em;
-            }
+        .content {
+          display: inline-block;
+          width: 80%;
+          text-align: center;
+          p {
+            margin-bottom: 2em;
+          }
+        }
+        .button {
+          font-size: 12px;
+          min-width: 12em;
+        }
+      }
+      .right {
+        padding-left: 8%;
+        padding-right: 8%;
+        form {
+          padding: 10% 5%;
+          input:not([type="submit"]),
+          textarea {
+            font-size: 14px;
+            padding: 1em 2em;
           }
         }
       }

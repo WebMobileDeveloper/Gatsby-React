@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { navigate } from 'gatsby';
 import Layout from '../components/layout';
 import Banner from '../components/Banner';
 
@@ -93,23 +93,21 @@ export default class Analytics extends React.Component {
     ];
     const items = [];
     linkData.forEach( item => items.push(
-      <div className={ `col-xl-4 col-lg-6 ${ item.link }` }>
+      <div className={ `col-xl-4 col-sm-6 ${ item.link }` } onClick={ () => navigate( item.pathname, { state: item.state } ) } role="link" tabIndex="0" onKeyUp={ this.handleKeyUp }>
         <div className="center-middle-div">
-          <Link to={ item.pathname } state={ item.state }>
-            <h1>
-              {item.main_title}
-              {item.second_title && (
-                <span className="plus">+</span>
-              )}
-              {item.second_title}
-            </h1>
-          </Link>
+          <h1>
+            {item.main_title}
+            {item.second_title && (
+              <span className="plus">+</span>
+            )}
+            {item.second_title}
+          </h1>
         </div>
       </div>
     ) );
     return (
       <Layout>
-        <Banner bannerClass="banner-analytics" showScrollSection headerOptions={ headerOptions }>
+        <Banner bannerClass="banner-analytics" headerOptions={ headerOptions }>
           <div className="banner-content">
             <div className="row">
               {items}

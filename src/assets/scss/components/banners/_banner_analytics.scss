@@ -5,15 +5,18 @@
 
   @include emptyBanner();
   background: transparentize($color: _palette(white), $amount: 0.97);
-  .banner-bottom {
-    background: transparent;
-    bottom: initial;
-    top: calc(100vh - 80px);
+  height: initial;
+  padding-bottom: 0;
+  .banner-header {
+    .logo {
+      left: 20px;
+      top: 12px;
+    }
   }
+
   .banner-content {
     padding-top: 50px;
-
-    .col-lg-6 {
+    .col-xl-4 {
       padding: 0;
       position: relative;
       height: 25vw;
@@ -22,7 +25,7 @@
           @include setBackground("banners/analytics-#{$detail}.jpg");
           @include overlay(_palette($detail), 0.8);
         }
-      }   
+      }
       .center-middle-div {
         position: absolute;
         .plus {
@@ -39,27 +42,29 @@
       width: 100%;
       padding: 50px 15px;
       margin: 0;
-      .col-lg-6 {
-        height: 50vw;
+      .col-xl-4 {
+        height: 35vw;
+      }
+    }
+  }
+  @include breakpoint(small) {
+    .banner-content {
+      .col-xl-4 {
+        height: 40vw;
       }
     }
   }
   @include breakpoint(xsmall) {
-    @media (orientation: portrait) {
-      .banner-header {
-        position: relative;
-        padding-top: 50px;
-        text-align: center;
-        h2 {
-          line-height: 100px;
-        }
-      }
-      .banner-content {
-        width: 100%;
-        padding: 0 15px;
-        .col-lg-6 {
-          height: 100vw;
-        }
+    .banner-header {
+      position: relative;
+      height: 100px;
+      padding-top: 50px;
+      text-align: center;
+    }
+    .banner-content {
+      padding: 0 15px;
+      .col-xl-4 {
+        height: 100vw;
       }
     }
   }

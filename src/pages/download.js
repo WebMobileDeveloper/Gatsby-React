@@ -29,7 +29,6 @@ export default class Download extends React.Component {
   }
 
   render () {
-    console.log( this.state );
     return (
       <Layout>
         <Banner bannerClass="banner-download">

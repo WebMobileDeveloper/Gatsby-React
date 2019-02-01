@@ -769,19 +769,15 @@ $vendor-values: ("filter", "flex", "linear-gradient", "radial-gradient", "transf
     line-height: 1em;
     margin-bottom: 0;
   }
-  @include breakpoint(xsmall) {
-    @media (orientation: portrait) {
-      .hideOnMobile {
-        display: none !important;
-      }
+  @include breakpoint(xsmall,null) {
+    .hideOnMobile {
+      display: none !important;
     }
   }
   .hideOnScreen {
     display: none !important;
     @include breakpoint(xsmall) {
-      @media (orientation: portrait) {
-        display: inherit !important;
-      }
+      display: inherit !important;
     }
   }
   // @if $mode == "normalize" {
@@ -918,7 +914,6 @@ $vendor-values: ("filter", "flex", "linear-gradient", "radial-gradient", "transf
   // }
 }
 
-
 /// Vendorizes a declaration's property and/or value(s).
 /// @param {string} $property Property.
 /// @param {mixed} $value String/list of value(s).
@@ -958,18 +953,3 @@ $vendor-values: ("filter", "flex", "linear-gradient", "radial-gradient", "transf
   }
 }
 
-@include breakpoint(xsmall) {
-  @media (orientation: portrait) {
-    .hideOnMobile {
-      display: none !important;
-    }
-  }
-}
-.hideOnScreen {
-  display: none !important;
-  @include breakpoint(xsmall) {
-    @media (orientation: portrait) {
-      display: inherit !important;
-    }
-  }
-}

@@ -129,19 +129,17 @@
   }
 
   @include breakpoint(xsmall) {
-    @media (orientation: portrait) {
-      height: 100vh;
-      .banner-content {
-        padding-top: 100px;
-        .left {
-          .button {
-            font-size: 12px;
-            min-width: 12em;
-          }
+    height: 100vh;
+    .banner-content {
+      padding-top: 100px;
+      .left {
+        .button {
+          font-size: 12px;
+          min-width: 12em;
         }
-        .right {
-          padding: 10vw 2%;
-        }
+      }
+      .right {
+        padding: 10vw 2%;
       }
     }
   }

@@ -5,13 +5,9 @@ import Banner from '../components/Banner';
 
 import banner2Img from '../assets/images/banners/tech-right.jpg';
 import playImg from '../assets/images/play.png';
-import fuseImg from '../assets/images/fuse.jpg';
 import fuseIconImg from '../assets/images/fuse_icon.png';
-import lightningImg from '../assets/images/lightning.jpg';
 import lightningIconImg from '../assets/images/lightning_icon.png';
-import sunspotImg from '../assets/images/sunspot.jpg';
 import sunspotIconImg from '../assets/images/sunspot_icon.png';
-import penumbraImg from '../assets/images/penumbra.jpg';
 import penumbraIconImg from '../assets/images/penumbra_icon.png';
 
 export default class Tech extends React.Component {
@@ -23,7 +19,7 @@ export default class Tech extends React.Component {
   render () {
     return (
       <Layout hideSandboxMenu>
-        <Banner bannerClass="banner-tech"  showScrollSection>
+        <Banner bannerClass="banner-tech" showScrollSection>
           <div className="banner-content">
             <div className="row">
               <div className="col-sm-6 left">
@@ -61,12 +57,8 @@ export default class Tech extends React.Component {
           <section id="fuse">
             <div className="full-container">
               <div className="row">
-
-                <div className="col-md-8 col-sm-6 col-4">
-                  <img src={ fuseImg } alt="" className="main-img" />
-                </div>
-
-                <div className="col-md-4 col-sm-6 col-8 description">
+                <div className="col-md-7 col-sm-6 col-5 fuseImg" />
+                <div className="col-md-5 col-sm-6 col-7 description">
                   <div className="center-middle-div">
                     <header>
                       <img src={ fuseIconImg } alt="" />
@@ -88,7 +80,7 @@ export default class Tech extends React.Component {
             <div className="full-container">
               <div className="row">
 
-                <div className="col-md-4 col-sm-6 col-8 description">
+                <div className="col-md-5 col-sm-6 col-7 description">
                   <div className="center-middle-div">
                     <header>
                       <img src={ lightningIconImg } alt="" />
@@ -101,11 +93,7 @@ export default class Tech extends React.Component {
                     </div>
                   </div>
                 </div>
-
-                <div className="col-md-8 col-sm-6 col-4">
-                  <img src={ lightningImg } alt="" className="main-img" />
-                </div>
-
+                <div className="col-md-7 col-sm-6 col-5 lightningImg" />
               </div>
             </div>
           </section>
@@ -113,12 +101,8 @@ export default class Tech extends React.Component {
           <section id="sunspot">
             <div className="full-container">
               <div className="row">
-
-                <div className="col-md-8 col-sm-6 col-4">
-                  <img src={ sunspotImg } alt="" className="main-img" />
-                </div>
-
-                <div className="col-md-4 col-sm-6 col-8 description">
+                <div className="col-md-7 col-sm-6 col-5 sunspotImg" />
+                <div className="col-md-5 col-sm-6 col-7 description">
                   <div className="center-middle-div">
                     <header>
                       <img src={ sunspotIconImg } alt="" />
@@ -140,7 +124,7 @@ export default class Tech extends React.Component {
             <div className="full-container">
               <div className="row">
 
-                <div className="col-md-4 col-sm-6 col-8 description">
+                <div className="col-md-5 col-sm-6 col-7 description">
                   <div className="center-middle-div">
                     <header>
                       <img src={ penumbraIconImg } alt="" />
@@ -153,11 +137,7 @@ export default class Tech extends React.Component {
                     </div>
                   </div>
                 </div>
-
-                <div className="col-md-8 col-sm-6 col-4">
-                  <img src={ penumbraImg } alt="" className="main-img" />
-                </div>
-
+                <div className="col-md-7 col-sm-6 col-5 penumbraImg" />
               </div>
             </div>
           </section>

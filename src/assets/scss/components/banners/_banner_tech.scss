@@ -1,14 +1,17 @@
 /* Banner */
 
 #banner.banner-tech {
-  @include vendor("background-image", 'url("../images/banners/tech.jpg")');
+  @include setBackground("banners/tech.jpg");
+  .banner-bottom {
+    background-image: linear-gradient(to top, _palette(bg), transparent);
+  }
   .banner-content {
-    padding-top: 6%;
+    padding: 6% 5% 6% 10%;
     .left {
-      padding-left: 16%;
+      padding-left: 5%;
       .header {
         display: inline-block;
-        margin-bottom: 2em;
+        margin-bottom: 1em;
         .title {
           font-size: 150px;
           font-weight: 900;
@@ -47,7 +50,7 @@
 
   @include breakpoint(xxlarge) {
     .banner-content {
-      padding-top: 8%;
+      padding: 8% 5% 8% 10%;
       .left {
         .header {
           .title {
@@ -60,12 +63,11 @@
 
   @include breakpoint(xlarge) {
     .banner-content {
-      padding-top: 10%;
+      padding: 10% 5% 10% 10%;
       .left {
-        padding-left: 12%;
         .header {
           .title {
-            font-size: 120px;
+            font-size: 110px;
           }
         }
         .button {
@@ -77,9 +79,8 @@
 
   @include breakpoint(large) {
     .banner-content {
-      padding-top: 13%;
+      padding: 10% 5% 10% 10%;
       .left {
-        padding-left: 10%;
         .header {
           .title {
             font-size: 100px;
@@ -90,14 +91,16 @@
         }
       }
       .right {
-        padding-left: 7%;
+        padding-left: 5%;
+        padding-right: 0;
       }
     }
   }
+
   @include breakpoint(medium) {
     .banner-content {
+      padding: 10% 3% 10% 7%;
       .left {
-        padding-left: 10%;
         .header {
           .title {
             font-size: 80px;
@@ -110,15 +113,15 @@
         }
       }
       .right {
-        padding-left: 4%;
-        padding-right: 4%;
+        padding-left: 0%;
+        padding-right: 0%;
       }
     }
   }
+
   @include breakpoint(small) {
     .banner-content {
       .left {
-        padding-left: 10%;
         .header {
           .title {
             font-size: 60px;
@@ -130,34 +133,28 @@
           min-width: 10em;
         }
       }
-      .right {
-        padding-left: 2%;
-        padding-right: 3%;
-      }
     }
   }
 
   @include breakpoint(xsmall) {
-    @media (orientation: portrait) {
-      .banner-content {
-        padding-top: 70px;
-        .left {
-          padding-left: 0;
-          .header {
-            text-align: left;
-            .title {
-              font-size: 60px;
-            }
+    .banner-content {
+      padding-top: 70px;
+      .left {
+        padding-left: 0;
+        .header {
+          text-align: left;
+          .title {
+            font-size: 60px;
           }
-          .content {
-            p {
-              margin-bottom: 2em;
-            }
+        }
+        .content {
+          p {
+            margin-bottom: 2em;
           }
-          .button {
-            font-size: 12px;
-            min-width: 12em;
-          }
+        }
+        .button {
+          font-size: 12px;
+          min-width: 12em;
         }
       }
     }

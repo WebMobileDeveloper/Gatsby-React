@@ -1,10 +1,7 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { navigate } from 'gatsby';
 import Layout from '../components/layout';
 import Banner from '../components/Banner';
-
-import industryImg from '../assets/images/banners/solution-industry.jpg';
-import analyticsImg from '../assets/images/banners/solution-analytics.jpg';
 
 export default class Solution extends React.Component {
   constructor ( props ) {
@@ -14,26 +11,24 @@ export default class Solution extends React.Component {
 
   render () {
     const headerOptions = {
-      title: 'SOLUTION',
+      main_title: 'SOLUTION',
       linkTo: '/solution',
     };
     return (
       <Layout>
-        <Banner bannerClass="banner-solution"  headerOptions={ headerOptions }>
+        <Banner bannerClass="banner-solution" headerOptions={ headerOptions }>
           <div className="banner-content">
             <div className="row">
 
-              <div className="col-md-6 industry">
-                <img src={ industryImg } alt="" />
+              <div className="col-sm-6 industry" onClick={ () => navigate( '/industry' ) } role="link" tabIndex="0" onKeyUp={ this.handleKeyUp }>
                 <div className="center-middle-div">
-                  <Link to="/industry"><h1>INDUSTRY</h1></Link>
+                  <h1>INDUSTRY</h1>
                 </div>
               </div>
 
-              <div className="col-md-6 analytics">
-                <img src={ analyticsImg } alt="" />
+              <div className="col-sm-6 analytics" onClick={ () => navigate( '/analytics' ) } role="link" tabIndex="0" onKeyUp={ this.handleKeyUp }>
                 <div className="center-middle-div">
-                  <Link to="/analytics"><h1>ANALYTICS NEED</h1></Link>
+                  <h1>ANALYTICS NEED</h1>
                 </div>
               </div>
             </div>

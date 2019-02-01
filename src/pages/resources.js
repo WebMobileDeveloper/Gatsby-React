@@ -11,13 +11,13 @@ import img5 from '../assets/images/resources/resource-5.jpg';
 import img6 from '../assets/images/resources/resource-6.jpg';
 
 export default class Resources extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor ( props ) {
+    super( props );
     this.state = {};
   }
 
-  render() {
-    const subTitleData = [{
+  render () {
+    const subTitleData = [ {
       index: 1,
       title: 'Titles',
       imgObj: img1,
@@ -50,11 +50,11 @@ export default class Resources extends React.Component {
     },
     ];
     const subItems = [];
-    subTitleData.forEach(item => subItems.push(
-      <div className="col-lg-4 col-md-6" key={item.index}>
+    subTitleData.forEach( item => subItems.push(
+      <div className="col-lg-4 col-md-6" key={ item.index }>
         <div className="sub-item color-fg">
           <div className="img-div">
-            <img src={item.imgObj} alt={item.title} />
+            <img src={ item.imgObj } alt={ item.title } />
             <Link to="/download" className="download-tag">DOWNLOAD</Link>
           </div>
           <div className="content-div">
@@ -67,11 +67,11 @@ export default class Resources extends React.Component {
           </div>
         </div>
       </div>
-    ));
+    ) );
     return (
       <Layout>
-        <Banner showScrollSection bannerClass="banner-resources" >
-          <div className="banner-content color-fg">
+        <Banner showScrollSection bannerClass="banner-resources">
+          <div className="banner-content">
             <div className="center-middle-div">
               <h1>Resources</h1>
               <div className="line" />
