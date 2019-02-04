@@ -68,7 +68,7 @@ export default class About extends React.Component {
                   <p className="content color-fg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel malesuada erat, sit amet imperdiet ex. Mauris porta vulputate fringilla.Donec accumsan tempus ligula, consectetur euismod tellus vestibulum ac. Vestibulum massa sem, efficitur eget sem id, placerat pharetra tortor. Duis pulvinar in sapien in sodales. Fusce posuere erat in nisl pulvinar, sed ornare ligula mattis. Aliquam erat volutpat. Aliquam in urna sit amet lorem congue congue. Pellentesque habitantmorbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque eget elit a mauris pharetra venenatis
                   </p>
                 </OverflowWrapper>
-                <Link onClick={ this.props.onToggleMenu } to="/about" className="button bg-white">FIND OUT MORE</Link>
+                <Link onClick={ this.props.onToggleMenu } to="/career" className="button bg-white">FIND OUT MORE</Link>
               </div>
 
             </div>

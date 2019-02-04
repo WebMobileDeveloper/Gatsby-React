@@ -1,0 +1,36 @@
+#main-career {
+  .content-div {
+    text-align: left;
+    padding: 3em 30% 3em 15%;
+    .under-line {
+      border-bottom: 0.1em solid;
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 1.5em;
+    }
+    @include wrapper-style(50vw, 15em);
+  }
+  @include breakpoint(large) {
+    .content-div {
+      padding: 3em 20% 3em 15%;
+      @include wrapper-style(60vw, 15em);
+    }
+  }
+  @include breakpoint(medium) {
+    .content-div {
+      @include wrapper-style(70vw, 15em);
+      .button{
+        font-size: 1.1em;
+      }
+    }
+  }
+  @include breakpoint(xsmall) {
+    .content-div {
+      @include wrapper-style(70vw, 13em);
+      .button{
+        font-size: 1.1em;
+      }
+    }
+  }
+}

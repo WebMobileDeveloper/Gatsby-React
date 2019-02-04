@@ -1,7 +1,8 @@
 /* Banner */
 
-#banner.banner-about {
-  @include setBackground("banners/about.jpg");
+#banner.banner-career {
+  @include setBackground("banners/career.jpg");
+  @include overlay(#20293D, 0.8);
   .banner-content {
     height: 100vh;
     h1 {
