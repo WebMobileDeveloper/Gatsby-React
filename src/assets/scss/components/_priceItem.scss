@@ -3,7 +3,7 @@
   @each $itemIndex in $item-indexs {
     &.item-#{$itemIndex} {
       .circle {
-        border: solid 8px _palette(price#{$itemIndex});
+        border: solid 0.4rem _palette(price#{$itemIndex});
       }
       a.more {
         color: _palette(price#{$itemIndex});
@@ -20,12 +20,13 @@
   text-align: center;
   .circle {
     display: inline-block;
-    width: 6em;
-    height: 6em;
+    width: 10rem;
+    height: 10rem;
     border-radius: 50%;
   }
   .title {
     margin-bottom: 0.6em;
+    margin-top: 1em;
   }
   p {
     display: block;

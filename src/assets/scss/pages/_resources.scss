@@ -38,7 +38,10 @@
       overflow: hidden;
       .img-div {
         a {
-          bottom: calc(1em + 50%);
+          bottom: 50%;
+          font-size: 1.3em;
+          height: 2.5em;
+          line-height: 2.5em;
         }
       }
       .content-div {
@@ -49,6 +52,7 @@
         @include overlay(white, 0.08);
         position: absolute;
         top: 50%;
+        height: 50%;
       }
     }
   }

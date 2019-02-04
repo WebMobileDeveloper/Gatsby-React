@@ -28,12 +28,37 @@
     }
     .content {
       .stage-content {
-        max-height: 11.55em;
+        height: 12em;
         overflow-y: hidden;
       }
       .button {
         font-size: 1em;
         padding: 0 1.5em;
+      }
+    }
+  }
+  @include breakpoint(small) {
+    .frame {
+      padding: 20px 10%;
+      .header {
+        .stage-link {
+          display: block;
+          .stageImg {
+            width: 50%;
+          }
+        }
+        .stageTitle {
+          font-size: 2em;
+        }
+      }
+      .content {
+        .stage-content {
+          height: 10em;
+          overflow-y: hidden;
+        }
+        .button {
+          font-size: 1.2em;
+        }
       }
     }
   }
