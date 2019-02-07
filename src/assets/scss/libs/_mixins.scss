@@ -401,6 +401,13 @@
     line-height: $line-height;
     max-height: $line-height * $lines;
     overflow: hidden;
+    .overflow-wrapper {
+      column-width: $width;
+      max-height: $height;
+      p {
+        max-height: calc(#{$height} - 1em);
+      }
+    }
   }
 }
 @mixin emptyBanner {

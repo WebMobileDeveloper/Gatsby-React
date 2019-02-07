@@ -26,7 +26,21 @@
     }
     .content-div {
       margin-bottom: 3em;
-      @include wrapper-style-by-lineHeight(100%, 10, 1.2em);
+      .overflow-container {
+        $width: 100%;
+        $height: 10em;
+        display: block;
+        width: $width;
+        max-height: $height;
+        overflow: hidden;
+        .overflow-wrapper {
+          column-width: 30em;
+          max-height: $height;
+          p {
+            max-height: calc(#{$height} - 1em);
+          }
+        }
+      }
     }
   }
   @include breakpoint(xsmall) {
@@ -45,11 +59,11 @@
         }
       }
       .content-div {
-        @include wrapper-style-by-lineHeight(100%, 4, 24px);
-        font-size: 14px;
-        padding: 5%;
         background-color: _palette(bg);
         @include overlay(white, 0.08);
+        // @include wrapper-style(100%, 96px);
+        font-size: 14px;
+        padding: 5%;
         position: absolute;
         top: 50%;
         height: 50%;
