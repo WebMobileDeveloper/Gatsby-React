@@ -3,7 +3,8 @@
 **This is a web design based on Gatsby.js V2.**
 
 Gatsby.js V2 starter based on the Forty site template, designed by HTML5 UP. Check out https://codebushi.com/gatsby-starters/ for more Gatsby starters and templates.
-![alt text](https://github.com/WebMobileDeveloper/Gatsby-React/blob/master/Image/Landing.png | width=200)
+
+![Landing Page](https://github.com/WebMobileDeveloper/Gatsby-React/blob/master/Image/Landing.png)
 
 
 ## Installation
