@@ -3,9 +3,6 @@ import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import Banner from '../components/Banner';
 import OverflowWrapper from '../components/OverflowWrapper';
-import historyImg from '../assets/images/history.jpg';
-import cultureImg from '../assets/images/culture.jpg';
-import careersImg from '../assets/images/careers.jpg';
 
 export default class Career extends React.Component {
   constructor ( props ) {

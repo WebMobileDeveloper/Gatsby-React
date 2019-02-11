@@ -8,7 +8,7 @@ Gatsby.js V2 starter based on the Forty site template, designed by HTML5 UP. Che
 
 Install this project (assuming Gatsby is installed) by running from your CLI:
 <br/>
-`git clone https://gitlab.datavis.sg/external/rto-datavis-website`
+`git clone https://github.com/WebMobileDeveloper/Gatsby-React`
 
 Run `npm install` and `gatsby develop` in the terminal to start the dev site.
 
